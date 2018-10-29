@@ -77,7 +77,7 @@ async def volume(ctx, vol):
     vol = player.volume = vol
 
 @bot.command(pass_context=True)
-async def stop(ctx):
+async def test(ctx):
     await bot.say("test")
     await bot.say("Music was stoped")
 
