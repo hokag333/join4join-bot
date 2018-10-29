@@ -80,6 +80,7 @@ async def volume(ctx, vol):
 async def test(ctx):
     await bot.say("test")
     await bot.say("Music was stoped")
+    await bot.say("test 2")
 
 
 
