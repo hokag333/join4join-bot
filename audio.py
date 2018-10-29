@@ -78,9 +78,9 @@ async def volume(ctx, vol):
 
 @bot.command(pass_context=True)
 async def test(ctx):
-    await bot.say("Hi, I am official helper of Chicken server")
-    await bot.say("What you need help with")
-    await bot.say("Write !help and I will halp you")
+    await bot.say("Hi, I am official helper of **Chicken server**.")
+    await bot.say("What you need help with?")
+    await bot.say("Write **!help** and I will help you")
 
 
 
