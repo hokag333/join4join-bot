@@ -91,59 +91,8 @@ async def helper(ctx):
   await bot.say("If you need help with something else, write **!call** to call moderators or helpers")
 
 @bot.command(pass_context=True)
-async def games(ctx):
-  await bot.say("**__List of supported games:__** **__List of games which can be add:__**"
-"**__List of games which can be add:__**")
-   
-@bot.command(pass_context=True)
-async def etcgames(ctx):
-  await bot.say("**__List of games which can be add:__**")
-  await bot.say("I am creating a list, just wait!!!")
-  await bot.say("Ark")
-  await bot.say("Black Desert Online")
-  await bot.say("Destiny 2")
-  await bot.say("Diablo 3")
-  await bot.say("Dota 2")
-  await bot.say("Factorio")
-  await bot.say("Garry´s Mod")
-  await bot.say("Grand Theft Auto 5")
-  
-@bot.command(pass_context=True)
-async def test58(ctx):
-  await bot.say("List of supported games :"
-,"Counter-Strike: Global Offensive :heavy_check_mark:️"
-      " Fortnite :heavy_check_mark:️"
-       "For Honor :heavy_check_mark:️"
-       "League of Legends :heavy_check_mark:️"
-       "Overwatch :heavy_check_mark:️"
-       "Paladins :heavy_check_mark:️"
-       "PlayerUnknown's Battlegrounds :heavy_check_mark:️"
-       "Rainbow 6 Siege :heavy_check_mark:️"
-       "Warframe :heavy_check_mark:️"
-       "World of Warcraft :heavy_check_mark:️"
-
-"List of games which can be add:"
-
-       "Ark"
-       "Black Desert Online"
-       "Destiny 2"
-       "Diablo 3"
-       "Dota 2"
-       "Factorio"
-       "Garry´s Mod"
-       "Grand Theft Auto 5"
-       "Guild Wars 2"
-       "Hearthstone"
-       "Heroes of the Storm"
-       "Minecraft"
-       "Path of Exile"
-       "PayDay 2"
-       "Rocket League"
-       "Rust"
-       "Sea of Thieves"
-       "Smite"
-       "Starcraft 2"
-       "Team Fortress 2")
+async def test(ctx):
+  await bot.say("testing")
 
 @bot.command(pass_context=True)
 async def call(ctx):
