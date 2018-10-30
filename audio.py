@@ -121,7 +121,7 @@ async def etcgames(ctx):
   
 @bot.command(pass_context=True)
 async def test58(ctx):
-  await bot.say("test                                                                                                                                                    test2")
+  await bot.say("test                                                                                                                                                                                                                          test2")
 
 @bot.command(pass_context=True)
 async def call(ctx):
