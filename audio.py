@@ -92,7 +92,7 @@ async def helper(ctx):
 
 @bot.command(pass_context=True)
 async def games(ctx):
-  await bot.say("**__List of supported games__**")
+  await bot.say("**__List of supported games__** wait")
   await bot.say("Counter-Strike: Global Offensive :white_check_mark: ")
   await bot.say("Fortnite :white_check_mark: ")
   await bot.say("For Honor :white_check_mark: ")
@@ -103,17 +103,11 @@ async def games(ctx):
   await bot.say("Rainbow 6 Siege :white_check_mark: ")
   await bot.say("Warframe :white_check_mark: ")
   await bot.say("World of Warcraft :white_check_mark: ")
-  await bot.say("**games which can be added you can get with !games2**")
+  await bot.say("**games which can be added you can get with !etcgames**")
   
 @bot.command(pass_context=True)
-async def test48(ctx):
+async def etcgames(ctx):
   await bot.say("testing")
-
-@commands.command()
-async def ping(self, ctx):
-  resp = await ctx.send('Loading...')
-  diff = resp.created_at - ctx.message.created_at
-  await resp.edit(content=f':ping_pong: Pong! **API** latency: {1000*diff.total_seconds():.1f}ms. **{self.bot.user.name}** latency: {round(self.bot.latency * 1000)}ms')  
 
 @bot.command(pass_context=True)
 async def call(ctx):
