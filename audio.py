@@ -92,7 +92,8 @@ async def helper(ctx):
 
 @bot.command(pass_context=True)
 async def games(ctx):
-  await bot.say("**__List of supported games__** wait")
+  await bot.say("**__List of supported games__**")
+  await bot.say("I'm creating a list, just wait")
   await bot.say("Counter-Strike: Global Offensive :white_check_mark: ")
   await bot.say("Fortnite :white_check_mark: ")
   await bot.say("For Honor :white_check_mark: ")
@@ -107,7 +108,8 @@ async def games(ctx):
   
 @bot.command(pass_context=True)
 async def etcgames(ctx):
-  await bot.say("testing")
+  await bot.say("**__List of games which can be add:__**")
+  await bot.say("")
 
 @bot.command(pass_context=True)
 async def call(ctx):
