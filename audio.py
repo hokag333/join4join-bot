@@ -107,8 +107,8 @@ async def games(ctx):
   await bot.say("**games which can be added you can get with !moregames**")
   
 @bot.command(pass_conntext=True)
-async def moregames(ctx):
-  await bot.say("test")
+async def games2(ctx):
+  await bot.say("testing")
 
 @bot.command(pass_context=True)
 async def call(ctx):
