@@ -92,7 +92,7 @@ async def helper(ctx):
 
 @bot.command(pass_context=True)
 async def games(ctx):
-  await bot.say("**__List of supported games:__**                      **__List of games which can be add:__**                                                                                                                                                                                                                          Counter-Strike: Global Offensive :white_check_mark:                       Ark                            Fortnite :white_check_mark:                        Black Desert Online")
+  await bot.say("**__List of supported games:__**                                      **__List of games which can be add:__**                                                                                                                                                                                                                          Counter-Strike: Global Offensive :white_check_mark:                                                       Ark                                                                                                                Fortnite :white_check_mark:                                                                                 Black Desert Online")
   
 @bot.command(pass_context=True)
 async def etcgames(ctx):
