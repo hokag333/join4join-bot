@@ -46,39 +46,11 @@ async def join(ctx):
 
 
 players={}
-@bot.command(pass_context=True)
-async def play(ctx, *,url):
-    global play_server
-    play_server = ctx.message.server
-    voice = bot.voice_client_in(play_server)
-    global player
-    player = await voice.create_ytdl_player(url,ytdl_options=opts)
-    players[play_server.id] = player
-    await bot.say ("Music is playing")
-    await bot.say ("**__Warning:__** to play next song wait when song end")
-    if player.is_live == True:
-        await bot.say("Can not play live audio yet.")
-    elif player.is_live == False:
-        player.start()
 
-@bot.command(pass_context=True)
-async def pause(ctx):
-    player.pause()
-    await bot.say("Music paused")
-
-@bot.command(pass_context=True)
-async def resume(ctx):
-    player.resume()
-    await bot.say("Music resumed")
-          
-@bot.command(pass_context=True)
-async def volume(ctx, vol):
-    vol = float(vol)
-    vol = player.volume = vol
 
 @bot.command(pass_context=True)
 async def helping(ctx):
-    await bot.say("Hi, I am official helper of **Chicken server**.")
+    await bot.say("Hi @everyone , I am official helper of **Chicken server**.")
     await bot.say("What you need help with?")
     await bot.say("Write **!helper** and I will help you")
     
