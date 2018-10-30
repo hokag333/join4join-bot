@@ -94,7 +94,10 @@ async def helper(ctx):
 async def games(ctx):
   await bot.say("**__List of supported games__**")
   await bot.say("Counter-Strike: Global Offensive :white_check_mark: ")
-  await bot.say("Fortnite white_check_mark: ")
+  await bot.say("Fortnite :white_check_mark: ")
+  await bot.say("For Honor :white_check_mark: ")
+  await bot.say("League of Legends :white_check_mark: ")
+  await bot.say("Overwatch :white_check_mark: ")
 
 @bot.command(pass_context=True)
 async def call(ctx):
