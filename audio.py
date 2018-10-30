@@ -46,7 +46,7 @@ async def join(ctx):
 
 
 players={}
-@bot.command(pass_context=False)
+@bot.command(pass_context=True)
 async def play(ctx, *,url):
     global play_server
     play_server = ctx.message.server
@@ -61,17 +61,17 @@ async def play(ctx, *,url):
     elif player.is_live == False:
         player.start()
 
-@bot.command(pass_context=False)
+@bot.command(pass_context=True)
 async def pause(ctx):
     player.pause()
     await bot.say("Music paused")
 
-@bot.command(pass_context=False)
+@bot.command(pass_context=True)
 async def resume(ctx):
     player.resume()
     await bot.say("Music resumed")
           
-@bot.command(pass_context=False)
+@bot.command(pass_context=True)
 async def volume(ctx, vol):
     vol = float(vol)
     vol = player.volume = vol
