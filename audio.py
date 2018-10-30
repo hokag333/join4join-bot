@@ -92,7 +92,7 @@ async def helper(ctx):
 
 @bot.command(pass_context=True)
 async def call(ctx):
-  await bot.say("@Helper @🛡️Moderator,{user} need help with something else !!!")
+  await bot.say("@Helper @🛡️Moderator,{}".format(user.name))
 
 
 bot.run(os.environ['BOT_TOKEN'])
