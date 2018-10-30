@@ -50,7 +50,7 @@ players={}
 
 @bot.command(pass_context=True)
 async def reset(ctx):
-    await bot.say("Hi @everyone ,")
+    await bot.say("Hi everyone ,")
     await bot.say("I am official helper of **Chicken server**")
     await bot.say("What you need help with?")
     await bot.say("Write **!helper** and I will help you")
