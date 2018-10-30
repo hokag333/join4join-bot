@@ -93,7 +93,8 @@ async def helper(ctx):
 @bot.command(pass_context=True)
 async def games(ctx):
   await bot.say("**__List of supported games__**")
-  await bot.say("testing now")
+  await bot.say("Counter-Strike: Global Offensive :white_check_mark: ")
+  await bot.say("testing")
 
 @bot.command(pass_context=True)
 async def call(ctx):
