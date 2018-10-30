@@ -95,7 +95,7 @@ async def call(ctx):
   await bot.say("**Moderators** and **Helpers** was called")
 
 @bot.command(pas_context=True)
-asyc def games(ctx):
+asyc def test(ctx):
   await bot.say("test")
   
 
