@@ -103,7 +103,7 @@ async def games(ctx):
   await bot.say("Rainbow 6 Siege :white_check_mark: ")
   await bot.say("Warframe :white_check_mark: ")
   await bot.say("World of Warcraft :white_check_mark: ")
-  await bot.say("**__games which can be added you can get with !more_games__**")
+  await bot.say("**games which can be added you can get with !more_games**")
   
 @bot.command(pass_conntext=True)
 async def more_games(ctx):
