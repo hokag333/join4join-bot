@@ -33,7 +33,6 @@ load_opus_lib()
 @bot.event
 async def on_ready():
     print("hi")
-    await bot.change_presence(status=discord.Status.idle, activity=discord.Activity(type=discord.ActivityType.playing, name=f"Chicken Helper | {os.getenv('PREFIX')}help"))
 opts = {
             'default_search': 'auto',
             'quiet': True,
@@ -104,10 +103,10 @@ async def games(ctx):
   await bot.say("Rainbow 6 Siege :white_check_mark: ")
   await bot.say("Warframe :white_check_mark: ")
   await bot.say("World of Warcraft :white_check_mark: ")
-  await bot.say("**games which can be added you can get with !moregames**")
+  await bot.say("**games which can be added you can get with !games2**")
   
 @bot.command(pass_conntext=True)
-async def games2(ctx):
+async def test48(ctx):
   await bot.say("testing")
 
 @bot.command(pass_context=True)
