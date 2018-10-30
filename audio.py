@@ -92,9 +92,9 @@ async def helper(ctx):
 
 @bot.command(pass_context=True)
 async def games(ctx):
-  await bot.say("**__List of supported games__**")
   resp = await ctx.send('Loading...')
   diff = resp.created_at - ctx.message.created_at
+  await bot.say("**__List of supported games__**")
   await bot.say("Counter-Strike: Global Offensive :white_check_mark: ")
   await bot.say("Fortnite :white_check_mark: ")
   await bot.say("For Honor :white_check_mark: ")
