@@ -109,7 +109,7 @@ async def games(ctx):
 @bot.command(pass_context=True)
 async def etcgames(ctx):
   await bot.say("**__List of games which can be add:__**")
-  await bot.say("")
+  await bot.say("Black Desert Online")
 
 @bot.command(pass_context=True)
 async def call(ctx):
