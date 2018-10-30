@@ -77,14 +77,16 @@ async def volume(ctx, vol):
     vol = player.volume = vol
 
 @bot.command(pass_context=True)
-async def helper(ctx):
+async def helping(ctx):
     await bot.say("Hi, I am official helper of **Chicken server**.")
     await bot.say("What you need help with?")
-    await bot.say("Write **!help** and I will help you")
+    await bot.say("Write **!helper** and I will help you")
     
 @bot.command(pass_context=True)
-async def test2(ctx):
-  await bot.say("test02")
+async def helper(ctx):
+  await bot.say("**Commands:**")
+  await bot.say("**         !server-info** = info about Chicken server")
+  await bot.say("**         !user-info** = info about user")
     
 
 
