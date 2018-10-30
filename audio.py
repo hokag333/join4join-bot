@@ -93,6 +93,21 @@ async def helper(ctx):
 @bot.command(pass_context=True)
 async def call(ctx):
   await bot.say("**Moderators** and **Helpers** was called")
+  
+@bot.comand(pass_context=True)
+async def games(ctx):
+  await bot.say("**__List of supported Games:__**")
+  await bot.say("**       Counter-Strike: Global Offensive **✔️")
+  await bot.say("**       Fortnite **✔️")
+  await bot.say("**       For Honor **✔️")
+  await bot.say("**       League of Legends **✔️")
+  await bot.say("**       Overwatch **✔️")
+  await bot.say("**       Paladins **✔️")
+  await bot.say("**       PlayerUnknown's Battlegrounds **✔️")
+  await bot.say("**       Rainbow 6 Siege **✔️")
+  await bot.say("**       Warframe **✔️")
+  await bot.say("**       World of Warcraft **✔️")
+  
 
 
 bot.run(os.environ['BOT_TOKEN'])
