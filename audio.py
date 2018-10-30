@@ -102,6 +102,7 @@ async def games(ctx):
   await bot.say("PlayerUnknown's Battlegrounds :white_check_mark: ")
   await bot.say("Rainbow 6 Siege :white_check_mark: ")
   await bot.say("Warframe :white_check_mark: ")
+  await bot.say("World of Warcraft :white_check_mark: ")
 
 @bot.command(pass_context=True)
 async def call(ctx):
