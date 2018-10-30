@@ -116,12 +116,13 @@ async def etcgames(ctx):
   await bot.say("Diablo 3")
   await bot.say("Dota 2")
   await bot.say("Factorio")
-  await bot.say("")
+  await bot.say("Garry´s Mod")
+  await bot.say("Grand Theft Auto 5")
   
 @bot.command(pass_context=True)
 async def test58(ctx):
-  await bot.say("test"
-                "test02"
+  await bot.say("test",
+                "test02",
                 "test03")
 
 @bot.command(pass_context=True)
