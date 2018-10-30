@@ -110,7 +110,40 @@ async def etcgames(ctx):
   
 @bot.command(pass_context=True)
 async def test58(ctx):
-  await bot.say("test                                                                                                                                                                                                                          test2")
+  await bot.say("List of supported games :"
+,"Counter-Strike: Global Offensive :heavy_check_mark:️"
+      " Fortnite :heavy_check_mark:️"
+       "For Honor :heavy_check_mark:️"
+       "League of Legends :heavy_check_mark:️"
+       "Overwatch :heavy_check_mark:️"
+       "Paladins :heavy_check_mark:️"
+       "PlayerUnknown's Battlegrounds :heavy_check_mark:️"
+       "Rainbow 6 Siege :heavy_check_mark:️"
+       "Warframe :heavy_check_mark:️"
+       "World of Warcraft :heavy_check_mark:️"
+
+"List of games which can be add:"
+
+       "Ark"
+       "Black Desert Online"
+       "Destiny 2"
+       "Diablo 3"
+       "Dota 2"
+       "Factorio"
+       "Garry´s Mod"
+       "Grand Theft Auto 5"
+       "Guild Wars 2"
+       "Hearthstone"
+       "Heroes of the Storm"
+       "Minecraft"
+       "Path of Exile"
+       "PayDay 2"
+       "Rocket League"
+       "Rust"
+       "Sea of Thieves"
+       "Smite"
+       "Starcraft 2"
+       "Team Fortress 2")
 
 @bot.command(pass_context=True)
 async def call(ctx):
