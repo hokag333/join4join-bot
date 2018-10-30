@@ -103,7 +103,11 @@ async def games(ctx):
   await bot.say("Rainbow 6 Siege :white_check_mark: ")
   await bot.say("Warframe :white_check_mark: ")
   await bot.say("World of Warcraft :white_check_mark: ")
-  await bot.say("**__Games which can be supported you can give with command !games2__**")
+  await bot.say("**__games which can be added you can get with !more_games__**")
+  
+@bot.command(pass_conntext=True)
+async def more_games(ctx):
+  await bot.say("test")
 
 @bot.command(pass_context=True)
 async def call(ctx):
