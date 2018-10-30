@@ -89,7 +89,10 @@ async def helper(ctx):
   await bot.say("**         !user-info** = info about user")
   await bot.say("**         !games** = list of all games that can be added to game updates ")
   await bot.say("           If you need help with something else, write **!call** to call moderators or helpers")
-    
+
+@bot.command(pass_context=True)
+async def call(ctx):
+  await bot.say("@Helper @🛡️Moderator,{user} need help with something else !!!")
 
 
 bot.run(os.environ['BOT_TOKEN'])
