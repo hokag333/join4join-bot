@@ -112,6 +112,17 @@ async def etcgames(ctx):
   await bot.say("I am creating a list, just wait!!!")
   await bot.say("Ark")
   await bot.say("Black Desert Online")
+  await bot.say("Destiny 2")
+  await bot.say("Diablo 3")
+  await bot.say("Dota 2")
+  await bot.say("Factorio")
+  await bot.say("")
+  
+@bot.command(pass_context=True)
+async def test58(ctx):
+  await bot.say("test"
+                "test02"
+                "test03")
 
 @bot.command(pass_context=True)
 async def call(ctx):
