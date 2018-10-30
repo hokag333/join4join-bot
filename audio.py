@@ -91,7 +91,7 @@ async def helper(ctx):
   await bot.say("If you need help with something else, write **!call** to call moderators or helpers")
 
 @bot.command(pass_context=True)
-async def test048(ctx):
+async def games(ctx):
   await bot.say("testing now")
 
 @bot.command(pass_context=True)
