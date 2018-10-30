@@ -93,10 +93,6 @@ async def helper(ctx):
 @bot.command(pass_context=True)
 async def call(ctx):
   await bot.say("**Moderators** and **Helpers** was called")
-
-@bot.command(pass_context=True)
-asyc def test(ctx):
-  await bot.say("test")
   
 
 
