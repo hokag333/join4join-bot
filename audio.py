@@ -42,7 +42,7 @@ opts = {
 async def on_message(message):
   channel = message.channel
   if message.content.startswith('test01'):
-    await client.send_message(channel, 'I am in testing mode')
+    await bot.send_message(channel, 'I am in testing mode')
 
 @bot.command(pass_context=True)
 async def join(ctx):
