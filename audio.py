@@ -72,11 +72,6 @@ async def test(ctx):
 async def call(ctx):
   await bot.say("**Moderators** and **Helpers** was called")
   
-@bot.event
-async def on_message(message):
-  channel = message.content.startswith('test'):
-    await bot.send_message(channel, 'I am now in testing mode')
-  
 
 
 bot.run(os.environ['BOT_TOKEN'])
