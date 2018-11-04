@@ -50,11 +50,6 @@ async def on_message(message):
   if message.content.startswith('test'): 
     await bot.send_message(channel, 'yea I am In testing mode')
 
-@bot.command(pass_context=True)
-async def join(ctx):
-    channel = ctx.message.author.voice.voice_channel
-    await bot.join_voice_channel(channel, 'test')
-
 
 
 players={}
