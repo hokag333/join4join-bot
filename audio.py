@@ -42,7 +42,7 @@ opts = {
 async def on_message(message):
   channel = message.channel
   if message.content.startswith('egg'):
-    await bot.send_message(channel, ':epicegg:')
+    await bot.send_message(channel, ' :test: ')
 
 @bot.command(pass_context=True)
 async def join(ctx):
