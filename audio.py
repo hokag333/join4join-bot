@@ -44,12 +44,6 @@ async def on_message(message):
   if message.content.startswith('egg'):
     await bot.send_message(channel, ':egg: ')
 
-@bot.event
-async def on_message(message):
-  channel = message.channel
-  if message.content.startswith('test'): 
-    await bot.send_message(channel, 'yea I am In testing mode')
-
 
 
 players={}
