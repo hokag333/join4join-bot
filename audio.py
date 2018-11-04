@@ -45,6 +45,9 @@ async def on_message(message):
     
   if message.content.startswith('chicken'):
     await bot.send_message(message.channel, ':hatched_chick:')
+    
+  if message.content.startswith('shit'):
+    await bot.send_message(message.channel, ':poop:')
 
 
 
