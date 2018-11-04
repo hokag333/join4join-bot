@@ -41,7 +41,7 @@ opts = {
 @bot.event
 async def on_message(message):
   channel = message.channel
-  if message.content.startswith('test01'):
+  if message.content.startswith('test'):
     await bot.send_message(channel, 'I am in testing mode')
 
 @bot.command(pass_context=True)
@@ -57,7 +57,7 @@ players={}
 
 
 @bot.command(pass_context=True)
-async def test(ctx):
+async def testing(ctx):
   await bot.say("testing")
   
 
