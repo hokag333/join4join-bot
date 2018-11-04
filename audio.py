@@ -54,29 +54,11 @@ async def join(ctx):
 players={}
 
 
-@bot.command(pass_context=True)
-async def reset(ctx):
-    await bot.say("Hi everyone ,")
-    await bot.say("I am official helper of **Chicken server**")
-    await bot.say("What you need help with?")
-    await bot.say("Write **!helper** and I will help you")
-    
-@bot.command(pass_context=True)
-async def helper(ctx):
-  await bot.say("**Commands:**")
-  await bot.say("**         !server-info** = info about Chicken server")
-  await bot.say("**         !user-info** = info about user")
-  await bot.say("**         !games** = list of all supported games for updates ")
-  await bot.say("** **")
-  await bot.say("If you need help with something else, write **!call** to call moderators or helpers")
+
 
 @bot.command(pass_context=True)
 async def test(ctx):
   await bot.say("testing")
-
-@bot.command(pass_context=True)
-async def call(ctx):
-  await bot.say("**Moderators** and **Helpers** was called")
   
 
 
