@@ -40,9 +40,8 @@ opts = {
 
 @bot.event
 async def on_message(message):
-  channel = message.channel
   if message.content.startswith('egg'):
-    await bot.send_message(channel, ':egg: ')
+    await bot.send_message(message.channel, ':egg:')
 
 
 
