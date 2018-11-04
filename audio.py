@@ -6,7 +6,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 
 
-bot=commands.Bot(command_prefix='/')
+bot=commands.Bot(command_prefix='!')
 bot.remove_command('help')
 
 from discord import opus
@@ -58,7 +58,7 @@ players={}
 
 
 @bot.command(pass_context=True)
-async def test(ctx):
+async def test03(ctx):
   await bot.say("testing")
   
 @bot.command(pass_context=True)
