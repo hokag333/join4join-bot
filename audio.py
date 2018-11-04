@@ -50,7 +50,7 @@ async def on_message(message):
 @bot.command(pass_context=True)
 async def join(ctx):
     channel = ctx.message.author.voice.voice_channel
-    await bot.join_voice_channel(channel, ':hatched_chick:')
+    await bot.join_voice_channel(channel, ' :hatched_chick: ')
 
 
 
