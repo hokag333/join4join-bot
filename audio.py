@@ -61,6 +61,12 @@ async def on_message(message):
     
   if message.content.startswith('hi'):
     await bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
+    
+  if message.content.startswith('whats up'):
+    await bot.send_message(message.channel, ' **I am good u** ')
+    
+  if message.content.startswith('damn'):
+    await bot.send_message(message.channel, '**damn=foool**')
 
 
 
