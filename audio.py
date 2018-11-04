@@ -59,7 +59,7 @@ players={}
 
 @bot.command(pass_context=True)
 async def testing(ctx):
-  await bot.say("testing")
+  await bot.say("test")
   
 @bot.command(pass_context=True)
 async def help(ctx):
