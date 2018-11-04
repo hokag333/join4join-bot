@@ -43,6 +43,7 @@ async def on_message(message):
   channel = message.channel
   if message.content.startswith('egg'):
     await bot.send_message(channel, ':egg: ')
+    
   if message.content.startswith('chicken'): 
     await bot.send_message(channel, '')
 
