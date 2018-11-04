@@ -41,8 +41,8 @@ opts = {
 @bot.event
 async def on_message(message):
   channel = message.channel
-  if message.content.startswith('test'):
-    await bot.send_message(channel, 'I am in testing mode')
+  if message.content.startswith('egg'):
+    await bot.send_message(channel, ':epicegg:')
 
 @bot.command(pass_context=True)
 async def join(ctx):
