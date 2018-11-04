@@ -66,7 +66,7 @@ async def on_message(message):
     await bot.send_message(message.channel, ' **I am good u** ')
     
   if message.content.startswith('damn'):
-    await bot.send_message(message.channel, '**damn=foool**')
+    await bot.send_message(message.channel, '**fool**')
 
 
 
