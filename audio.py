@@ -7,6 +7,7 @@ from discord.ext.commands import Bot
 
 
 bot=commands.Bot(command_prefix='!')
+bot.remove_command('help')
 
 from discord import opus
 OPUS_LIBS = ['libopus-0.x86.dll', 'libopus-0.x64.dll',
@@ -47,7 +48,7 @@ async def on_message(message):
     await bot.send_message(message.channel, ':hatched_chick:')
     
   if message.content.startswith('shit'):
-    await bot.send_message(message.channel, ':poop:')
+    await bot.send_message(message.channel, ':poop:')    
 
 
 
@@ -59,6 +60,15 @@ players={}
 @bot.command(pass_context=True)
 async def testing(ctx):
   await bot.say("testing")
+  
+@bot.command(pass_context=True)
+async def help(ctx):
+  embed = discord.Embed(
+    colour = discord.Colour.orange()
+  )
+  
+  embed.set_author(name='Help')
+  embed.add_field(name='testing', value='the testing command', inline=False)
   
 
 
