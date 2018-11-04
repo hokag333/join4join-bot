@@ -43,11 +43,13 @@ async def on_message(message):
   channel = message.channel
   if message.content.startswith('egg'):
     await bot.send_message(channel, ':egg: ')
+  if message.content.startswith('chicken'): 
+    await bot.send_message(channel, '')
 
 @bot.command(pass_context=True)
 async def join(ctx):
     channel = ctx.message.author.voice.voice_channel
-    await bot.join_voice_channel(channel)
+    await bot.join_voice_channel(channel, ':hatched_chick:')
 
 
 
