@@ -47,8 +47,8 @@ async def on_message(message):
 @bot.event
 async def on_message(message):
   channel = message.channel
-  if message.content.startswith('chicken'): 
-    await bot.send_message(channel, '')
+  if message.content.startswith('test'): 
+    await bot.send_message(channel, 'yea I am In testing mode')
 
 @bot.command(pass_context=True)
 async def join(ctx):
