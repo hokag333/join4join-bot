@@ -67,6 +67,9 @@ async def on_message(message):
     
   if message.content.startswith('damn'):
     await bot.send_message(message.channel, '**fool**')
+    
+  if message.content.startswith('try me'):
+    await bot.send_message(message.channel, '@Prisa#4835')
 
 
 
