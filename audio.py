@@ -72,7 +72,7 @@ async def on_message(message):
     await bot.send_message(message.channel, 'The server owner is <@381887710308335618>')
     
   if message.content.startswith('website'):
-    await bot.send_message(message.channel, '**server website here :** https://chickenserver.wix.com/website')
+    await bot.send_message(message.channel, '**server website :** https://chickenserver.wix.com/website')
 
 
 
