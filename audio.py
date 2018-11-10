@@ -69,7 +69,7 @@ async def on_message(message):
     await bot.send_message(message.channel, '**fool**')
     
   if message.content.startswith('owner'):
-    await bot.send_message(message.channel, 'The server owner is @Prisa#4835')
+    await bot.send_message(message.channel, 'The server owner is <@381887710308335618>')
 
 
 
