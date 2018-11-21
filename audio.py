@@ -73,6 +73,9 @@ async def on_message(message):
     
   if message.content.startswith('website'):
     await bot.send_message(message.channel, '**server website :** https://chickenserver.wix.com/website')
+    
+  if message.content.startswith('duck'):
+    await bot.send_message(message.channel, 'quack')
 
 
 
