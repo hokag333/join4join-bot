@@ -79,6 +79,9 @@ async def on_message(message):
     
   if message.content.startswith('knock knock'):
     await bot.send_message(message.channel, 'who is there?!')
+    
+  if message.content.startswith('Hey!'):
+    await bot.send_message(message.channel, 'Yeah boy')
 
 
 
