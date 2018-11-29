@@ -89,7 +89,7 @@ async def on_message(message):
   if message.content.startswith('good night'):
     await bot.send_message(message.channel, '<:sleepingegg:508556018779947030>')
     
-  if message.content.startswith('ho is playing in the begining'):
+  if message.content.startswith('ho is playing in the beginning'):
     await bot.send_message(message.channel, 'EMINƎM')
 
 
