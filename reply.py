@@ -58,6 +58,30 @@ class Reply:
     if message.content.startswith('ho is playing in the beginning'):
       await self.bot.send_message(message.channel, 'EMINƎM')
       
+    if message.content.startswith('mother fucker'):
+      await self.bot.send_message(message.channel, 'machine gun kelly')
+      
+    if message.content.startswith('fast'):
+      await self.bot.send_message(message.channel, 'Uh‚ sama lamaa duma lamaa you \n'
+                                 'assuming I am a human \n'
+                                 'What I gotta do to get it through \n'
+                                 'to you I am superhuman \n'
+                                 'Innovative and I am made of rubber \n'
+                                 'So that anything you saying ricocheting \n'
+                                 'off of me and it will glue to you \n'
+                                 'I am never stating‚ more than \n'
+                                 'never demonstrating \n'
+                                 'How to give a motherfuckin audience \n'
+                                 'a feeling like It is levitating \n'
+                                 'Never fading‚ and I know that the \n'
+                                 'haters are forever waiting \n'
+                                 'For the day that they can say I fell \n'
+                                 'off‚ They had be celebrating \n'
+                                 'Cause I know the way to \n'
+                                 'get them motivated \n'
+                                 'I make elevating music‚ you \n'
+                                 'make elevator music \n')
+      
   @commands.command()
   async def ping(self):
     await self.bot.say('bang')
