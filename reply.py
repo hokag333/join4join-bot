@@ -8,55 +8,55 @@ class Reply:
   
   async def on_message(self, message):
     if message.content.startswith('egg'):
-      await bot.send_message(message.channel, ':egg:')
+      await self.bot.send_message(message.channel, ':egg:')
       
     if message.content.startswith('chicken'):
-      await bot.send_message(message.channel, ':hatched_chick:')
+      await self.bot.send_message(message.channel, ':hatched_chick:')
       
     if message.content.startswith('shit'):
-      await bot.send_message(message.channel, ':poop:')
+      await self.bot.send_message(message.channel, ':poop:')
       
     if message.content.startswith('how are you'):
-      await bot.send_message(message.channel, ' ** :hatched_chick: I am fine tnx :hatched_chick: ** ')
+      await self.bot.send_message(message.channel, ' ** :hatched_chick: I am fine tnx :hatched_chick: ** ')
       
     if message.content.startswith('How are you'):
-      await bot.send_message(message.channel, ' ** :hatched_chick: I am fine tnx :hatched_chick: ** ')
+      await self.bot.send_message(message.channel, ' ** :hatched_chick: I am fine tnx :hatched_chick: ** ')
       
     if message.content.startswith('Hi'):
-      await bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
+      await self.bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
       
     if message.content.startswith('hi'):
-      await bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
+      await self.bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
       
     if message.content.startswith('whats up'):
-      await bot.send_message(message.channel, ' **I am good u** ')
+      await self.bot.send_message(message.channel, ' **I am good u** ')
       
     if message.content.startswith('damn'):
-      await bot.send_message(message.channel, '**fool**')
+      await self.bot.send_message(message.channel, '**fool**')
       
     if message.content.startswith('owner'):
-      await bot.send_message(message.channel, 'The server owner is <@381887710308335618>')
+      await self.bot.send_message(message.channel, 'The server owner is <@381887710308335618>')
       
     if message.content.startswith('website'):
-      await bot.send_message(message.channel, '**server website :** https://chickenserver.wix.com/website')
+      await self.bot.send_message(message.channel, '**server website :** https://chickenserver.wix.com/website')
       
     if message.content.startswith('duck'):
-      await bot.send_message(message.channel, 'quack')
+      await self.bot.send_message(message.channel, 'quack')
       
     if message.content.startswith('knock knock'):
-      await bot.send_message(message.channel, 'who is there?!')
+      await self.bot.send_message(message.channel, 'who is there?!')
       
     if message.content.startswith('Hey!'):
-      await bot.send_message(message.channel, 'Yeah boy')
+      await self.bot.send_message(message.channel, 'Yeah boy')
       
     if message.content.startswith('train'):
-      await bot.send_message(message.channel, ':bullettrain_front:')
+      await self.bot.send_message(message.channel, ':bullettrain_front:')
       
     if message.content.startswith('good night'):
-      await bot.send_message(message.channel, '<:sleepingegg:508556018779947030>')
+      await self.bot.send_message(message.channel, '<:sleepingegg:508556018779947030>')
       
     if message.content.startswith('ho is playing in the beginning'):
-      await bot.send_message(message.channel, 'EMINƎM')
+      await self.bot.send_message(message.channel, 'EMINƎM')
       
   @commands.command()
   async def ping(self):
