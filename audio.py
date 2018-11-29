@@ -13,7 +13,7 @@ extensions = ['reply', 'pic']
 
 @bot.event
 async def on_ready():
-  await bot.change_presence(game=discord.Game(name='Test'))
+  await bot.change_presence(game=discord.Game(name='Chicken Server'))
   print('Bot is ready.')
   
 if __name__ == '__main__':
