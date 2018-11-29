@@ -18,6 +18,14 @@ class Pic:
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
+    if message.content.startswith('meme'):
+      embed = discord.Embed(title = 'BIGSMOKE', description = '', colour = discord.Colour.purple())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://vignette.wikia.nocookie.net/gta-myths/images/5/5a/Big_Smoke_SA.png/revision/latest?cb=20160817115555')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
   @commands.command()
   async def testall(self):
     await self.bot.say('lol')
