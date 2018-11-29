@@ -85,6 +85,9 @@ async def on_message(message):
     
   if message.content.startswith('train'):
     await bot.send_message(message.channel, ':bullettrain_front:')
+    
+  if message.content.startswith('good night'):
+    await bot.send_message(message.channel, '<:sleepingegg:508556018779947030>')
 
 
 
