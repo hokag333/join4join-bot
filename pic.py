@@ -10,7 +10,7 @@ class Pic:
     if message.content.startswith('embed'):
       await self.bot.send_message(message.channel, 'it is not set')
       
-    if message.content.startswith('god'):
+    if ('god') in message.content:
       embed = discord.Embed(title = 'EMINƎM', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
