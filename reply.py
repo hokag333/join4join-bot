@@ -7,7 +7,7 @@ class Reply:
     
   
   async def on_message(self, message):
-    if ('egg') in message.content:
+    if message.content.startswith('egg')
       await self.bot.send_message(message.channel, ':egg:')
       
     if message.content.startswith('chicken'):
