@@ -7,13 +7,13 @@ class Reply:
     
   
   async def on_message(self, message):
-    if message.content.startswith('egg'):
+    if ('egg') in message.content:
       await self.bot.send_message(message.channel, ':egg:')
       
     if message.content.startswith('chicken'):
       await self.bot.send_message(message.channel, ':hatched_chick:')
       
-    if message.content.startswith('shit'):
+    if ('shit') in message.content:
       await self.bot.send_message(message.channel, ':poop:')
       
     if message.content.startswith('how are you'):
@@ -40,7 +40,7 @@ class Reply:
     if message.content.startswith('website'):
       await self.bot.send_message(message.channel, '**server website :** https://chickenserver.wix.com/website')
       
-    if message.content.startswith('duck'):
+    if ('duck') in message.content:
       await self.bot.send_message(message.channel, 'quack')
       
     if message.content.startswith('knock knock'):
@@ -52,13 +52,13 @@ class Reply:
     if message.content.startswith('train'):
       await self.bot.send_message(message.channel, ':bullettrain_front:')
       
-    if message.content.startswith('good night'):
+    if ('good night') in message.content:
       await self.bot.send_message(message.channel, '<:sleepingegg:508556018779947030>')
       
     if message.content.startswith('ho is playing in the beginning'):
       await self.bot.send_message(message.channel, 'EMINƎM')
       
-    if message.content.startswith('mother fucker'):
+    if ('mother fucker') in message.content:
       await self.bot.send_message(message.channel, 'machine gun kelly')
       
     if message.content.startswith('fast'):
