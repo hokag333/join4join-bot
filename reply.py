@@ -11,7 +11,7 @@ class Reply:
       return
     if message.author.bot: return
     
-    if (' egg ') in message.content:
+    if ('egg') in message.content:
       await self.bot.add_reaction(message, '🥚')
       await self.bot.send_message(message.channel, ':egg:')
       
