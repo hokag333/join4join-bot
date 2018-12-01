@@ -12,11 +12,11 @@ class Reply:
     if message.author.bot: return
     
     if ('egg') in message.content:
-      await bot.add_reaction(message, '🥚')
+      await bot.add_reaction(emoji='🥚')
       await self.bot.send_message(message.channel, ':egg:')
       
     if message.content.startswith('chicken'):
-      await bot.add_reaction(message, '🐥')
+      await bot.add_reaction(emoji='🐥')
       await self.bot.send_message(message.channel, ':hatched_chick:')
       
     if ('shit') in message.content:
