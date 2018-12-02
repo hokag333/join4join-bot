@@ -34,6 +34,14 @@ class Pic:
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
+    if message.content.startswith('Owner'):
+      embed = discord.Embed(title = '', description = 'Chicken Server owner is <@381887710308335618>', colour = discord.Colour.orange())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://cdn.discordapp.com/attachments/455034541757693952/517751186242273281/t_bot_painted_good.jpg')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
   @commands.command()
   async def testall(self):
     await self.bot.say('lol')
