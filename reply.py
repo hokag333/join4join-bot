@@ -87,6 +87,9 @@ class Reply:
                                  'I make elevating music‚ you \n'
                                  'make elevator music \n')
       
+    if message.content.startswith('Who I am'):
+      await self.bot.send_message(message.channel, 'You are {} **Chicken Server** member'.format(message.author.mention))
+      
   @commands.command()
   async def ping(self):
     await self.bot.say('bang')
