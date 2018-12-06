@@ -6,7 +6,7 @@ class Reply:
     self.bot = bot
     
   
-  async def on_message(self, message):
+  async def on_message(self, message, user: discord.User):
     if message.author == self.bot.user:
       return
     if message.author.bot: return
@@ -107,19 +107,21 @@ class Reply:
       else:
         await self.bot.send_message(message.channel, ' {} You have not any Tier'.format(message.author.mention))
         
-    if message.content.startswith('!CheckTier' + user: discord.User):
-      if '508606197461680138' in (role.id for role in user.roles):
-        await self.bot.send_message(message.channel, ' {} have: **Tier X** '.format(user.name))
-        return
-      if '508606351493169155' in (role.id for role in user.roles):
-        await self.bot.send_message(message.channel, ' {} have: **Tier IX** '.format(user.name))
-        return
-      else:
-        await self.bot.send_message(message.channel, ' {} have not any Tier'.format(user.name))
       
   @commands.command()
   async def ping(self):
     await self.bot.say('bang')
+    
+  @commands.command(pass_context=True)
+  async def tier(ctx, user: discord.User):
+    if '508606197461680138' in (role.id for role in user.roles):
+      await self.bot.send_message(message.channel, ' {} have: **Tier X** '.format(user.name))
+      return
+    if '508606351493169155' in (role.id for role in user.roles):
+      await self.bot.send_message(message.channel, ' {} have: **Tier IX** '.format(user.name))
+      return
+    else:
+      await self.bot.send_message(message.channel, ' {} have not any Tier'.format(user.name))
       
     
 def setup(bot):
