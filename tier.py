@@ -11,7 +11,7 @@ class Tier:
         return
       if message.author.bot: return
       
-      if message.content.startswith('tiertest'):
+      if message.content.startswith('ufdmsdsdsf'):
         await self.bot.send_message(message.channel, 'new Class tested')
         
         
