@@ -93,7 +93,8 @@ class Reply:
       
     if message.content.startswith('!Tier'):
       if '508606486864461824' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' {} You have: **Tier X** '.format(message.author.name))
+        await self.bot.send_message(message.channel, ' {} \n'
+                                    'You have: **Tier X** '.format(message.author.name))
         return
       if '508606351493169155' in (role.id for role in message.author.roles):
         await self.bot.send_message(message.channel, ' {} You are **Tier IX** '.format(message.author.mention))
@@ -105,6 +106,10 @@ class Reply:
         await self.bot.send_message(message.channel, ' {} You are **Tier VII** '.format(message.author.mention))
       else:
         await self.bot.send_message(message.channel, ' {} none'.format(message.author.mention))
+        
+    if message.content.startswith('!CheckTier'):
+      if '508606197461680138' in (role.id for role in discord.User.roles):
+        await self.bot.send_message(message.channel, ' {} You have: **Tier X** '.format(discord.User.name))
       
   @commands.command()
   async def ping(self):
