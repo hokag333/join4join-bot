@@ -92,8 +92,14 @@ class Reply:
                                   '**Chicken Server** member'.format(message.author.mention))
       
     if message.content.startswith('!Tier'):
-      if '482127378395562005' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' {} test'.format(message.author.mention))
+      if '508606486864461824' in (role.id for role in message.author.roles):
+        await self.bot.send_message(message.channel, ' {} You are **Tier X** '.format(message.author.mention))
+      if '508606351493169155' in (role.id for role in message.author.roles):
+        await self.bot.send_message(message.channel, ' {} You are **Tier IX** '.format(message.author.mention))
+      if '508606276666654720' in (role.id for role in message.author.roles):
+        await self.bot.send_message(message.channel, ' {} You are **Tier VIII** '.format(message.author.mention))
+      if '508606197461680138' in (role.id for role in message.author.roles):
+        await self.bot.send_message(message.channel, ' {} You are **Tier VII** '.format(message.author.mention))
       else:
         await self.bot.send_message(message.channel, ' {} none'.format(message.author.mention))
       
