@@ -136,8 +136,8 @@ class Reply:
         await self.bot.send_message(message.channel, ' **{}** \n'
                                     'You have not any Tier'.format(message.author.name))
         
-      if message.content.startswith('testmetiers'):
-        await self.bot.send_message(message.channel, 'commands is in testing for now if they work fine')
+    if message.content.startswith('testmetiers'):
+      await self.bot.send_message(message.channel, 'commands is in testing for now if they work fine')
         
       
   @commands.command()
