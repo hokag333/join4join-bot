@@ -95,10 +95,13 @@ class Reply:
   async def ping(self):
     await self.bot.say('bang')
     
-  @commands.command()
-  async def mytier(self):
-    if "508606486864461824" in (role.id for role in message.author.roles):
-      await self.bot.send_message(message.channel, ' {} You are Tier X '.format(message.author.mention))
+  @bot.command(pass_context=True)
+  async def amiadmin(ctx):
+    if "503635706040549386" in (role.id for role in message.author.roles):
+      await bot.send_message(message.channel, " {} You are admin".format(message.author.mention))
+    else:
+      await bot.send_message(message.channel, "You are not admin")
+      
     
 def setup(bot):
   bot.add_cog(Reply(bot))
