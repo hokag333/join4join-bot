@@ -7,6 +7,9 @@ class Pic:
     
     
   async def on_message(self, message):
+    if message.author == self.bot.user:
+      return
+    
     if message.content.startswith('embed'):
       await self.bot.send_message(message.channel, 'it is not set')
       
