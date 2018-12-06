@@ -97,34 +97,44 @@ class Reply:
                                     'You have: **Tier X** '.format(message.author.name))
         return
       if '508606351493169155' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier IX** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier IX** '.format(message.author.name))
         return
       if '508606276666654720' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier VIII** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier VIII** '.format(message.author.name))
         return
       if '508606197461680138' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier VII** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier VII** '.format(message.author.name))
         return
       if '508606126497988609' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier VI** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier VI** '.format(message.author.name))
         return
       if '508606074736214036' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier V** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier V** '.format(message.author.name))
         return
       if '508605954875719698' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier IV** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier IV** '.format(message.author.name))
         return
       if '508605725874978825' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier III** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier III** '.format(message.author.name))
         return
       if '508605659143471104' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier II** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier II** '.format(message.author.name))
         return
       if '508605450770448384' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** You are **Tier I** '.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You are **Tier I** '.format(message.author.name))
         return
       else:
-        await self.bot.send_message(message.channel, ' **{}** You have not any Tier'.format(message.author.mention))
+        await self.bot.send_message(message.channel, ' **{}** \n'
+                                    'You have not any Tier'.format(message.author.name))
         
       
   @commands.command()
