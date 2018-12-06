@@ -98,7 +98,7 @@ class Reply:
   @commands.command()
   async def mytier(self):
     if "508606486864461824" in (role.id for role in message.author.roles):
-      await bot.send_message(message.channel, ' {} You are Tier X '.format(message.author.mention))
+      await self.bot.send_message(message.channel, ' {} You are Tier X '.format(message.author.mention))
     
 def setup(bot):
   bot.add_cog(Reply(bot))
