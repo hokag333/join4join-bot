@@ -96,7 +96,7 @@ class Reply:
     await self.bot.say('bang')
     
   @bot.command(pass_context=True)
-  async def amiadmin(ctx):
+  async def testadmin(ctx):
     if "503635706040549386" in (role.id for role in message.author.roles):
       await self.bot.send_message(message.channel, " {} You are admin".format(message.author.mention))
     else:
