@@ -7,6 +7,10 @@ class Reply:
     
   
   async def on_message(self, message):
+    if message.author == self.bot.user:
+      return
+    if message.author.bot: return
+    
     if ('egg') in message.content:
       await self.bot.add_reaction(message, '🥚')
       await self.bot.send_message(message.channel, ':egg:')
