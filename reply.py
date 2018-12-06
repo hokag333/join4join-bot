@@ -9,7 +9,8 @@ class Reply:
   async def on_message(self, message, user: discord.User):
     if message.author == self.bot.user:
       return
-    if message.author.bot: return
+    if message.author.bot:
+      return
     
     if ('egg') in message.content:
       await self.bot.add_reaction(message, '🥚')
