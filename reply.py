@@ -107,15 +107,15 @@ class Reply:
       else:
         await self.bot.send_message(message.channel, ' {} You have not any Tier'.format(message.author.mention))
         
-    if message.content.startswith('!CheckTier'):
+    if message.content.startswith('!CheckTier' + user: discord.User):
       if '508606197461680138' in (role.id for role in discord.User.roles):
-        await self.bot.send_message(message.channel, ' {} have: **Tier X** '.format(discord.User.name))
+        await self.bot.send_message(message.channel, ' {} have: **Tier X** '.format(message.user.name))
         return
       if '508606351493169155' in (role.id for role in discord.User.roles):
-        await self.bot.send_message(message.channel, ' {} have: **Tier IX** '.format(discord.User.name))
+        await self.bot.send_message(message.channel, ' {} have: **Tier IX** '.format(message.user.name))
         return
       else:
-        await self.bot.send_message(message.channel, ' {} have not any Tier'.format(discord.User.name))
+        await self.bot.send_message(message.channel, ' {} have not any Tier'.format(message.user.name))
       
   @commands.command()
   async def ping(self):
