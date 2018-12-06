@@ -91,6 +91,9 @@ class Reply:
       await self.bot.send_message(message.channel, 'You are {} \n '
                                   '**Chicken Server** member'.format(message.author.mention))
       
+    if message.content.startswith('my Tier'):
+      await self.bot.send_message(message.channel, ' {} test'.format(message.author.mention))
+      
   @commands.command()
   async def ping(self):
     await self.bot.say('bang')
