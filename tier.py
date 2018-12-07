@@ -18,7 +18,7 @@ class Tier:
   @commands.command(pass_context=True)
   async def Tier(self, ctx, user: discord.User=None):
     if not user:
-      #mentioned user tier
+      #mentioned user Tiers
       #Platinum Tiers
       if "520632449898774550" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
@@ -59,7 +59,7 @@ class Tier:
       if "520632473583878164" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
                            "You have: **Platinum Tier I** ".format(ctx.message.author.name))
-      #normal Tiers
+      #Normal Tiers
       if "508606486864461824" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
                            "You have: **Tier X** ".format(ctx.message.author.name))
@@ -104,7 +104,48 @@ class Tier:
         await self.bot.say(" **{}** \n"
                            "You haven´t got any Tier".format(ctx.message.author.name))
     else:
-      #mentioned user tier
+      #mentioned user Tiers
+      #Platinum Tiers
+      if "520632449898774550" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier X** ".format(user.name))
+        return
+      if "520632455305232384" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier IX** ".format(user.name))
+        return
+      if "520632457930997770" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier VIII** ".format(user.name))
+        return
+      if "520632460422283290" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier VII** ".format(user.name))
+        return
+      if "520632462351663109" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier VI** ".format(user.name))
+        return
+      if "520632464323117056" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier V** ".format(user.name))
+        return
+      if "520632466311086090" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier IV** ".format(user.name))
+        return
+      if "520632468328415233" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier III** ".format(user.name))
+        return
+      if "520632470253862912" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier II** ".format(user.name))
+        return
+      if "520632473583878164" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Platinum Tier I** ".format(user.name))
+      #Normal Tiers
       if "508606486864461824" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
                            "have: **Tier X** ".format(user.name))
