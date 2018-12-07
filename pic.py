@@ -54,6 +54,14 @@ class Pic:
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
+    if message.content.startswith('venom'):
+      embed = discord.Embed(title = '', description = 'Venom', colour = discord.Colour.dark_red())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://i.ytimg.com/vi/acNWDwnelLE/maxresdefault.jpg')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
   @commands.command()
   async def testall(self):
     await self.bot.say('lol')
