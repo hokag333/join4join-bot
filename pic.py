@@ -79,7 +79,7 @@ class Pic:
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('Oh'):
-      embed = discord.Embed(title = '', description = 'Ohh', colour = discord.Colour.purple())
+      embed = discord.Embed(title = 'Ohh', description = '', colour = discord.Colour.purple())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='https://i.imgur.com/xgz9nkR.gif')
