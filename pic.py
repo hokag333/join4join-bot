@@ -87,7 +87,7 @@ class Pic:
       await self.bot.send_message(message.channel, embed=embed)
       
     if ('Spiderman') in message.content:
-      embed = discord.Embed(title = '', description = 'Spiderman', colour = discord.Colour.red())
+      embed = discord.Embed(title = 'Spiderman', description = '', colour = discord.Colour.red())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='https://www.jrc.cz/userfiles/Spidey1.jpg')
