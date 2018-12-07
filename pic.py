@@ -78,6 +78,14 @@ class Pic:
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
+    if message.content.startswith('hacker'):
+      embed = discord.Embed(title = '', description = 'Ohh', colour = discord.Colour.purple())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://i.imgur.com/xgz9nkR.gif')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
   @commands.command()
   async def testall(self):
     await self.bot.say('lol')
