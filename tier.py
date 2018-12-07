@@ -58,7 +58,7 @@ class Tier:
       
       
   @commands.command(pass_context=True)
-  async def mytier(self, ctx, user: discord.User=None):
+  async def Tier(self, ctx, user: discord.User=None):
     if not user:
       #mentioned user tier
       if "508606486864461824" in (role.id for role in ctx.message.author.roles):
@@ -109,6 +109,43 @@ class Tier:
       if "508606486864461824" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
                            "have: **Tier X** ".format(user.name))
+        return
+      if "508606351493169155" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier IX** ".format(user.name))
+        return
+      if "508606276666654720" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier VIII** ".format(user.name))
+        return
+      if "508606197461680138" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier VII** ".format(user.name))
+        return
+      if "508606126497988609" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier VI** ".format(user.name))
+        return
+      if "508606074736214036" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier V** ".format(user.name))
+        return
+      if "508605954875719698" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier IV** ".format(user.name))
+        return
+      if "508605725874978825" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier III** ".format(user.name))
+        return
+      if "508605659143471104" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier II** ".format(user.name))
+        return
+      if "508605450770448384" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **Tier I** ".format(user.name))
+        return
       else:
         await self.bot.say(" **{}** \n"
                            "haven´t got any Tier".format(user.name))
