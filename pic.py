@@ -78,11 +78,19 @@ class Pic:
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
-    if message.content.startswith('hacker'):
+    if message.content.startswith('Oh'):
       embed = discord.Embed(title = '', description = 'Ohh', colour = discord.Colour.purple())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='https://i.imgur.com/xgz9nkR.gif')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
+    if ('Spiderman') in message.content:
+      embed = discord.Embed(title = '', description = 'Ohh', colour = discord.Colour.red())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://www.jrc.cz/userfiles/Spidey1.jpg')
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
