@@ -12,7 +12,7 @@ class Helper:
     if message.author.bot: return
     
     
-    if ('!help') in message.content:
+    if ('.help') in message.content:
       await self.bot.send_message(message.channel, 'helping')
       
       
