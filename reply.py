@@ -11,13 +11,6 @@ class Reply:
       return
     if message.author.bot: return
     
-    if ('god') in message.content:
-      embed = discord.Embed(title = 'EMINƎM', description = '', colour = discord.Colour.blue())
-      embed.set_footer(text='')
-      embed.set_thumbnail(url='')
-      embed.set_image(url='https://www.gannett-cdn.com/presto/2018/09/06/PDTF/c9571445-4fc8-4156-8562-dd11d01e6b4a-Detroit_rapper_Eminem-13.JPG?width=534&height=712&fit=bounds&auto=webp')
-      embed.set_author(name='', icon_url='')
-      await self.bot.send_message(message.channel, embed=embed)
     
     if ('egg') in message.content:
       await self.bot.add_reaction(message, '🥚')
