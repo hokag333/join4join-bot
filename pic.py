@@ -63,7 +63,15 @@ class Pic:
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('MACHINE GUN KELLY'):
-      embed = discord.Embed(title = '', description = 'Venom', colour = discord.Colour.blue())
+      embed = discord.Embed(title = '', description = '', colour = discord.Colour.blue())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://cdn.discordapp.com/attachments/459741965055950849/520667139007578140/download.jpg')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
+    if message.content.startswith('hacker'):
+      embed = discord.Embed(title = '', description = '', colour=0x00ffff())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='https://cdn.discordapp.com/attachments/459741965055950849/520667139007578140/download.jpg')
