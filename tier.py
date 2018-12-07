@@ -6,13 +6,18 @@ class Tier:
     self.bot = bot
     
     
-    async def on_message(self, message):
-      if message.author == self.bot.user:
-        return
-      if message.author.bot: return
+  async def on_message(self, message):
+    if message.author == self.bot.user:
+      return
+    if message.author.bot: return
       
-      if message.content.startswith('ufdmsdsdsf'):
-        await self.bot.send_message(message.channel, 'new Class tested')
+    if message.content.startswith('astabagar'):
+      await self.bot.send_message(message.channel, 'new Class tested')
+      
+      
+  @commands.command()
+  async def trtierewsi(self):
+    await self.bot.say('bang')
         
         
 def setup(bot):
