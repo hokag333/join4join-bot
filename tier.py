@@ -60,9 +60,7 @@ class Tier:
   @commands.command(pass_context=True)
   async def mytier(self, ctx, user: discord.User=None):
     if not user:
-      if "508606486864461824" in (role.id for role in message.author.roles):
-        await self.bot.say(" **{}** \n"
-                           "You have: **Tier X** ".format(message.author.roles))
+        await self.bot.say(" testing Tier reposytory")
     else:
       if "508606486864461824" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
