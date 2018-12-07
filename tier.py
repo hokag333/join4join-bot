@@ -19,6 +19,47 @@ class Tier:
   async def Tier(self, ctx, user: discord.User=None):
     if not user:
       #mentioned user tier
+      #Platinum Tiers
+      if "520632449898774550" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier X** ".format(ctx.message.author.name))
+        return
+      if "520632455305232384" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier IX** ".format(ctx.message.author.name))
+        return
+      if "520632457930997770" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier VIII** ".format(ctx.message.author.name))
+        return
+      if "520632460422283290" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier VII** ".format(ctx.message.author.name))
+        return
+      if "520632462351663109" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier VI** ".format(ctx.message.author.name))
+        return
+      if "520632464323117056" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier V** ".format(ctx.message.author.name))
+        return
+      if "520632466311086090" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier IV** ".format(ctx.message.author.name))
+        return
+      if "520632468328415233" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier III** ".format(ctx.message.author.name))
+        return
+      if "520632470253862912" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier II** ".format(ctx.message.author.name))
+        return
+      if "520632473583878164" in (role.id for role in ctx.message.author.roles):
+        await self.bot.say(" **{}** \n"
+                           "You have: **Platinum Tier I** ".format(ctx.message.author.name))
+      #normal Tiers
       if "508606486864461824" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
                            "You have: **Tier X** ".format(ctx.message.author.name))
