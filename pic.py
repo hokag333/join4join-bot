@@ -46,6 +46,14 @@ class Pic:
       embed.set_author(name='', icon_url='')
       await self.bot.send_message(message.channel, embed=embed)
       
+    if message.content.startswith('Lord'):
+      embed = discord.Embed(title = '', description = 'Lord Tachanka', colour = discord.Colour.green())
+      embed.set_footer(text='')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='https://i.kym-cdn.com/entries/icons/original/000/021/395/axi3q4APr3tkfnWkdiQPo7.jpg')
+      embed.set_author(name='', icon_url='')
+      await self.bot.send_message(message.channel, embed=embed)
+      
   @commands.command()
   async def testall(self):
     await self.bot.say('lol')
