@@ -145,6 +145,46 @@ class Tier:
                            "You haven´t got any Tier".format(ctx.message.author.name))
     else:
       #mentioned user Tiers
+      #Diamond Tiers
+      if "520631199710969864" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier X💎** ".format(user.name))
+        return
+      if "520631201778892810" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier IX💎** ".format(user.name))
+        return
+      if "520631013748113418" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier VIII💎** ".format(user.name))
+        return
+      if "520631017376186388" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier VII💎** ".format(user.name))
+        return
+      if "520631021125763082" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier VI💎** ".format(user.name))
+        return
+      if "520630751897583626" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier V💎** ".format(user.name))
+        return
+      if "520630661678235648" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier IV💎** ".format(user.name))
+        return
+      if "520630586369507350" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier III💎** ".format(user.name))
+        return
+      if "520630502827229184" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier II💎** ".format(user.name))
+        return
+      if "520630368668483594" in (role.id for role in user.roles):
+        await self.bot.say(" **{}** \n"
+                           "have: **💎Diamond Tier I💎** ".format(user.name))
       #Platinum Tiers
       if "520632449898774550" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
