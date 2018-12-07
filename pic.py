@@ -71,7 +71,7 @@ class Pic:
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('hacker'):
-      embed = discord.Embed(title = '', description = '', colour = 0x00ffff())
+      embed = discord.Embed(title = '', description = '', colour = discord.Colour.ping())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='https://cdn.discordapp.com/attachments/459741965055950849/520667139007578140/download.jpg')
