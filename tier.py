@@ -20,6 +20,8 @@ class Tier:
     if "508606486864461824" in (role.id for role in user.roles):
       await self.bot.say(" **{}** \n"
                                   "You have: **Tier X** ".format(user.name))
+    else:
+      await self.bot.say(" error")
         
         
 def setup(bot):
