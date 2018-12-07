@@ -90,52 +90,7 @@ class Reply:
       
     if message.content.startswith('Who I am'):
       await self.bot.send_message(message.channel, 'You are {} \n '
-                                  '**Chicken Server** member'.format(message.author.mention))
-      
-    if message.content.startswith('!Tier'):
-      if '508606486864461824' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier X** '.format(message.author.name))
-        return
-      if '508606351493169155' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier IX** '.format(message.author.name))
-        return
-      if '508606276666654720' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier VIII** '.format(message.author.name))
-        return
-      if '508606197461680138' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier VII** '.format(message.author.name))
-        return
-      if '508606126497988609' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier VI** '.format(message.author.name))
-        return
-      if '508606074736214036' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier V** '.format(message.author.name))
-        return
-      if '508605954875719698' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier IV** '.format(message.author.name))
-        return
-      if '508605725874978825' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier III** '.format(message.author.name))
-        return
-      if '508605659143471104' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier II** '.format(message.author.name))
-        return
-      if '508605450770448384' in (role.id for role in message.author.roles):
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have: **Tier I** '.format(message.author.name))
-        return
-      else:
-        await self.bot.send_message(message.channel, ' **{}** \n'
-                                    'You have not any Tier'.format(message.author.name))
+                                  '**Chicken Server** member'.format(message.author.mention)
         
     if message.content.startswith('askdjajsda'):
       await self.bot.send_message(message.channel, 'commands is in testing for now if they work fine')
