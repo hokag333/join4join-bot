@@ -11,13 +11,15 @@ class Tier:
       return
     if message.author.bot: return
       
-    if message.content.startswith('astabagar'):
+    if message.content.startswith('none'):
       await self.bot.send_message(message.channel, 'new Class tested')
       
       
-  @commands.command()
-  async def trtierewsi(self):
-    await self.bot.say('bang')
+  @commands.command(pass_context=True)
+  async def mytier(self, ctx, user: discord.User):
+    if '508606486864461824' in (role.id for role in ctx.user.roles):
+      await self.bot.send_message(message.channel, ' **{}** \n'
+                                  'You have: **Tier X** '.format(ctx.user.name))
         
         
 def setup(bot):
