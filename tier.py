@@ -58,7 +58,7 @@ class Tier:
       
       
   @commands.command(pass_context=True)
-  async def mytier(self, ctx, user: discord.User):
+  async def mytier(self, ctx, user: discord.User=None):
     if not user:
       if "508606486864461824" in (role.id for role in message.author.roles):
         await self.bot.say(" **{}** \n"
