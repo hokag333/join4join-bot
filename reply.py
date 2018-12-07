@@ -90,7 +90,7 @@ class Reply:
       
     if message.content.startswith('Who I am'):
       await self.bot.send_message(message.channel, 'You are {} \n '
-                                  '**Chicken Server** member'.format(message.author.mention)
+                                  '**Chicken Server** member'.format(message.author.mention))
         
     if message.content.startswith('askdjajsda'):
       await self.bot.send_message(message.channel, 'commands is in testing for now if they work fine')
