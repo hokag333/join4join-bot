@@ -17,9 +17,9 @@ class Tier:
       
   @commands.command(pass_context=True)
   async def mytier(self, ctx, user: discord.User):
-    if '508606486864461824' in (role.id for role in ctx.user.roles):
+    if '508606486864461824' in (role.id for role in user.roles):
       await self.bot.send_message(message.channel, ' **{}** \n'
-                                  'You have: **Tier X** '.format(ctx.user.name))
+                                  'You have: **Tier X** '.format(user.name))
         
         
 def setup(bot):
