@@ -22,7 +22,7 @@ class Helper:
       embed.add_field(name='.responses', value= 'all chatting cmds with bot responses', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
-    if message.content.startswith('.cmdss'):
+    if message.content.startswith('.responses'):
       embed = discord.Embed(title = 'Help', description = 'cmds', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
