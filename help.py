@@ -32,7 +32,7 @@ class Helper:
       embed.add_field(name='!Tier @user_mention', value= 'show user´s **Tier**', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
-    if ('.responses') in message.content:
+    if ('.abctest') in message.content:
       embed = discord.Embed(title = 'Help', description = 'responses', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
