@@ -29,7 +29,7 @@ class Helper:
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='!Tier', value= 'show your **Tier**', inline=False)
-      embed.add_field(name='!Tier @user_mention', value= 'show user´s**Tier**', inline=True)
+      embed.add_field(name='!Tier @user_mention', value= 'show user´s **Tier**', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
     if ('.responses') in message.content:
