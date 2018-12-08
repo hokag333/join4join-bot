@@ -19,7 +19,7 @@ class Helper:
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='.cmds', value= 'all commands of bot', inline=True)
-      embed.add_field(name='.responses', value= 'all chatting cmds to get bot responses', inline=True)
+      embed.add_field(name='.responses', value= 'all chatting cmds with bot responses', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('.test15'):
