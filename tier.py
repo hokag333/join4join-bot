@@ -59,6 +59,7 @@ class Tier:
       if "520630368668483594" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
                            "You have: **💎Diamond Tier I💎** ".format(ctx.message.author.name))
+        return
       #Platinum Tiers
       if "520632449898774550" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
@@ -99,6 +100,8 @@ class Tier:
       if "520632473583878164" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
                            "You have: **Platinum Tier I** ".format(ctx.message.author.name))
+        return
+      
       #Normal Tiers
       if "508606486864461824" in (role.id for role in ctx.message.author.roles):
         await self.bot.say(" **{}** \n"
@@ -185,6 +188,8 @@ class Tier:
       if "520630368668483594" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
                            "have: **💎Diamond Tier I💎** ".format(user.name))
+        return
+      
       #Platinum Tiers
       if "520632449898774550" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
@@ -225,6 +230,8 @@ class Tier:
       if "520632473583878164" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
                            "have: **Platinum Tier I** ".format(user.name))
+        return
+      
       #Normal Tiers
       if "508606486864461824" in (role.id for role in user.roles):
         await self.bot.say(" **{}** \n"
