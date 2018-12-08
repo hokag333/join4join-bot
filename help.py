@@ -23,7 +23,7 @@ class Helper:
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('.responses'):
-      embed = discord.Embed(title = 'Help', description = 'responses', colour = discord.Colour.blue())
+      embed = discord.Embed(title = 'Help - responses', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
@@ -32,13 +32,13 @@ class Helper:
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('.cmds'):
-      embed = discord.Embed(title = 'Help', description = 'cmds', colour = discord.Colour.blue())
+      embed = discord.Embed(title = 'Help - cmds', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='!Tier', value= 'show your **Tier**', inline=False)
-      embed.add_field(name='!Tier @user_mention', value= 'show user´s **Tier**', inline=True)
+      embed.add_field(name='!Tier @user_mention', value= 'show mentioned user´s **Tier**', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
       
