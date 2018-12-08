@@ -22,13 +22,13 @@ class Helper:
       embed.add_field(name='.responses', value= 'all chatting cmds with bot responses', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
-    if message.content.startswith('.test15'):
-      embed = discord.Embed(title = 'Help', description = 'responses', colour = discord.Colour.blue())
+    if message.content.startswith('.checktest'):
+      embed = discord.Embed(title = 'Help', description = 'cmds', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='not set', value= '', inline=True)
+      embed.add_field(name='!Tier @user_mention', value= 'show user´s **Tier**', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('.cmds'):
