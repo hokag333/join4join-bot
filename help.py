@@ -28,7 +28,7 @@ class Helper:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='this is not set', value= '', inline=False)
+      embed.add_field(name='this is not set', value= 'this is not set', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('.cmds'):
