@@ -43,6 +43,30 @@ class Points:
       else:
         await self.bot.say(" **{}** you don´t have any points \n"
                            "or isn´t write".format(ctx.message.author.name))
+    #user.list
+    else:
+      #4835
+      if "381887710308335618" in (user.id):
+        await self.bot.say(" **{}** have **∞** points".format(user.name))
+        return
+      #7553
+      if "461967586058305537" in (user.id):
+        await self.bot.say(" **{}** have **5 500** points".format(user.name))
+        return
+      #1056
+      if "466673021248208896" in (user.id):
+        await self.bot.say(" **{}** have **1 000** points".format(user.name))
+        return
+      #3046
+      if "310264325497421824" in (user.id):
+        await self.bot.say(" **{}** have **1 000** points".format(user.name))
+        return
+      #6739
+      if "373867168280084496" in (user.id):
+        await self.bot.say(" **{}** have **500** points".format(user.name))
+        return
+      else:
+        await self.bot.say(" **{}** haven't got any points".format(user.name))
         
         
 def setup(bot):
