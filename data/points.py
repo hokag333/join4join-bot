@@ -15,7 +15,7 @@ class Points:
       await self.bot.send_message(message.channel, ' **{}**  to view your points write !points'.format(message.author.name))
       
     if message.content.startswith('!points register'):
-      await self.bot.send_message(520911898909212676, ' **{}**  was registered to points board'.format(message.author.name))
+      await self.bot.send_message(bot.get_channel('520911898909212676'), ' **{}**  was registered to points board'.format(message.author.name))
       
   @commands.command(pass_context=True)
   async def points(self, ctx, user: discord.User=None):
