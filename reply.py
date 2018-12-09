@@ -29,7 +29,7 @@ class Reply:
         await self.bot.send_message(message.channel, ' ** :hatched_chick: I am fine tnx :hatched_chick: ** ')
       
       if message.content.startswith('Hi'):
-        await self.bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
+        await self.bot.send_message(message.channel, ':hatched_chick: **Hello {}** :hatched_chick: '.format(message.author.name))
       
       if message.content.startswith('hi'):
         await self.bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
