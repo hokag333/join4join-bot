@@ -6,6 +6,8 @@ class Points:
   def __init__(self, bot):
     self.bot = bot
     
+  points = pointsdata(int)
+    
     
   async def on_message(self, message):
     if message.author == self.bot.user:
