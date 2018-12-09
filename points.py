@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+from data import pointsdata
 
 class Points:
   def __init__(self, bot):
