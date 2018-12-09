@@ -32,7 +32,7 @@ class Reply:
         await self.bot.send_message(message.channel, ':hatched_chick: **Hello {}** :hatched_chick: '.format(message.author.name))
       
       if message.content.startswith('hi'):
-        await self.bot.send_message(message.channel, ':hatched_chick: **Hello** :hatched_chick: ')
+        await self.bot.send_message(message.channel, ':hatched_chick: **Hello {}** :hatched_chick: '.format(message.author.name))
       
       if message.content.startswith('whats up'):
         await self.bot.send_message(message.channel, ' **I am good u** ')
@@ -53,7 +53,7 @@ class Reply:
         await self.bot.send_message(message.channel, 'who is there?!')
         
       if message.content.startswith('Hey!'):
-        await self.bot.send_message(message.channel, 'Yeah boy')
+        await self.bot.send_message(message.channel, 'whats up {}'.format(message.author.name))
       
       if message.content.startswith('train'):
         await self.bot.send_message(message.channel, ':bullettrain_front:')
