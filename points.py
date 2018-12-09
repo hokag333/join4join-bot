@@ -18,11 +18,11 @@ class Points:
   @commands.command(pass_context=True)
   async def give(self, ctx, member: discord.Member):
     points[member.id] += 1
-    self.bot.say("{} now has {} points".format(member.mention, points[member.id]))
+    await self.bot.say("{} now has {} points".format(member.mention, points[member.id]))
     
   @commands.command(pass_context=True)
   async def points(self, ctx, member: discord.Member):
-    self.bot.say("{} has {} points".format(member.mention, points[member.id]))
+    await self.bot.say("{} has {} points".format(member.mention, points[member.id]))
     
 
 def setup(bot):
