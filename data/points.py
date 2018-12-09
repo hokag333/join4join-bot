@@ -12,7 +12,9 @@ class Points:
     if message.author.bot: return
     
     if message.content.startswith('!points help'):
-      await self.bot.send_message(message.channel, ' **{}**  to view your points write !points'.format(message.author.name))
+      await self.bot.send_message(message.channel, " **{}** \n"
+                                  "**!points** to show your/user´s points \n"
+                                  "**!points register** if you are not registered".format(message.author.name))
       
     if message.content.startswith('!points register'):
       await self.bot.send_message(self.bot.get_channel('520911898909212676'), ' **{}**  was registered to points member list'.format(message.author.name))
@@ -41,8 +43,8 @@ class Points:
         await self.bot.say(" **{}** you have **500** points".format(ctx.message.author.name))
         return
       else:
-        await self.bot.say(" **{}** you don´t have any points \n"
-                           "or isn´t write".format(ctx.message.author.name))
+        await self.bot.say(" **{}** you haven't got any points \n"
+                           "or not registered **(!points help)**".format(ctx.message.author.name))
     #user.list
     else:
       #4835
