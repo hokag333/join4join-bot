@@ -9,7 +9,7 @@ from discord.ext.commands import Bot
 bot=commands.Bot(command_prefix='!')
 bot.remove_command('help')
 
-extensions = ['reply', 'pic', 'tier', 'help', 'data.points']
+extensions = ['reply', 'pic', 'data.tier', 'help', 'data.points']
 
 @bot.event
 async def on_ready():
