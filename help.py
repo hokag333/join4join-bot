@@ -13,7 +13,7 @@ class Helper:
     
     
     if message.content.startswith('.help'):
-      embed = discord.Embed(title = 'Help', description = '', colour = discord.Colour.blue())
+      embed = discord.Embed(title = 'Help', description = '[chicken server](https://discord.gg/9hjAVpP)', url: "https://discord.gg/9hjAVpP" colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
