@@ -7,38 +7,6 @@ class Points:
     self.bot = bot
     
   
-  try:
-    with open("users.json") as fp:
-        users = json.load(fp)
-except Exception:
-    users = {}
-
-def save_users():
-    with open("users.json", "w+") as fp:
-        json.dump(users, fp, sort_keys=True, indent=4)
-
-def add_points(user: discord.User, points: int):
-    id = user.id
-    if id not in users:
-        users[id] = {}
-    users[id]["points"] = users[id].get("points", 0) + points
-    print("{} now has {} points".format(user.name, users[id]["points"]))
-    save_users()
-
-def get_points(user: discord.User):
-    id = user.id
-    if id in users:
-        return users[id].get("points", 0)
-    return 0
-
-async def on_message(self, message):
-    if message.author == client.user:
-        return
-    print("{} sent a message".format(message.author.name))
-    if message.content.lower().startswith("!points"):
-        msg = "You have {} points!".format(get_points(message.author))
-        await self.bot.send_message(message.channel, msg)
-    add_points(message.author, 1)
     
   async def on_message(self, message):
     if message.author == self.bot.user:
@@ -53,25 +21,6 @@ async def on_message(self, message):
     if message.content.startswith('!points register'):
       await self.bot.send_message(self.bot.get_channel('520911898909212676'), ' **{}**  was registered to points member list'.format(message.author.name))
   
-  @commands.command(pass_context=True)
-  async def coinflip(self, ctx, guess: str, amount: float):
-    guesses = ('heads', 'tails')
-    guess = guess.lower()
-    if guess not in guesses:
-      await self.bot.say("Invalid guess.")
-      return
-    author = ctx.message.author
-    balance = get_dollars(author)
-    if balance < amount:
-      await self.bot.say(f"You don't have that much money.  Your balance is ${balance:.2f}")
-      return
-    result = random.sample(guesses)
-    if result == guess:
-      await self.bot.say("You won!")
-      add_dollars(author, amount)
-    else:
-      await self.bot.say("You lost!")
-      remove_dollars(author, amount)
       
   @commands.command(pass_context=True)
   async def points(self, ctx, user: discord.User=None):
