@@ -5,6 +5,39 @@ class Points:
   def __init__(self, bot):
     self.bot = bot
     
+  
+  try:
+    with open("users.json") as fp:
+        users = json.load(fp)
+except Exception:
+    users = {}
+
+def save_users():
+    with open("users.json", "w+") as fp:
+        json.dump(users, fp, sort_keys=True, indent=4)
+
+def add_points(user: discord.User, points: int):
+    id = user.id
+    if id not in users:
+        users[id] = {}
+    users[id]["points"] = users[id].get("points", 0) + points
+    print("{} now has {} points".format(user.name, users[id]["points"]))
+    save_users()
+
+def get_points(user: discord.User):
+    id = user.id
+    if id in users:
+        return users[id].get("points", 0)
+    return 0
+
+async def on_message(self, message):
+    if message.author == client.user:
+        return
+    print("{} sent a message".format(message.author.name))
+    if message.content.lower().startswith("!points"):
+        msg = "You have {} points!".format(get_points(message.author))
+        await self.bot.send_message(message.channel, msg)
+    add_points(message.author, 1)
     
   async def on_message(self, message):
     if message.author == self.bot.user:
