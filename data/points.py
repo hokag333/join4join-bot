@@ -20,7 +20,7 @@ class Points:
       await self.bot.send_message(self.bot.get_channel('520911898909212676'), ' **{}**  was registered to points member list'.format(message.author.name))
   
   @commands.command(pass_context=True)
-  async def coinflip(ctx, guess: str, amount: float):
+  async def coinflip(self, ctx, guess: str, amount: float):
     guesses = ('heads', 'tails')
     guess = guess.lower()
     if guess not in guesses:
