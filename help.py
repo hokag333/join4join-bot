@@ -13,14 +13,14 @@ class Helper:
     
     
     if message.content.startswith('.help'):
-      embed = discord.Embed(title = 'Help', description = '[chicken server](https://discord.gg/9hjAVpP)', colour = discord.Colour.blue())
+      embed = discord.Embed(title = 'Help', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='** **', value= '[chicken server](https://discord.gg/9hjAVpP)', inline=True)
-      embed.add_field(name='** **', value= '[chicken website](http://chickenserver.wix.com/website)', inline=False)
-      embed.add_field(name='.cmds', value= 'all commands of bot', inline=True)
+      embed.add_field(name='** **', value= '[chicken website](http://chickenserver.wix.com/website)', inline=True)
+      embed.add_field(name='.cmds', value= 'all commands of bot', inline=False)
       embed.add_field(name='.responses', value= 'all chatting cmds with bot responses', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       
