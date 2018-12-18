@@ -5,6 +5,9 @@ class User:
   def __init__(self, bot):
     self.bot = bot
     
+  @commands.command(pass_context=True)
+  async def testrep(self, ctx):
+    await self.bot.send_message(ctx.message.channel, "hi")
     
   @commands.command(pass_context=True)
   async def me(self, ctx):
