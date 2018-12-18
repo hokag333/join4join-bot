@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class User:
+class Userinfo:
   def __init__(self, bot):
     self.bot = bot
     
@@ -19,4 +19,4 @@ class User:
     
     
 def setup(bot):
-  bot.add_cog(User(bot))
+  bot.add_cog(Userinfo(bot))
