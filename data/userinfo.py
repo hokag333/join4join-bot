@@ -14,7 +14,7 @@ class Userinfo:
     embed=discord.Embed(title=" ", description="{}".format(ctx.message.author.name), color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=ctx.message.author.avatar_url)
-    embed.add_field(name="Higgest role", value="{}".format(ctx.message.author.top_role.name, inline=True)
+    embed.add_field(name="Higgest role", value="fixing", inline=True)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
     
