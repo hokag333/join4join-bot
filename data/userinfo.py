@@ -15,7 +15,7 @@ class Userinfo:
     embed.set_author(name=" ")
     embed.set_image(url=ctx.message.author.avatar_url)
     embed.add_field(name="Higgest role", value="{}".format(ctx.message.author.top_role.mention, inline=True)
-    embed.add_field(name="Joined", value="{}".format(ctx.message.author.joined_at.date, inline=True)
+    embed.add_field(name="Joined", value="test", inline=True)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
     
