@@ -7,7 +7,7 @@ class Userinfo:
     
     
   @commands.command(pass_context=True)
-  async def me(self, ctx, user: discord.User=None):
+  async def userinfo(self, ctx, user: discord.User=None):
     if not user:
       user = ctx.message.author
     embed=discord.Embed(title=" ", description="{}".format(user.name), color=0xfed83d)
