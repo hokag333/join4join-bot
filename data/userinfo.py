@@ -18,7 +18,7 @@ class Userinfo:
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
     embed.add_field(name="Highest role", value=" {} ".format(user.top_role.mention), inline=True)
-    embed.add_field(name="Tier", value=tierid, inline=True) 
+    embed.add_field(name="Tier", value= tierid, inline=True) 
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
     
