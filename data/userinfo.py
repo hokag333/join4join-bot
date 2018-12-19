@@ -13,8 +13,10 @@ class Userinfo:
     #Diamond Tiers
     if "520631199710969864" in(role.id for role in user.roles):
       tierid = "<@&520631199710969864>"
+      return
     if "" in(role.id for role in user.roles):
       tierid = "<@&520631201778892810>"
+      return
     if "520631013748113418" in(role.id for role in user.roles):
       tierid = "<@&520631013748113418>"
     if "520631017376186388" in(role.id for role in user.roles):
