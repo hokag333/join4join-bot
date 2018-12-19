@@ -104,7 +104,7 @@ class Userinfo:
                                                                 tierid = "<@&508605450770448384>"
                                                               else:
                                                                 tierid = "none"
-    embed=discord.Embed(title="User", description="{}".format(user.name), color=0xfed83d)
+    embed=discord.Embed(title="User", description="{}".format(user.mention), color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
     embed.add_field(name="Highest role", value=" {} ".format(user.top_role.mention), inline=True)
