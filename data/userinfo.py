@@ -13,7 +13,7 @@ class Userinfo:
     if "520630368668483594" in(role.id for role in user.roles):
       tierid = "<@&520630368668483594>" 
     else:
-      tierid = "none" 
+      tierid = "none or not set(this command is in set mode)" 
     embed=discord.Embed(title="User", description="{}".format(user.name), color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
