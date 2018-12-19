@@ -104,13 +104,17 @@ class Userinfo:
                                                                 tierid = "<@&508605450770448384>"
                                                               else:
                                                                 tierid = "none"
+    invites = await self.bot.invites_from(ctx.message.channel.server)
+    for invite in invite:
+      if invite.Inviter == user:
+        print(invite.uses)
     embed=discord.Embed(title="User", description="{}".format(user.mention), color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
     embed.add_field(name="Highest role", value=" {} ".format(user.top_role.mention), inline=True)
     embed.add_field(name="Tier", value=" {} ".format(tierid), inline=True)
     embed.add_field(name="Joined at", value=" {} ".format(user.joined_at.strftime(" %d %B %Y ")), inline=False)
-    embed.add_field(name="Invites", value=" {} ".format(user.invite_uses)), inline=False)
+    embed.add_field(name="Invites", value=" {} ".format(invites), inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
     
