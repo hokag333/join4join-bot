@@ -10,11 +10,10 @@ class Userinfo:
   async def userinfo(self, ctx, user: discord.User=None):
     if not user:
       user = ctx.message.author
-    if:
-      #Diamond Tiers
-      if "520631199710969864" in(role.id for role in user.roles):
-        try:
-          tierid = "<@&520631199710969864>"
+    #Diamond Tiers
+    if "520631199710969864" in(role.id for role in user.roles):
+      tierid = "<@&520631199710969864>"
+      return infotest
     if "" in(role.id for role in user.roles):
       tierid = "<@&520631201778892810>"
       return
@@ -105,14 +104,16 @@ class Userinfo:
       tierid = "<@&508605450770448384>"
       return
     else:
-      tierid = "none" 
-    embed=discord.Embed(title="User", description="{}".format(user.name), color=0xfed83d)
-    embed.set_author(name=" ")
-    embed.set_image(url=user.avatar_url)
-    embed.add_field(name="Highest role", value=" {} ".format(user.top_role.mention), inline=True)
-    embed.add_field(name="Tier", value=" {} ".format(tierid), inline=True)
-    embed.add_field(name="Join at", value=" {} ".format(user.joined_at.strftime("%A, %B %d %Y @ %H:%M:%S %p")), inline=False)
-    await self.bot.send_message(ctx.message.channel, embed=embed)
+      tierid = "none"
+      
+    infotest:
+      embed=discord.Embed(title="User", description="{}".format(user.name), color=0xfed83d)
+      embed.set_author(name=" ")
+      embed.set_image(url=user.avatar_url)
+      embed.add_field(name="Highest role", value=" {} ".format(user.top_role.mention), inline=True)
+      embed.add_field(name="Tier", value=" {} ".format(tierid), inline=True)
+      embed.add_field(name="Join at", value=" {} ".format(user.joined_at.strftime("%A, %B %d %Y @ %H:%M:%S %p")), inline=False)
+      await self.bot.send_message(ctx.message.channel, embed=embed)
     
     
 def setup(bot):
