@@ -10,7 +10,7 @@ class Userinfo:
   async def userinfo(self, ctx, user: discord.User=None):
     if not user:
       user = ctx.message.author
-    if:
+    try:
       #Diamond Tiers
       if "520631199710969864" in(role.id for role in user.roles):
         tierid = "<@&520631199710969864>"
