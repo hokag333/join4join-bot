@@ -10,10 +10,7 @@ class Userinfo:
   async def userinfo(self, ctx, user: discord.User=None):
     if not user:
       user = ctx.message.author
-    if "520630368668483594" in(role.id for roles in user.role):
-      tierid = "<@&520630368668483594>" 
-    else:
-      tierid = "none" 
+    tierid = "none" 
     embed=discord.Embed(title="User", description="{}".format(user.name), color=0xfed83d)
     embed.set_author(name=" ")
     embed.set_image(url=user.avatar_url)
