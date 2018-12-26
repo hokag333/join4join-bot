@@ -20,7 +20,7 @@ class Swearwords:
       embed.set_author(name='Warn', icon_url=message.author.avatar_url)
       embed.add_field(name='User', value= '{}'.format(message.author.mention), inline=True)
       embed.add_field(name='Reason', value='Swear Words ', inline=True)
-      await self.bot.send_message(discord.Object(id='501076339973947402'), embed=embed)
+      await self.bot.send_message(message.channel, embed=embed)
       
       
 def setup(bot):
