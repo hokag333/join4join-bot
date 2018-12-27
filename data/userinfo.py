@@ -111,6 +111,7 @@ class Userinfo:
     embed.add_field(name="Highest role", value=" {} ".format(user.top_role.mention), inline=True)
     embed.add_field(name="Tier", value=" {} ".format(tierid), inline=True)
     embed.add_field(name="Joined at", value=" {} ".format(user.joined_at.strftime(" %d %B %Y ")), inline=False)
+    embed.add_field(name="Account Created at", value=" {} ".format(user.created_at.strftime(" %d %B %Y ")), inline=False)
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
     
