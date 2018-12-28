@@ -18,7 +18,7 @@ async def my_background_task():
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='version 1.0.1'))
         await asyncio.sleep(5)
-        await bot.change_presence(game=discord.Game(name='6 members'))
+        await bot.change_presence(game=discord.Game(name='7 members'))
         await asyncio.sleep(5)
         
 @bot.event
