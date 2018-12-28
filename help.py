@@ -30,9 +30,10 @@ class Helper:
     await self.bot.say('pong')
     
   @commands.command()
-  async def help(self, ctx, *, reason):
-    await self.bot.send_message(ctx.message.channel, "help message add soon")
-    if "admin" in(reason):
+  async def help(self, ctx, reason=None):
+    if not reason:
+      await self.bot.send_message(ctx.message.channel, "help message add soon")
+    if 'admin' in(reason):
       await self.bot.send_message(ctx.message.channel, "test")
     
     
