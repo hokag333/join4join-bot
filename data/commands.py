@@ -7,8 +7,7 @@ class Commands:
     
   @commands.command(pass_context=True)
   async def dm(self, ctx, *, reason):
-    await self.bot.send_message(ctx.message.channel, " test \n" + reason
-                                "message by {}".format(ctx.message.author.mention))
+    await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
