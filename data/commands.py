@@ -30,9 +30,12 @@ class Commands:
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       await self.bot.send_message(user, "❗verification error❗ \n"
                                   "{} you are not **Chicken Server** member \n"
-                                  "If you want to get verification and enable post invite links \n"
+                                  "If you want to get **verification** and enable post **invite links** \n"
+                                  " \n"
                                   "Join **Chicken Server** \n"
                                   "https://discord.gg/9hjAVpP".format(user.mention))
+      await self.bot.send_message(ctx.message.channel, "{} get verification error message".format(user.mention))
+      return
     
 def setup(bot):
   bot.add_cog(Commands(bot))
