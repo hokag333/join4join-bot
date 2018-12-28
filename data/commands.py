@@ -18,12 +18,14 @@ class Commands:
       raise error
       
   @commands.command(pass_context=True)
-  @commands.cooldown(1, 60, commands.BucketType.user)
-  async def dm(self, ctx):
+  @commands.cooldown(1, 3, commands.BucketType.user)
+  async def dm(self, ctx, *, reason=""):
     if "528160233273425923" in(role.id for role in ctx.message.author.roles):
-      await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
+      await self.bot.delete_message(ctx.message)
+      await self.bot.send_message(ctx.message.channel, "{}\n"
+                                  "**Join 4 Join dm** by{}".format(reason, ctx.message.author.mention))
     else:
-      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm users".format(ctx.message.author.mention))
+      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
