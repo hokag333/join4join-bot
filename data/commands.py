@@ -6,7 +6,7 @@ class Commands:
     self.bot = bot
     
   @commands.command(pass_context=True)
-  async def dm(self, ctx, *, reason):
+  async def dm(self, ctx,):
     await self.bot.say(" test message by {}".format(ctx.message.author.mention))
     
 def setup(bot):
