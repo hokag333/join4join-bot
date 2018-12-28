@@ -3,13 +3,7 @@ from discord.ext import commands
 
 class Userinfo:
   def __init__(self, bot):
-    self.bot = bot
-    
-  @commands.command(pass_context=True)
-  async def dm(self, ctx, *, reason):
-    await self.bot.send_message(ctx.message.channel," \n" + reason, 
-                                "by user {} ".format(ctx.message.author.mention)
-    await self.bot.send_message(server_member, " "  + reason)  
+    self.bot = bot 
                                 
   @commands.command(pass_context=True)
   async def userinfo(self, ctx, user: discord.User=None):
