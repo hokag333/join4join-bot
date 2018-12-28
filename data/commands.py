@@ -24,7 +24,7 @@ class Commands:
       await self.bot.delete_message(ctx.message)
       await self.bot.send_message(ctx.message.channel, "{}\n"
                                   " \n"
-                                  "**Join 4 Join dm** by{}".format(reason, ctx.message.author.mention))
+                                  "**Join 4 Join dm** by {}, don´t forget to contact him to join your server".format(reason, ctx.message.author.mention))
     else:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
     
