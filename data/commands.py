@@ -19,8 +19,8 @@ class Commands:
     await self.bot.say("messages deleted")
     
   @commands.command(pass_context=True)
-  async def dm(self, ctx):
-    await self.bot.send_message(ctx.message.channel," test dm \n"
+  async def dm(self, ctx, *, reason):
+    await self.bot.send_message(ctx.message.channel," \n" + reason, 
                                 "by user {} ".format(ctx.message.author.mention)
     await self.bot.send_message(server_member, "test")
 
