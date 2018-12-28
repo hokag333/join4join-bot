@@ -5,12 +5,12 @@ class Commands:
   def __init__(self, bot):
     self.bot = bot
     
-  async def on_message(self, ctx, message):
+  async def on_message(self, message):
     if ('discord.gg') in message.content:
-      if "528162784022626314" in(role.id for role in ctx.message.author.roles):
+      if "528162784022626314" in(role.id for role in message.author.roles):
         return
       else:
-        await self.bot.delete_message(ctx.message)
+        await self.bot.delete_message(message)
     
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
@@ -23,6 +23,7 @@ class Commands:
     if "528160233273425923" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
       await self.bot.send_message(ctx.message.channel, "{}\n"
+                                  " \n"
                                   "**Join 4 Join dm** by{}".format(reason, ctx.message.author.mention))
     else:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
