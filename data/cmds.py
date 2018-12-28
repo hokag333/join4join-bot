@@ -9,8 +9,8 @@ class Cmds:
   @commands.command(pass_context=True)
   async def dm(self, ctx, reason):
     await self.bot.delete_message(ctx.message)
-    await self.bot.send_message(ctx.message.channel," {} \n"
-                                "by user {} ".format(reason, ctx.message.author.mention)
+    await self.bot.send_message(ctx.message.channel,"  \n" + reason
+                                "by user {} ".format(ctx.message.author.mention)
 
     
     
