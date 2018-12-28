@@ -5,7 +5,7 @@ class Commands:
   def __init__(self, bot):
     self.bot = bot
     
-  async def on_message(self, message):
+  async def on_message(self, ctx, message):
     if ('discord.gg') in message.content:
       if "528162784022626314" in(role.id for role in ctx.message.author.roles):
         return
