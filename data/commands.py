@@ -12,7 +12,7 @@ class Commands:
   @commands.command(pass_context=True)
   async def verify(self, ctx):
     await self.bot.delete_message(ctx.message)
-    await self.bot.send_message(ctx.message.channel, " {} waiting for verification".format(ctx.message.author.mention)
+    await self.bot.send_message(ctx.message.channel, " {} waiting for verification".format(ctx.message.author.mention))
     
 def setup(bot):
   bot.add_cog(Commands(bot))
