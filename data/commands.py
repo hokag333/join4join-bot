@@ -6,6 +6,7 @@ class Commands:
     self.bot = bot
     
   @commands.command(pass_context=True)
+  @commands.cooldown(1, 30, commands.BucketType.user)
   async def dm(self, ctx):
     await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
     
