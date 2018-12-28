@@ -5,13 +5,16 @@ class Commands:
   def __init__(self, bot):
     self.bot = bot
     
+    
+  async def on_command_error(self, error, ctx):
+    if isinstance(error, commands.CommandOnCooldown):
+      await self.bot.send_message(ctx.message.channel, content='This command is on a %.2fs cooldown' % error.retry_after)
+      raise error
+      
   @commands.command(pass_context=True)
   @commands.cooldown(1, 60, commands.BucketType.user)
   async def dm(self, ctx):
     await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
-  async def on_command_error(self, ctx, error):
-    if isinstance(error, commands.CommandOnCooldown):
-      await self.bot.send_message(ctx.message.channel, "This command is on cooldown, please retry in {}s.".format(math.ceil(error.retry_after)))
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
