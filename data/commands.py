@@ -22,7 +22,6 @@ class Commands:
   async def dm(self, ctx):
     if "528160233273425923" in(role.id for role in ctx.message.author.roles):
       await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
-      return
     else:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm users".format(ctx.message.author.mention))
     
