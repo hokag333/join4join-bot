@@ -22,7 +22,7 @@ class Commands:
   async def dm(self, ctx, *, reason):
     await self.bot.send_message(ctx.message.channel," \n" + reason, 
                                 "by user {} ".format(ctx.message.author.mention)
-    await self.bot.send_message(server_member, "test")
+    await self.bot.send_message(server_member, " "  + reason)
 
     
     
