@@ -6,6 +6,12 @@ class Userinfo:
     self.bot = bot
     
   @commands.command(pass_context=True)
+  async def dm(self, ctx, *, reason):
+    await self.bot.send_message(ctx.message.channel," \n" + reason, 
+                                "by user {} ".format(ctx.message.author.mention)
+    await self.bot.send_message(server_member, " "  + reason)  
+                                
+  @commands.command(pass_context=True)
   async def userinfo(self, ctx, user: discord.User=None):
     if not user:
       user = ctx.message.author
