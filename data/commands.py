@@ -14,7 +14,7 @@ class Commands:
     
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
-      await self.bot.send_message(ctx.message.channel, content="You have {:.2s}s cooldown on this command".format(error.retry_after))
+      await self.bot.send_message(ctx.message.channel, "You have {:.2s}s cooldown on this command".format(error.retry_after))
       raise error
       
   @commands.command(pass_context=True)
