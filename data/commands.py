@@ -6,8 +6,9 @@ class Commands:
     self.bot = bot
     
   @commands.command(pass_context=True)
-  async def dm(self, ctx):
-    await self.bot.say(" test {}".format(ctx.message.author.mention))
+  async def dm(self, ctx, *, reason):
+    await self.bot.say(" test {} /n".format(reason)
+                       "message by {}".format(ctx.message.author.mention))
     
 def setup(bot):
   bot.add_cog(Commands(bot))
