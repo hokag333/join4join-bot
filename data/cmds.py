@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Cmds:
+class Commands:
   def __init__(self, bot):
     self.bot = bot
     
@@ -27,4 +27,4 @@ class Cmds:
     
     
 def setup(bot):
-  bot.add_cog(Cmds(bot))
+  bot.add_cog(Commands(bot))
