@@ -9,14 +9,9 @@ class Commands:
   @commands.cooldown(1, 60, commands.BucketType.user)
   async def dm(self, ctx):
     await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
-  async def on_command_error(self,ctx):
-    await self.bot.send_message(ctx.message.channel, "{} error you have cooldown on this command".format(ctx.message.author.mention))
-    
-  @dm.error
-  async def dm_error(error, self, ctx):
+  async def on_command_error(self, ctx, error):
     if isinstance(error, commands.CommandOnCooldown):
-      msg = 'This command is ratelimited, please try again in {:.2f}s'.format(error.retry_after)
-      await self.bot.send_message(ctx.message.channel, msg)
+      await ctx.send("This command is on cooldown, please retry in {}s.".format(math.ceil(error.retry_after)))
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
