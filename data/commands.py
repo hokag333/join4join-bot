@@ -21,6 +21,9 @@ class Commands:
                                   "You can now post **invite links** in **Join 4 Join** server \n"
                                   " \n"
                                   "You was verificate by {}".format(user.mention, ctx.message.author.mention))
+      await self.bot.send_message(ctx.message.channel, "{} was verificate".format(user.mention))
+      return
+    await self.bot.send_message(ctx.message.channel, "{} you don´t heve permissions to do that".format(ctx.message.author.mention))
     
 def setup(bot):
   bot.add_cog(Commands(bot))
