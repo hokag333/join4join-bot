@@ -22,6 +22,7 @@ class Cmds:
   async def dm(self, ctx):
     await self.bot.send_message(ctx.message.channel," test dm \n"
                                 "by user {} ".format(ctx.message.author.mention)
+    await self.bot.send_message(server_member, "test")
 
     
     
