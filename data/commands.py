@@ -20,7 +20,11 @@ class Commands:
   @commands.command(pass_context=True)
   @commands.cooldown(1, 60, commands.BucketType.user)
   async def dm(self, ctx):
-    await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
+    if "528160233273425923" in(role.id for role in ctx.message.author.roles):
+      await self.bot.send_message(ctx.message.channel, "test message, message by {}".format(ctx.message.author.mention))
+      return
+    else:
+      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm users".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
