@@ -18,7 +18,8 @@ class Commands:
   async def verified(self, ctx, user: discord.User):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       await self.bot.send_message(user, "{} verification complete \n"
-                                  "You can now post invite links in **Join 4 Join** server \n"
+                                  "You can now post **invite links** in **Join 4 Join** server \n"
+                                  " \n"
                                   "You was verificate by {}".format(user.mention, ctx.message.author.mention))
     
 def setup(bot):
