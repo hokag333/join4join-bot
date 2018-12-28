@@ -7,7 +7,7 @@ class Commands:
     
   @commands.command(pass_context=True)
   async def dm(self, ctx, *, reason):
-    await self.bot.say(" test {} /n".format(reason)
+    await self.bot.say(" test {} /n"
                        "message by {}".format(ctx.message.author.mention))
     
 def setup(bot):
