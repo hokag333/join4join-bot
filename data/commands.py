@@ -16,6 +16,21 @@ class Commands:
   @commands.command(pass_context=True)
   async def verify(self, ctx):
     await self.bot.delete_message(ctx.message)
+    await self.bot.send_message(ctx.message.author, "**Chicken server** \n"
+                                "🔄**Game Updates** - for new updates of games \n"
+                                "🎥**Twitch bot** - for watching live streams on discord server \n"
+                                "🎵**Music bots** - for listen songs with your friends \n"
+                                "👌**memes** \n"
+                                "🐻**funny animals** \n"
+                                "🤔**would you rather** \n"
+                                "🔔**selectable roles** - you can choose which you want to use and get notify on the server \n"
+                                "❔**helper** - when you need help with something \n"
+                                "📢**giveaways** - you can join on our website \n"
+                                "💬**Chat Rooms** and 🔈**Voice Rooms** \n"
+                                "and more \n"
+                                " \n"
+                                "**Invite** : **__ {} to verification join this server__** \n"
+                                "https://discord.gg/9hjAVpP".format(ctx.message.author.mention))
     await self.bot.send_message(ctx.message.channel, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
