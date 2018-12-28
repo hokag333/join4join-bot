@@ -29,7 +29,7 @@ class Commands:
                                 "💬**Chat Rooms** and 🔈**Voice Rooms** \n"
                                 "and more \n"
                                 " \n"
-                                "**Invite** : **__ {} to verification join this server__** \n"
+                                "**Invite** : {}**__to verification join this server__** \n"
                                 "https://discord.gg/9hjAVpP".format(ctx.message.author.mention))
     await self.bot.send_message(ctx.message.channel, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
