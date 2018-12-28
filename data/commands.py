@@ -18,7 +18,7 @@ class Commands:
       raise error
       
   @commands.command(pass_context=True)
-  @commands.cooldown(1, 86400, commands.BucketType.user)
+  @commands.cooldown(1, 60, commands.BucketType.user)
   async def dm(self, ctx, *, reason=""):
     if "528160233273425923" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
