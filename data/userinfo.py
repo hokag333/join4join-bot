@@ -5,9 +5,6 @@ class Userinfo:
   def __init__(self, bot):
     self.bot = bot
     
-  async def on_message(self, message):
-    if message.content.startswith('test'):
-      await self.bot.send_message(message.channel, 'test')
       
   @commands.command(pass_context=True)
   async def userinfo(self, ctx, user: discord.User=None):
