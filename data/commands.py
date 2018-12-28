@@ -6,7 +6,7 @@ class Commands:
     self.bot = bot
     
   @commands.command(pass_context=True)
-  async def dm(self, ctx, *, reason):
+  async def dm(self):
     await self.bot.say("test")
     
 def setup(bot):
