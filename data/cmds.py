@@ -5,7 +5,10 @@ class Cmds:
   def __init__(self, bot):
     self.bot = bot
     
-    
+  async def on_message(self, message):
+    if message.content.startswith('test'):
+      await self.bot.send_message(message.channel, 'test')
+      
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=100):
     channel = ctx.message.channel
