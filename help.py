@@ -26,8 +26,8 @@ class Helper:
       
       
   @commands.command()
-  async def bro(self):
-    await self.bot.say('ring')
+  async def ping(self):
+    await self.bot.say('pong')
     
     
 def setup(bot):
