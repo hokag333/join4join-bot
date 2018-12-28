@@ -12,7 +12,7 @@ class Helper:
     if message.author.bot: return
     
     
-    if message.content.startswith('.help'):
+    if message.content.startswith('!help'):
       embed = discord.Embed(title = 'Help', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
@@ -28,6 +28,11 @@ class Helper:
   @commands.command()
   async def ping(self):
     await self.bot.say('pong')
+    
+  @commands.command()
+  async def help(self, ctx, reason):
+    if "admin" in(reason):
+      await self.bot.send_message(ctx.message.channel, "test")
     
     
 def setup(bot):
