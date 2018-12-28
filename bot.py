@@ -14,9 +14,11 @@ extensions = [ 'data.userinfo', 'help']
 async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
-        await bot.change_presence(game=discord.Game(name='Chicken Server'))
+        await bot.change_presence(game=discord.Game(name='Join4Join server'))
         await asyncio.sleep(5)
-        await bot.change_presence(game=discord.Game(name='version 1.3.5'))
+        await bot.change_presence(game=discord.Game(name='version 1.0.1'))
+        await asyncio.sleep(5)
+        await bot.change_presence(game=discord.Game(name='6 members'))
         await asyncio.sleep(5)
         
 @bot.event
