@@ -15,9 +15,10 @@ class Commands:
     
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
-      await self.bot.send_message(ctx.message.channel, content="You have %.5s s cooldown on this command" % error.retry_after)
+      message = content="You have %.5s s cooldown on this command" % error.retry_after
+      await self.bot.send_message(ctx.message.channel, message)
       await asyncio.sleep(5)
-      await self.bot.send_message(ctx.message.channel, content="You have %.5s s cooldown on this command" % error.retry_after)
+      await self.bot.delete_message(message)
       raise error
       
   @commands.command(pass_context=True)
@@ -42,7 +43,7 @@ class Commands:
    
   @commands.command(pass_context=True)
   @commands.cooldown(1, 60, commands.BucketType.user)
-  async def clear(self, ctx, amount=50):
+  async def clear(self, ctx, amount=51):
     channel = ctx.message.channel
     messages = []
     async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
