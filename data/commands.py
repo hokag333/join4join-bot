@@ -21,11 +21,7 @@ class Commands:
       raise error
       
   @commands.command(pass_context=True)
-  if "528160233273425923" in(role.id for role in ctx.message.author.roles):
-    rate_limit = 1
-  if "528500676372856834" in(role.id for role in ctx.message.author.roles):
-    rate_limit = 2
-  @commands.cooldown(rate_limit, 60*60*24, commands.BucketType.user)
+  @commands.cooldown(1, 60*60*24, commands.BucketType.user)
   async def dm(self, ctx, *, reason=""):
     if "528160233273425923" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
@@ -43,6 +39,15 @@ class Commands:
       return
     else:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
+   
+  @commands.command(pass_context=True)
+  async def clear(self, ctx, amount=100):
+    channel = ctx.message.channel
+    messages = []
+    async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
+      message.append(message)
+    await self.bot.delete_messages(messages)
+    await self.bot.send_message(channel, "Messages was deleted")
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
