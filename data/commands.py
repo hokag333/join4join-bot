@@ -45,7 +45,7 @@ class Commands:
     channel = ctx.message.channel
     messages = []
     async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
-      message.append(message)
+      messages.append(message)
     await self.bot.delete_messages(messages)
     await self.bot.send_message(channel, "Messages was deleted")
     
