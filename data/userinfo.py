@@ -19,13 +19,16 @@ class Userinfo:
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
   @commands.command(pass_context=True)
-  async def testcmd(self, ctx):
+  async def testcmd(self, ctx, user: discord.User=None):
+    if not user:
+      user = ctx.message.author
+      
     server = self.bot.get_server("458341394524798976")
-    if ctx.message.author in(server.members):
-      await self.bot.send_message(ctx.message.channel, "{} test complete".format(ctx.message.author.mention))
+    if user in(server.members):
+      await self.bot.send_message(ctx.message.channel, "{} user is in server".format(user.mention))
       return
     else:
-      await self.bot.send_message(ctx.message.channel, "{} test error".format(ctx.message.author.mention))
+      await self.bot.send_message(ctx.message.channel, "{} user wasn´t find in server".format(user.mention))
     
     
 def setup(bot):
