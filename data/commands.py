@@ -55,6 +55,7 @@ class Commands:
     await self.bot.send_message(channel, msg)
     
   @commands.command(pass_context=True)
+  @commands.cooldown(1, 60*5, commands.BucketType.user)
   async def verify(self, ctx):
     await self.bot.delete_message(ctx.message)
     await self.bot.send_message(ctx.message.author, "**Chicken server** \n"
