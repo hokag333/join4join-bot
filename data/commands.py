@@ -16,7 +16,7 @@ class Commands:
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
       message = content="You have %.5s s cooldown on this command" % error.retry_after
-      await self.bot.send_message(ctx.message.channel, message)
+      await self.bot.send_message(ctx.message.channel, message, delete_after=10)
       raise error
       
   @commands.command(pass_context=True)
@@ -48,9 +48,7 @@ class Commands:
       messages.append(message)
     await self.bot.delete_messages(messages)
     msg = "**{}** messages was deleted".format(amount)
-    sleep = await asyncio.sleep(5)
-    delete = await self.bot.delete_mesage(msg)
-    await self.bot.send_message(channel, msg, sleep, delete)
+    await self.bot.send_message(channel, msg, delete_after=5)
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
