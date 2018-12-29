@@ -42,7 +42,7 @@ class Commands:
    
   @commands.command(pass_context=True)
   @commands.cooldown(1, 60, commands.BucketType.user)
-  async def clear(self, ctx, amount=101):
+  async def clear(self, ctx, amount=50):
     channel = ctx.message.channel
     messages = []
     async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
