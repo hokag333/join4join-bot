@@ -1,5 +1,7 @@
 import discord
 import asyncio
+import itertools, datetime
+from async_timeout import timeout
 from discord.ext import commands
 
 class Commands:
@@ -16,7 +18,7 @@ class Commands:
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
       message = content="You have %.5s s cooldown on this command" % error.retry_after
-      await self.bot.send_message(ctx.message.channel, message, delete_after=10)
+      await self.bot.send_message(ctx.message.channel, message, delete_after=20)
       raise error
       
   @commands.command(pass_context=True)
@@ -48,7 +50,7 @@ class Commands:
       messages.append(message)
     await self.bot.delete_messages(messages)
     msg = "**{}** messages was deleted".format(amount)
-    await self.bot.send_message(channel, msg, delete_after=5)
+    await self.bot.send_message(channel, msg, delete_after=20)
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
