@@ -39,7 +39,7 @@ class Commands:
                                   "don´t forget to contact him to make join 4 join".format(reason, ctx.message.author.mention))
       return
     else:
-      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention), delete_after=20)
+      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
    
   @commands.command(pass_context=True)
   @commands.cooldown(1, 60, commands.BucketType.user)
@@ -50,7 +50,7 @@ class Commands:
       messages.append(message)
     await self.bot.delete_messages(messages)
     msg = "**{}** messages was deleted".format(amount)
-    await self.bot.send_message(channel, msg, delete_after=20)
+    await self.bot.send_message(channel, msg)
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
