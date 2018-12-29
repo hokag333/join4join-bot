@@ -41,13 +41,14 @@ class Commands:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
    
   @commands.command(pass_context=True)
-  async def clear(self, ctx, amount=100):
+  @commands.cooldown(1, 60, commands.BucketType.user)
+  async def clear(self, ctx, amount=101):
     channel = ctx.message.channel
     messages = []
     async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
       messages.append(message)
     await self.bot.delete_messages(messages)
-    await self.bot.send_message(channel, "Messages was deleted")
+    await self.bot.send_message(channel, "{} Messages was deleted".format(amount))
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
