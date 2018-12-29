@@ -21,7 +21,7 @@ class Userinfo:
   @commands.command(pass_context=True)
   async def testme(self, ctx):
     await self.bot.get_server('458341394524798976'):
-      if ctx.message.author in(server.members):
+      if ctx.message.author in(server.members for server):
         await self.bot.send_message(ctx.message.channel, "{} test complete".format(ctx.message.author.mention))
         return
       else:
