@@ -25,10 +25,10 @@ class Userinfo:
       
     server = self.bot.get_server("382204136990703616")
     if user in(server.members):
-      await self.bot.send_message(ctx.message.channel, "{} user is in server".format(user.mention))
+      await self.bot.send_message(ctx.message.channel, "{} user is in {} server".format(user.mention, server.name))
       return
     else:
-      await self.bot.send_message(ctx.message.channel, "{} user wasn´t find in server".format(user.mention))
+      await self.bot.send_message(ctx.message.channel, "{} user wasn´t find in {} server".format(user.mention, server.name))
     
     
 def setup(bot):
