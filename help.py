@@ -11,7 +11,7 @@ class Helper:
       return
     if message.author.bot: return
       
-    if message.content.startswith('.help admin'):
+    if message.content.startswith('.help mod'):
       embed = discord.Embed(title = 'Help', description = 'moderator commands', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
