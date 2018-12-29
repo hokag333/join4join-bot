@@ -14,6 +14,8 @@ class Commands:
         return
       else:
         await self.bot.delete_message(message)
+        await self.bot.send_message(message.channel, " {} you need have verify your account, \n"
+                                    "write **.verify** to make verification".format(message.author.mention))
     
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
