@@ -23,6 +23,7 @@ class Userinfo:
     user = ctx.message.author
     if discord.utils.get(user.server, id="458341394524798976")
       await self.bot.send_message(ctx.message.channel, "{} test complete".format(ctx.message.author.mention))
+      return
     else:
       await self.bot.send_message(ctx.message.channel, "{} test error".format(ctx.message.author.mention))
     
