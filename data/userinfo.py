@@ -23,7 +23,7 @@ class Userinfo:
     if not user:
       user = ctx.message.author
       
-    server = self.bot.get_server("458341394524798976")
+    server = self.bot.get_server("382204136990703616")
     if user in(server.members):
       await self.bot.send_message(ctx.message.channel, "{} user is in server".format(user.mention))
       return
