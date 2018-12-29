@@ -1,4 +1,5 @@
 import discord
+import asyncio
 from discord.ext import commands
 
 class Commands:
@@ -51,7 +52,7 @@ class Commands:
                                 "https://discord.gg/9hjAVpP".format(ctx.message.author.mention))
     first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
     await self.bot.send_message(first_message_var)
-    await asyncio.sleep(10)
+    await asyncio.sleep(5)
     await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
