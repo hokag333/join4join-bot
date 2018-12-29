@@ -20,11 +20,12 @@ class Userinfo:
     
   @commands.command(pass_context=True)
   async def testme(self, ctx):
-    if ctx.message.author in(discord.Server.members for discord.Server.id="458341394524798976")
-      await self.bot.send_message(ctx.message.channel, "{} test complete".format(ctx.message.author.mention))
-      return
-    else:
-      await self.bot.send_message(ctx.message.channel, "{} test error".format(ctx.message.author.mention))
+    if ctx.message.author in(discord.Server.members):
+      for discord.Server.id(id="458341394524798976"):
+        await self.bot.send_message(ctx.message.channel, "{} test complete".format(ctx.message.author.mention))
+        return
+      else:
+        await self.bot.send_message(ctx.message.channel, "{} test error".format(ctx.message.author.mention))
     
     
 def setup(bot):
