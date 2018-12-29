@@ -20,8 +20,7 @@ class Userinfo:
     
   @commands.command(pass_context=True)
   async def testme(self, ctx):
-    server = discord.Server(id='416940353564704768')
-    if ctx.message.author in server.members
+    server = discord.Server(id='458341394524798976')
       await self.bot.send_message(ctx.message.channel, "{} test complete".format(ctx.message.author.mention))
     
     
