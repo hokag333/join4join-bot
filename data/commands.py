@@ -18,7 +18,7 @@ class Commands:
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
       message = content="You have %.5s s cooldown on this command" % error.retry_after
-      await self.bot.send_message(ctx.message.channel, message, delete_after=20)
+      await self.bot.send_message(ctx.message.channel, message)
       raise error
       
   @commands.command(pass_context=True)
@@ -39,7 +39,7 @@ class Commands:
                                   "don´t forget to contact him to make join 4 join".format(reason, ctx.message.author.mention))
       return
     else:
-      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
+      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention), delete_after=20)
    
   @commands.command(pass_context=True)
   @commands.cooldown(1, 60, commands.BucketType.user)
