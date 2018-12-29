@@ -49,7 +49,10 @@ class Commands:
                                 " \n"
                                 "**Invite** : {} **__to verification join this server__** \n"
                                 "https://discord.gg/9hjAVpP".format(ctx.message.author.mention))
-    await self.bot.send_message(self.bot.get_channel('528209980734832642'), " {} waiting for verification🌀".format(ctx.message.author.mention))
+    first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
+    await self.bot.send_message(first_message_var)
+    await asyncio.sleep(10)
+    await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
   async def verified(self, ctx, user: discord.User):
