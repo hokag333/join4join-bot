@@ -1,4 +1,5 @@
 import discord
+import asyncio
 from discord.ext import commands
 
 class Commands:
@@ -15,7 +16,7 @@ class Commands:
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
       await self.bot.send_message(ctx.message.channel, content="You have %.6s s cooldown on this command" % error.retry_after)
-      await asyncio.sleep(20)
+      await asyncio.sleep(5)
       await self.bot.delete_message(message)
       raise error
       
@@ -50,7 +51,8 @@ class Commands:
                                 "**Invite** : {} **__to verification join this server__** \n"
                                 "https://discord.gg/9hjAVpP".format(ctx.message.author.mention))
     first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
-    await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
+    time_var = await asyncio.sleep(5)
+    await self.bot.edit_message(first_message_var, time_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
   @commands.command(pass_context=True)
   async def verified(self, ctx, user: discord.User):
