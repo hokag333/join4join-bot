@@ -48,7 +48,10 @@ class Commands:
     async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
       messages.append(message)
     await self.bot.delete_messages(messages)
-    await self.bot.send_message(channel, "[ {} ]messages was deleted".format(amount))
+    msg = "**{}** messages was deleted".format(amount)
+    await self.bot.send_message(channel, msg)
+    await asyncio.sleep(5)
+    await self.bot.delete_mesage(msg)
     
   @commands.command(pass_context=True)
   async def verify(self, ctx):
