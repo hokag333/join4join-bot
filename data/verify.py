@@ -22,7 +22,7 @@ class Verify:
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='', value='[click here](https://discord.gg/9hjAVpP)', inline=False)
-      await self.bot.send_message(message.channel, embed=embed)
+      await self.bot.send_message(ctx.message.author, embed=embed)
       first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
       await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
