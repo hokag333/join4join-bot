@@ -36,7 +36,8 @@ class Join:
       if member in(server1.members):
         return
       else:
-        if "528162784022626314" in(role.id for role in member.roles):
+        server2 = self.bot.get_server("528142547894272010")
+        if "528162784022626314" in(role.id for role in member.roles in server2):
           await self.bot.send_message(member, "{} Your account **Verification error** \n"
                                       "You was maybe left **Chicken Server** \n"
                                       "If you want to **Verificate** your account write **.verify**".format(member.mention))
