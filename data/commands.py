@@ -86,7 +86,7 @@ class Commands:
       embed.set_author(name=' ', icon_url=user.avatar_url)
       embed.add_field(name='User', value= '{}'.format(user.mention), inline=True)
       embed.add_field(name='Reason', value= '{}'.format(reason), inline=True)
-      await self.bot.send_message(ctx.message.author, embed=embed)
+      await self.bot.send_message(user, embed=embed)
     
     
     
