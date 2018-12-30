@@ -22,7 +22,7 @@ class Verify:
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
-      await self.bot.send_message(message.channel, embed=embed)
+      await self.bot.send_message(ctx.message.author, embed=embed)
     
 def setup(bot):
   bot.add_cog(Verify(bot))
