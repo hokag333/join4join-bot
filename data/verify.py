@@ -16,21 +16,13 @@ class Verify:
   async def verify(self, ctx):
     if "528142547894272010" in (ctx.message.server.id):
       await self.bot.delete_message(ctx.message)
-      await self.bot.send_message(ctx.message.author, "**Chicken server** \n"
-                                  "🔄**Game Updates** - for new updates of games \n"
-                                  "🎥**Twitch bot** - for watching live streams on discord server \n"
-                                  "🎵**Music bots** - for listen songs with your friends \n"
-                                  "👌**memes** \n"
-                                  "🐻**funny animals** \n"
-                                  "🤔**would you rather** \n"
-                                  "🔔**selectable roles** - you can choose which you want to use and get notify on the server \n"
-                                  "❔**helper** - when you need help with something \n"
-                                  "📢**giveaways** - you can join on our website \n"
-                                  "💬**Chat Rooms** and 🔈**Voice Rooms** \n"
-                                  "and more \n"
-                                  " \n"
-                                  "**Invite** : {} **__to verification join this server__** \n"
-                                  "https://discord.gg/9hjAVpP".format(ctx.message.author.mention))
+      embed = discord.Embed(title = 'Verification', description = '', colour = discord.Colour.orange())
+      embed.set_footer(text='created by Prisa#4835')
+      embed.set_thumbnail(url='')
+      embed.set_image(url='')
+      embed.set_author(name='', icon_url='')
+      embed.add_field(name='to verify your account', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
+      await self.bot.send_message(ctx.message.author, embed=embed)
       first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
       await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
