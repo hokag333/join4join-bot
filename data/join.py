@@ -18,7 +18,7 @@ class Join:
                                   "or contact **Moderators**".format(member.mention))
     elif member.server.id == "382204136990703616":
       server1 = self.bot.get_server("528142547894272010")
-      if member in(server1.members):)
+      if member in(server1.members):
         await self.bot.send_message(member, "{} \n"
                                     " Your account was verificate✅".format(member.mention))
  
