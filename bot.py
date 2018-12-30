@@ -18,11 +18,7 @@ async def my_background_task():
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='version 1.2.1'))
         await asyncio.sleep(5)
-        jserver = bot.get_server("528142547894272010")
-        sum = 0
-        for s in jserver:
-            sum += len(s.members)
-        await bot.change_presence(game=discord.Game(name="{} members".format(sum)))
+        await bot.change_presence(game=discord.Game(name="21 members"))
         await asyncio.sleep(5)
         
 @bot.event
