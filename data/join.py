@@ -22,7 +22,8 @@ class Join:
         await self.bot.send_message(discord.Object(id='528146368464945152'), "{} give Verify role pls".format(member.mention))
         await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(member.mention))
         await self.bot.send_message(member, "{} \n"
-                                    "Your account was verificate✅".format(member.mention))
+                                    "Your account was verificate✅ \n"
+                                    "You can now post **invite links** in **Join 4 Join** server .format(member.mention))
         
   async def on_member_remove(self, member):
     if member.server.id == "382204136990703616":
