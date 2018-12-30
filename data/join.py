@@ -6,8 +6,8 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    if not member.guild.id == "528142547894272010":
-      if not member.guild.id == "458341394524798976":
+    if not member.server.id == "528142547894272010":
+      if not member.server.id == "458341394524798976":
         return
       server1 = self.bot.get_server("528142547894272010")
       if member in(server1.members):
