@@ -31,10 +31,11 @@ class Verify:
   async def verified(self, ctx, user: discord.User):
     if "528142547894272010" in (ctx.message.server.id):
       if "528145435022327810" in(role.id for role in ctx.message.author.roles):
-        await self.bot.send_message(user, "{} verification complete✅ \n"
-                                    "You can now post **invite links** in **Join 4 Join** server \n"
-                                    " \n"
-                                    "You was verificate by {}".format(user.mention, ctx.message.author.mention))
+        await self.bot.add_roles(member, get_role(self.bot.get_server("528142547894272010").roles.id('528162784022626314')
+        await self.bot.send_message(user, "{} \n"
+                                    "Your account was verificate✅"
+                                    "**invite links** in **Join 4 Join** server is enabled\n"
+                                    " \n"format(user.mention))
         await self.bot.send_message(self.bot.get_channel('528209980734832642'), "{} was verificate✅".format(user.mention))
         return
       await self.bot.send_message(ctx.message.channel, "{} you don´t heve permissions to do that".format(ctx.message.author.mention))
