@@ -16,7 +16,7 @@ class Join:
                                   " \n"
                                   "If you need help with something, write **.help** \n"
                                   "or contact **Moderators**".format(member.mention))
-    elif member.server.id == "458341394524798976":
+    elif member.server.id == "382204136990703616":
       server1 = self.bot.get_server("528142547894272010")
       if member in(server1.members):
         server = self.bot.get_server("528142547894272010")
