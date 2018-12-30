@@ -5,10 +5,11 @@ class Join:
   def __init__(self, bot):
     self.bot = bot 
                                 
-  async def on_member_join(self, member, server: discord.Server):
-    if member_join(server.id("528142547894272010")):
-      await self.bot.send_message(member, "test message")
-      return
+  async def on_member_join(self, member):
+    server0 = discord.utils.get(member.server, id="528142547894272010")
+    if "528142547894272010" in(server0):
+      await self.bot.send_message(member, "test complete")
+    
     server1 = self.bot.get_server("528142547894272010")
     if member in(server1):
       server2 = self.bot.get_server("382204136990703616")
