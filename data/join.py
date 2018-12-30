@@ -27,6 +27,14 @@ class Join:
     else:
       return
     
+  async def on_server_remove(self, server, member):
+    if server.id("528142547894272010"):
+      return
+    if server.id("382204136990703616"):
+      server1 = self.bot.get_server("528142547894272010")
+      if member in(server1.members):
+        await self.bot.send_message(member, "test")
+    
   async def on_member_remove(self, member):
     server2 = self.bot.get_server("528142547894272010")
     if member (server2.members):
