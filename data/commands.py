@@ -10,7 +10,7 @@ class Commands:
     
   async def on_message(self, message):
     if ('discord.gg') in message.content:
-      if "528142547894272010" in (ctx.message.server.id):
+      if "528142547894272010" in(message.server.id):
         if message.author.bot:
           return
         
