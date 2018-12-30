@@ -72,7 +72,7 @@ class Commands:
   @commands.command(pass_context=True)
   async def members(self, ctx):
     await self.bot.delete_message(ctx.message)
-    await self.bot.send_message(ctx.message.channel, " {} Members".foramt(ctx.server.member_count))
+    await self.bot.send_message(ctx.message.channel, " {} Members".foramt(len(ctx.server.member_count)))
     
     
 def setup(bot):
