@@ -14,8 +14,8 @@ class Verify:
   @commands.command(pass_context=True)
   async def verify(self, ctx):
     if "528142547894272010" in (ctx.message.server.id):
-      await self.bot.send_message(ctx.message.author, "{} just confirm your Verification".format(ctx.message.author.mention))
       await self.bot.delete_message(ctx.message)
+      await self.bot.send_message(ctx.message.author, "{} just confirm your Verification".format(ctx.message.author.mention))
       embed = discord.Embed(title = '', description = '', colour = discord.Colour.orange())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
