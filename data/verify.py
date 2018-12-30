@@ -15,18 +15,14 @@ class Verify:
   async def verify(self, ctx):
     if "528142547894272010" in (ctx.message.server.id):
       await self.bot.delete_message(ctx.message)
-      await self.bot.send_message(ctx.message.author, "{} just confirm your Verification".format(ctx.message.author.mention))
       
-      embed = discord.Embed(title = 'Verification', description = '', colour = discord.Colour.blue())
-      embed.set_footer(text='')
+      embed = discord.Embed(title = 'Verification', description = ' ', colour = discord.Colour.blue())
+      embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='', value='[click here](https://discord.gg/9hjAVpP)', inline=False)
-      await self.bot.send_message(ctx.message.author, embed=embed)
-      
-      first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
-      await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
+      embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
+      await self.bot.send_message(message.channel, embed=embed)
     
 def setup(bot):
   bot.add_cog(Verify(bot))
