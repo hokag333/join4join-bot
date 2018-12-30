@@ -12,14 +12,17 @@ bot.remove_command('help')
 extensions = [ 'data.userinfo', 'data.commands', 'data.verify', 'help']
 
 async def my_background_task():
-    server = bot.get_server("528142547894272010")
+    jserver = bot.get_server("528142547894272010")
+    sum = 0
+    for s in jserver:
+        sum += len(s.members)
     await bot.wait_until_ready()
     while not bot.is_closed:
         await bot.change_presence(game=discord.Game(name='Join4Join server'))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='version 1.2.1'))
         await asyncio.sleep(5)
-        await bot.change_presence(game=discord.Game(name="{} members".format(server.member_count)))
+        await bot.change_presence(game=discord.Game(name="{} members".format(sum)))
         await asyncio.sleep(5)
         
 @bot.event
