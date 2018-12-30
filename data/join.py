@@ -17,7 +17,7 @@ class Join:
                                   "If you need help with something, write **.help** \n"
                                   "or contact <@&528200802863677450>".format(member.mention))
       
-    if member.server.id("458341394524798976")
+    if member.server.id("458341394524798976"):
       server1 = self.bot.get_server("528142547894272010")
       if member in(server1):
         await self.bot.send_message(member, "{} \n"
