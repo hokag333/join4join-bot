@@ -6,7 +6,13 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    if not member.guild.id == "458341394524798976":
+    if not member.guild.id == "528142547894272010":
+      if not member.guild.id == "458341394524798976":
+        return
+      server1 = self.bot.get_server("528142547894272010")
+      if member in(server1.members):
+        await self.bot.send_message(member, "{} \n"
+                                    " Your account was verificate✅".format(member.mention))
       return
     await self.bot.send_message(member, "{} \n"
                                 "👋Welcome👋 \n"
@@ -17,22 +23,6 @@ class Join:
                                 " \n"
                                 "If you need help with something, write **.help** \n"
                                 "or contact <@&528200802863677450>".format(member.mention))
-      
-    if member.guild.id == "458341394524798976":
-      server1 = self.bot.get_server("528142547894272010")
-      if member in(server1):
-        await self.bot.send_message(member, "{} \n"
-                                    " Your account was verificate✅".format(member.mention))
-      else:
-        await self.bot.send_message(member, "test error")
-
-    
-  async def on_member_remove(self, member):
-    if "382204136990703616" in(member.server.id):
-      server1 = self.bot.get_server("528142547894272010")
-      if member in(server1):
-        await self.bot.send_message(member, "{} \n"
-                                    "Verification error, bot can´t find you in **Chicken Server** members".format(member.mention))
     
 def setup(bot):
   bot.add_cog(Join(bot))
