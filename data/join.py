@@ -28,10 +28,11 @@ class Join:
     if member.server.id == "382204136990703616":
       server1 = self.bot.get_server("528142547894272010")
       if member in(server1.members):
-        await self.bot.send_message(member, "Verification error❌ \n"
+        await self.bot.send_message(discord.Object(id='528146368464945152'), "{} **Verification error**❌ remove role from him!".format(member.mention))
+        await self.bot.send_message(member, "**Verification error**❌ \n"
                                     "{} \n"
                                     "You don´t meet the verification request \n"
-                                    "try verify your account again".format(member.mention))
+                                    "try **verify** your account again".format(member.mention))
  
     
 def setup(bot):
