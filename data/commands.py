@@ -9,11 +9,17 @@ class Commands:
     self.bot = bot
     
   async def on_message(self, message):
-    if ('discord.gg') in message.content:
-      if "528142547894272010" in(message.server.id):
-        if message.author.bot:
+    if message.author.bot:
+      return
+    if "528142547894272010" in(message.server.id):
+      
+      if "528148608533528596" in(message.channel.id):
+        if message.content.startswith('!invites'):
           return
-        
+        else:
+          await self.bot.delete_message(message)
+      
+      if ('discord.gg') in message.content:
         if "528162784022626314" in(role.id for role in message.author.roles):
           return
         else:
@@ -24,8 +30,6 @@ class Commands:
           embed.set_image(url='')
           embed.set_author(name='', icon_url=ctx.message.author.avatar_url)
           embed.add_field(name='User', value= '{} '.format(message.author.mention), inline=True)
-          embed.add_field(name='reason', value= 'post invite link', inline=True)
-          embed.add_field(name='Role', value= '<@&528162784022626314>', inline=False)
           embed.add_field(name='Not in user roles', value= '', inline=False)
           await self.bot.send_message(self.bot.get_channel('528915422871945228'), embed=embed)
           await self.bot.send_message(message.channel, " {} you need have verify your account, \n"
