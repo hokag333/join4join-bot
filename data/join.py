@@ -30,7 +30,7 @@ class Join:
       if member in(server1.members):
         await self.bot.send_message(member, "Verification error❌ \n"
                                     "{} \n"
-                                    "You don´t meet the verification request /n"
+                                    "You don´t meet the verification request \n"
                                     "try verify your account again".format(member.mention))
  
     
