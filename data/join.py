@@ -6,7 +6,7 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    if member.server.id("528142547894272010"):
+    if member.join_server.id("528142547894272010"):
       await self.bot.send_message(member, "{} \n"
                                   "👋Welcome👋 \n"
                                   "to **Join 4 Join** server \n"
