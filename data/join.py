@@ -6,10 +6,10 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    server1 = self.bot.get_server("382204136990703616")
+    server1 = self.bot.get_server("528142547894272010")
     if member in(server1.members):
-      server2 = self.bot.get_server("528142547894272010")
-      if member in(server2.members):
+      server2 = self.bot.get_server("382204136990703616")
+      if member in(server1.members):
         await self.bot.send_message(member, "{} Your account was verificate".format(member.mention))
         return
       else:
@@ -48,12 +48,6 @@ class Join:
                                       "You was maybe left **Chicken Server** \n"
                                       "If you want to **Verificate** your account write **.verify**".format(member.mention))
           return
-        else:
-          return
-      else:
-        return
-    else:
-      return
     
 def setup(bot):
   bot.add_cog(Join(bot))
