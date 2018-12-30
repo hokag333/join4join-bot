@@ -18,9 +18,9 @@ class Verify:
       
       embed = discord.Embed(title = 'Verification', description = ' ', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
-      embed.set_thumbnail(url='')
-      embed.set_image(url='')
-      embed.set_author(name='', icon_url='')
+      embed.set_thumbnail(url=' ')
+      embed.set_image(url=' ')
+      embed.set_author(name=' ', icon_url=' ')
       embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
       await self.bot.send_message(ctx.message.author, embed=embed)
     
