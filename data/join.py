@@ -6,7 +6,17 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    if member.join.server.id("528142547894272010"):
+    server = self.bot.get_server("382204136990703616")
+    if member in(server.members):
+      server = self.bot.get_server("528142547894272010")
+      if member in(server.members):
+        await self.bot.send_message(member, "{} Your account was verificate".format(member.mention))
+        return
+      else:
+        return
+      
+    server = self.bot.get_server("528142547894272010")
+    if member in(server.members):
       await self.bot.send_message(member, "Hello {} \n"
                                   "👋Welcome👋 to \n"
                                   "**Join 4 Join** server \n"
@@ -17,14 +27,6 @@ class Join:
                                   "If you need help with something, write **.help** in <#528147248706486282> \n"
                                   "or contact <@&528200802863677450>".format(member.mention))
       return
-    
-    if member.join.server.id("382204136990703616"):
-      server = self.bot.get_server("528142547894272010")
-      if member in(server.members):
-        await self.bot.send_message(member, "{} Your account was verificate".format(member.mention))
-        return
-      else:
-        return
     else:
       return
     
