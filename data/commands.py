@@ -68,13 +68,13 @@ class Commands:
   @commands.cooldown(1, 60, commands.BucketType.user)
   async def clear(self, ctx, amount=51):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
-    channel = ctx.message.channel
-    messages = []
-    async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
-      messages.append(message)
-    await self.bot.delete_messages(messages)
-    msg = "**{}** messages was deleted".format(amount)
-    await self.bot.send_message(channel, msg)
+      channel = ctx.message.channel
+      messages = []
+      async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
+        messages.append(message)
+        await self.bot.delete_messages(messages)
+        msg = "**{}** messages was deleted".format(amount)
+        await self.bot.send_message(channel, msg)
     
   @commands.command(pass_context=True)
   async def warn(self, ctx, user: discord.User, *, reason=""):
