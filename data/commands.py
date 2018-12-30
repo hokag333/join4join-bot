@@ -23,7 +23,7 @@ class Commands:
           embed.set_thumbnail(url='')
           embed.set_image(url='')
           embed.set_author(name='', icon_url=ctx.message.author.avatar_url)
-          embed.add_field(name='User', value= '{}'.format(ctx.message.author.mention), inline=True)
+          embed.add_field(name='User', value= '{} '.format(message.author.mention), inline=True)
           embed.add_field(name='reason', value= 'post invite link', inline=True)
           embed.add_field(name='Role', value= '<@&528162784022626314>', inline=False)
           embed.add_field(name='Not in user roles', value= '', inline=False)
