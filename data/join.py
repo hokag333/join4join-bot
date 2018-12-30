@@ -16,12 +16,12 @@ class Join:
         return
     server2 = self.bot.get_server("528142547894272010")
     if member in(server2.members):
-      await self.bot.send_message(member, "Hello {} \n"
+      await self.bot.send_message(member, "{} \n"
                                   "👋Welcome👋 to \n"
-                                  "**Join 4 Join** server \n"
+                                  "**    ** **Join 4 Join** server \n"
                                   " \n"
                                   "write **.verify** in <#528209980734832642> to verification✅ your account \n"
-                                  "check <#528148347698020353> and read 📝information📝 how to use **Join 4 Join** server and bot \n"
+                                  "check <#528148347698020353> and read 📝information how to use **Join 4 Join** server and bot \n"
                                   " \n"
                                   "If you need help with something, write **.help** in <#528147248706486282> \n"
                                   "or contact <@&528200802863677450>".format(member.mention))
