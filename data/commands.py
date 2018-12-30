@@ -18,6 +18,9 @@ class Commands:
           return
         else:
           await self.bot.delete_message(message)
+          
+      if "528209980734832642" in(message.channel.id):
+        await self.bot.delete_message(message)
       
       if ('discord.gg') in message.content:
         if "528162784022626314" in(role.id for role in message.author.roles):
