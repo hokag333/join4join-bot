@@ -29,6 +29,25 @@ class Trynew:
         new_member = server.get_member(member.id)
         await self.bot.add_roles(new_member, role)
         await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(member.mention))
+        await self.bot.send_message(member, "{} \n"
+                                    "Your account was verificate✅ \n"
+                                    "You can now post **invite links** in **Join 4 Join** server".format(member.mention))
+        return
+      
+  async def on_member_remove(self, member):
+    if member.server.id == "382204136990703616":
+      server1 = self.bot.get_server("528142547894272010")
+      if member in(server1.members):
+        server = self.bot.get_server("528142547894272010")
+        role = discord.utils.get(server.roles, id="528162784022626314")
+        left_member = server.get_member(member.id)
+        await self.bot.remove_roles(left_member, role)
+        await self.bot.send_message(discord.Object(id='528915422871945228'), "{} **Verification error**❌ check if role was removed".format(member.mention))
+        await self.bot.send_message(member, "**Verification error**❌ \n"
+                                    "{} \n"
+                                    "You don´t meet the verification request \n"
+                                    "try **verify** your account again".format(member.mention))
+        return
  
     
 def setup(bot):
