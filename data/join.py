@@ -9,13 +9,13 @@ class Join:
     chickenserver = self.bot.get_server("382204136990703616")
     join4joinserver = self.bot.get_server("382204136990703616")
     server = member.server
-    if "382204136990703616" in(server.id):
+    if member.join chickenserver:
       if member in(join4joinserver.members):
         await self.bot.send_message(member, "You was verificate your account")
         return
       else:
         return
-    if "528142547894272010" in(server.id):
+    if member.join join4joinserver:
       await self.bot.send_message(member, "Hello {} \n"
                                   "👋Welcome👋 to \n"
                                   "**Join 4 Join** server \n"
