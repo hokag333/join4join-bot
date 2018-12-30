@@ -19,6 +19,9 @@ class Join:
     elif member.server.id == "458341394524798976":
       server1 = self.bot.get_server("528142547894272010")
       if member in(server1.members):
+        server = self.bot.get_server("528142547894272010")
+        role = discord.utils.get(server.roles, name="Verified")
+        await self.bot.add_roles(member, role)
         await self.bot.send_message(member, "{} \n"
                                     " Your account was verificate✅".format(member.mention))
  
