@@ -10,8 +10,8 @@ class Verify:
     if "528142547894272010" in (ctx.message.server.id):
       await self.bot.delete_message(ctx.message)
       
-      embed = discord.Embed(title = 'Verification', description = ' ', colour = discord.Colour.blue())
-      embed.set_footer(text='developer: Prisa#4835')
+      embed = discord.Embed(title = 'Verification', description = ' ', colour = discord.Colour.orange())
+      embed.set_footer(text=' ')
       embed.set_thumbnail(url=' ')
       embed.set_image(url=' ')
       embed.set_author(name=' ', icon_url=' ')
