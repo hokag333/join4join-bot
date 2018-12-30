@@ -6,6 +6,7 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
+    server = member.server
     chickenserver = self.bot.get_server("382204136990703616")
     join4joinserver = self.bot.get_server("382204136990703616")
     if "382204136990703616" in(server.id):
@@ -14,7 +15,7 @@ class Join:
         return
       else:
         return
-    if "382204136990703616" in(server.id):
+    if "528142547894272010" in(server.id):
       await self.bot.send_message(member, "Hello {} \n"
                                   "👋Welcome👋 to \n"
                                   "**Join 4 Join** server \n"
