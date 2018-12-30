@@ -18,10 +18,7 @@ class Join:
                                   "or contact **Moderators**".format(member.mention))
     elif member.server.id == "382204136990703616":
       server1 = self.bot.get_server("528142547894272010")
-      if member in(server1.members):
-        server = self.bot.get_server("528142547894272010")
-        role = discord.utils.get(server.roles, id="528162784022626314")
-        await self.bot.add_roles(member, role)
+      if member in(server1.members):)
         await self.bot.send_message(member, "{} \n"
                                     " Your account was verificate✅".format(member.mention))
  
