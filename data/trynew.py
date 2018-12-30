@@ -7,6 +7,10 @@ class Trynew:
                                 
   async def on_member_join(self, member):
     if member.server.id == "528142547894272010":
+      server = self.bot.get_server("528142547894272010")
+      role = discord.utils.get(server.roles, id="529027718340280327")
+      new_member = server.get_member(member.id)
+      await self.bot.add_roles(new_member, role)
       await self.bot.send_message(member, "👋Welcome👋 \n"
                                   "{} \n"
                                   "to **Join 4 Join** server \n"
