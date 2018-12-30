@@ -18,9 +18,6 @@ class Commands:
           return
         else:
           await self.bot.delete_message(message)
-          await self.bot.send_message(message.channel, " {} you need have verify your account, \n"
-                                      "write **.verify** to make verification".format(message.author.mention))
-          
           embed = discord.Embed(title = 'Warn', description = '', colour = discord.Colour.blue())
           embed.set_footer(text='developer: Prisa#4835')
           embed.set_thumbnail(url='')
@@ -31,6 +28,8 @@ class Commands:
           embed.add_field(name='**Role**', value= '<@&528162784022626314>', inline=False)
           embed.add_field(name='**Not in user roles**', value= '', inline=False)
           await self.bot.send_message(self.bot.get_channel('528915422871945228'), embed=embed)
+          await self.bot.send_message(message.channel, " {} you need have verify your account, \n"
+                                      "write **.verify** to make verification".format(message.author.mention))
     
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
