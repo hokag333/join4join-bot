@@ -20,6 +20,7 @@ class Commands:
           await self.bot.delete_message(message)
           await self.bot.send_message(message.channel, " {} you need have verify your account, \n"
                                       "write **.verify** to make verification".format(message.author.mention))
+          
           embed = discord.Embed(title = 'Warn', description = '', colour = discord.Colour.blue())
           embed.set_footer(text='developer: Prisa#4835')
           embed.set_thumbnail(url='')
