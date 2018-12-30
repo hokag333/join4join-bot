@@ -10,6 +10,9 @@ class Commands:
     
   async def on_message(self, message):
     if ('discord.gg') in message.content:
+      if message.author.bot:
+        return
+      
       if "528162784022626314" in(role.id for role in message.author.roles):
         return
       else:
