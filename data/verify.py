@@ -9,6 +9,7 @@ class Verify:
   async def verify(self, ctx):
     if "528142547894272010" in (ctx.message.server.id):
       await self.bot.delete_message(ctx.message)
+      await self.bot.send_message(ctx.message.author, "{}".format(ctx.message.author.mention))
       
       embed = discord.Embed(title = '🔄__Verification__', description = ' ', colour = discord.Colour.orange())
       embed.set_footer(text=' ')
