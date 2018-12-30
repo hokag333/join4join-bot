@@ -6,11 +6,11 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    server1 = self.bot.get_server("528142547894272010")
-    if member in(server1.members):
-      server2 = self.bot.get_server("382204136990703616")
+    server2 = self.bot.get_server("382204136990703616")
+    if member in(server2.members):
+      server1 = self.bot.get_server("528142547894272010")
       if member in(server1.members):
-        await self.bot.send_message(member, "{} Your account was verificate".format(member.mention))
+        await self.bot.send_message(member, "{} Your account was verificate✅".format(member.mention))
         return
       else:
         return
@@ -30,13 +30,6 @@ class Join:
       return
     
   async def on_member_remove(self, member):
-    server1 = self.bot.get_server("382204136990703616")
-    if member in(server1.members):
-      server2 = self.bot.get_server("528142547894272010")
-      if member in(server2.members):
-        return
-      else:
-        return
     server2 = self.bot.get_server("528142547894272010")
     if member (server2.members):
       server1 = self.bot.get_server("382204136990703616")
