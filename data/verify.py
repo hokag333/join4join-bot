@@ -5,12 +5,6 @@ class Verify:
   def __init__(self, bot):
     self.bot = bot
     
-  async def on_command_error(self, error, ctx):
-    if isinstance(error, commands.CommandOnCooldown):
-      message = content="You have %.5s s cooldown on this command" % error.retry_after
-      await self.bot.send_message(ctx.message.channel, message)
-      raise error
-    
   @commands.command(pass_context=True)
   async def verify(self, ctx):
     if "528142547894272010" in (ctx.message.server.id):
