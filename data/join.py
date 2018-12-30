@@ -8,7 +8,7 @@ class Join:
   async def on_member_join(self, member):
     chickenserver = self.bot.get_server("382204136990703616")
     join4joinserver = self.bot.get_server("382204136990703616")
-    if server in(chickenserver):
+    if "382204136990703616" in(server):
       if member in(join4joinserver.members):
         await self.bot.send_message(member, "You was verificate your account")
         return
