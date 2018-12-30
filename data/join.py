@@ -6,17 +6,15 @@ class Join:
     self.bot = bot 
                                 
   async def on_member_join(self, member):
-    server = self.bot.get_server("382204136990703616")
-    if member in(server.members):
+    if member.server.id("382204136990703616"):
       server = self.bot.get_server("528142547894272010")
       if member in(server.members):
         await self.bot.send_message(member, "{} Your account was verificate".format(member.mention))
         return
       else:
         return
-      
-    server = self.bot.get_server("528142547894272010")
-    if member in(server.members):
+    
+    if member.server.id("528142547894272010"):
       await self.bot.send_message(member, "Hello {} \n"
                                   "👋Welcome👋 to \n"
                                   "**Join 4 Join** server \n"
@@ -30,6 +28,14 @@ class Join:
     else:
       return
     
+  async def on_member_remove(self, member):
+    if member.server.id("382204136990703616"):
+      server = self.bot.get_server("528142547894272010")
+      if member in(server.members):
+        await self.bot.send_message(member, "{} Verification error".format(member.mention))
+        return
+    else:
+      return
     
 def setup(bot):
   bot.add_cog(Join(bot))
