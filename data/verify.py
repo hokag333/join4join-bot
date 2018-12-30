@@ -16,6 +16,7 @@ class Verify:
     if "528142547894272010" in (ctx.message.server.id):
       await self.bot.delete_message(ctx.message)
       await self.bot.send_message(ctx.message.author, "{} just confirm your Verification".format(ctx.message.author.mention))
+      
       embed = discord.Embed(title = 'Verification', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='')
       embed.set_thumbnail(url='')
@@ -23,6 +24,7 @@ class Verify:
       embed.set_author(name='', icon_url='')
       embed.add_field(name='', value='[click here](https://discord.gg/9hjAVpP)', inline=False)
       await self.bot.send_message(ctx.message.author, embed=embed)
+      
       first_message_var = await self.bot.send_message(self.bot.get_channel('528209980734832642'), "Procesing ...")
       await self.bot.edit_message(first_message_var, " {} waiting for verification🌀".format(ctx.message.author.mention))
     
