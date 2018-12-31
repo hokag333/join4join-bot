@@ -33,7 +33,7 @@ class Trynew:
                                     "Your account was verificate✅ \n"
                                     "You can now post **invite links** in **Join 4 Join** server".format(member.mention))
         
-        embed=discord.Embed(title="✅__Verification__", description=" ", color=0x2be20a)
+        embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
         embed.set_footer(text='verificate')
         embed.set_author(name=" ")
         embed.set_image(url=" ")
@@ -55,7 +55,7 @@ class Trynew:
                                     "You don´t meet the verification request \n"
                                     "try **verify** your account again".format(member.mention))
         
-        embed=discord.Embed(title="❌__Verification__", description=" ", color=0x2be20a)
+        embed=discord.Embed(title="❌__Verification__", description=" ", color=0xc11515)
         embed.set_footer(text='error')
         embed.set_author(name=" ")
         embed.set_image(url=" ")
