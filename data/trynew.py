@@ -49,7 +49,6 @@ class Trynew:
         role = discord.utils.get(server.roles, id="528162784022626314")
         left_member = server.get_member(member.id)
         await self.bot.remove_roles(left_member, role)
-        await self.bot.send_message(discord.Object(id='528915422871945228'), "{} **Verification error**❌ check if role was removed".format(member.mention))
         await self.bot.send_message(member, "**Verification error**❌ \n"
                                     "{} \n"
                                     "You don´t meet the verification request \n"
