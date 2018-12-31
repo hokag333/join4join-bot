@@ -28,6 +28,7 @@ class Moderation:
           embed.set_author(name=" ")
           embed.set_image(url=" ")
           embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
+          embed.add_field(name="Reason", value="post invite link", inline=True)
           await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
           await self.bot.send_message(message.channel, " {} you need have **verification account**, \n"
                                       "write **.verify** to make verification".format(message.author.mention))
