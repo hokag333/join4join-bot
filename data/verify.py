@@ -79,6 +79,7 @@ class Verify:
         server = self.bot.get_server("528142547894272010")
         role = discord.utils.get(server.roles, id="528162784022626314")
         member = server.get_member(ctx.message.author.id)
+        await self.bot.delete_message(ctx.message)
         await self.bot.add_roles(member, role)
         await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
         await self.bot.send_message(ctx.message.author, "{} \n"
