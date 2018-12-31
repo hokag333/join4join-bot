@@ -23,7 +23,7 @@ class Verify:
       embed.set_footer(text='Processing ...')
       embed.set_author(name=" ")
       embed.set_image(url=" ")
-      embed.add_field(name="User", value=" {} ".format(member.mention), inline=True)
+      embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
     
 def setup(bot):
