@@ -45,20 +45,7 @@ class Commands:
         await self.bot.delete_messages(messages)
         msg = "**{}** messages was deleted".format(amount)
         await self.bot.send_message(channel, msg)
-    
-  @commands.command(pass_context=True)
-  async def warn(self, ctx, user: discord.User, *, reason=""):
-    if "528145435022327810" or "528200802863677450" in(role.id for role in ctx.message.author.roles):
-      embed = discord.Embed(title = '__Warn__', description = ' ', colour = discord.Colour.orange())
-      embed.set_footer(text=' ')
-      embed.set_thumbnail(url=' ')
-      embed.set_image(url=' ')
-      embed.set_author(name=' ', icon_url=user.avatar_url)
-      embed.add_field(name='User', value= '{}'.format(user.mention), inline=True)
-      embed.add_field(name='Reason', value= '{}'.format(reason), inline=True)
-      await self.bot.send_message(user, embed=embed)
-    
-    
+        
     
 def setup(bot):
   bot.add_cog(Commands(bot))
