@@ -15,7 +15,7 @@ class Commands:
       raise error
       
   @commands.command(pass_context=True)
-  @commands.cooldown(1, 60*60*24, commands.BucketType.user)
+  @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx, *, reason=""):
     if "528160233273425923" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
@@ -44,6 +44,7 @@ class Commands:
         await self.bot.delete_messages(messages)
         msg = "**{}** messages was deleted".format(amount)
         await self.bot.send_message(channel, msg)
+        return
         
     
 def setup(bot):
