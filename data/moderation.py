@@ -23,7 +23,7 @@ class Moderation:
           return
         else:
           await self.bot.delete_message(message)
-          await self.bot.send_message(message.channel, " {} you need have verify account, \n"
+          await self.bot.send_message(message.channel, " {} you need have **verification account**, \n"
                                       "write **.verify** to make verification".format(message.author.mention))
     
 def setup(bot):
