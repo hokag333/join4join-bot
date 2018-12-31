@@ -20,8 +20,6 @@ async def my_background_task():
         await asyncio.sleep(5)
         server = bot.get_server("528142547894272010")
         await bot.change_presence(game=discord.Game(name=" %s members" % len(server.members)))
-        channel = bot.get_channel("529348267746787328")
-        await bot.edit.channel(channel, name="Members %s" % len(server.members))
         await asyncio.sleep(5)
         
 @bot.event
