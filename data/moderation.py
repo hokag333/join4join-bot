@@ -52,13 +52,7 @@ class Moderation:
       embed.add_field(name="Moderator", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
       
-      embed=discord.Embed(title=" ", description=" ", color=0xdb781e)
-      embed.set_footer(text='developer: Prisa')
-      embed.set_author(name="Warn", icon_url=user.avatar_url)
-      embed.set_image(url=" ")
-      embed.add_field(name=" ", value=" {} \n"
-                      "{} ".format(user.mention, reason), inline=True)
-      await self.bot.send_message(ctx.message.channel, embed=embed)
+      await self.bot.send_message(user, "{} you was warned for {}".format(user.mention, reason))
       return
     else:
       return
