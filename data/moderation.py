@@ -56,7 +56,7 @@ class Moderation:
       embed.set_footer(text='developer: Prisa')
       embed.set_author(name="Warn", icon_url=user.avatar_url)
       embed.set_image(url=" ")
-      embed.add_field(name=" ", value=" {} ".format(user.mention), inline=True)
+      embed.add_field(name="User", value=" {} ".format(user.mention), inline=True)
       embed.add_field(name="Warned for", value="{}".format(reason), inline=False)
       await self.bot.send_message(user, embed=embed)
       return
