@@ -58,7 +58,7 @@ class Moderation:
       embed.set_image(url=" ")
       embed.add_field(name=" ", value=" {} \n"
                       "{} ".format(user.mention, reason), inline=True)
-      await self.bot.send_message(user, embed=embed)
+      await self.bot.send_message(ctx.message.channel, embed=embed)
       return
     else:
       return
