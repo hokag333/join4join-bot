@@ -43,7 +43,7 @@ class Moderation:
       embed.set_footer(text='developer: Prisa')
       embed.set_thumbnail(url=' ')
       embed.set_image(url=' ')
-      embed.set_author(name='__Warn__', icon_url=user.avatar_url)
+      embed.set_author(name='Warn', icon_url=user.avatar_url)
       embed.add_field(name='User', value= '{}'.format(user.mention), inline=True)
       embed.add_field(name='Reason', value= '{}'.format(reason), inline=True)
       embed.add_field(name='Moderator', value= '{}'.format(ctx.message.author.mention), inline=True)
