@@ -104,6 +104,7 @@ class Verify:
         embed.set_image(url=" ")
         embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
         await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
+        return
  
     
 def setup(bot):
