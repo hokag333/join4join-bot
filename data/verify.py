@@ -61,6 +61,10 @@ class Verify:
         embed.add_field(name="User", value=" {} ".format(member.mention), inline=True)
         await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
         return
+      else:
+        return
+    else:
+      return
       
   @commands.command(pass_context=True)
   async def verify(self, ctx):
