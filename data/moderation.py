@@ -39,11 +39,11 @@ class Moderation:
     mod_list = ["528145435022327810"
                 "528200802863677450"]
     if mod_list in(role.id for role in ctx.message.author.roles):
-      embed = discord.Embed(title = ' ', description = ' ', color=0xdb781e)
+      embed = discord.Embed(title = '__Warn__', description = ' ', color=0xdb781e)
       embed.set_footer(text='developer: Prisa')
       embed.set_thumbnail(url=' ')
       embed.set_image(url=' ')
-      embed.set_author(name='Warn', icon_url=user.avatar_url)
+      embed.set_author(name=' ', icon_url=' ')
       embed.add_field(name='User', value= '{}'.format(user.mention), inline=True)
       embed.add_field(name='Reason', value= '{}'.format(reason), inline=True)
       await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
