@@ -22,14 +22,7 @@ class Moderation:
         if "528162784022626314" in(role.id for role in message.author.roles):
           return
         else:
-          embed=discord.Embed(title="__Warn__", description=" ", color=0x21ae09)
-          embed.set_footer(text='developer: Prisa')
-          embed.set_author(name=" ", icon_url=message.author.avatar_url)
-          embed.set_image(url=" ")
-          embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
-          embed.add_field(name="Reason", value="Post invite link in {} ".format(message.channel.mention), inline=True)
-          embed.add_field(name=" ", value="not <@&528162784022626314> in User Roles".format(message.channel.name), inline=False)
-          await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
+          await self.bot.delete_message(message)
           await self.bot.send_message(message.channel, " {} you need have verify account, \n"
                                       "write **.verify** to make verification".format(message.author.mention))
     
