@@ -37,7 +37,14 @@ class Moderation:
           
   @commands.command(pass_context=True)
   async def warn(self, ctx, user: discord.User, *, reason=""):
-    await self.bot.send_message(ctx.message.channel, "test")
+    await self.bot.delete_message(ctx.message)
+    embed=discord.Embed(title="❗__Warn__", description=" ", color=0xdb781e)
+    embed.set_footer(text='developer: Prisa')
+    embed.set_author(name=" ")
+    embed.set_image(url=" ")
+    embed.add_field(name="Author", value=" {} ".format(ctx.message.author.mention), inline=True)
+    embed.add_field(name="Reason", value="{}".format(reason), inline=True)
+    await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
     
 def setup(bot):
   bot.add_cog(Moderation(bot))
