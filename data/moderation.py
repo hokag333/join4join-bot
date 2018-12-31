@@ -23,6 +23,13 @@ class Moderation:
           return
         else:
           await self.bot.delete_message(message)
+          embed=discord.Embed(title="__Warn__", description=" ", color=0x21ae09)
+          embed.set_footer(text='developer: Prisa')
+          embed.set_author(name=" ")
+          embed.set_image(url=" ")
+          embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
+          embed.add_field(name="Reason", value="posted invit link", inline=True)
+          await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
           await self.bot.send_message(message.channel, " {} you need have **verification account**, \n"
                                       "write **.verify** to make verification".format(message.author.mention))
     
