@@ -18,6 +18,13 @@ class Verify:
       embed.set_author(name=' ', icon_url=' ')
       embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
       await self.bot.send_message(ctx.message.author, embed=embed)
+      
+      embed=discord.Embed(title="🔄__Verification__", description=" ", color=0x1378ca)
+      embed.set_footer(text='Processing ...')
+      embed.set_author(name=" ")
+      embed.set_image(url=" ")
+      embed.add_field(name="User", value=" {} ".format(member.mention), inline=True)
+      await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
     
 def setup(bot):
   bot.add_cog(Verify(bot))
