@@ -51,6 +51,7 @@ class Moderation:
       embed.add_field(name="Reason", value="{}".format(reason), inline=True)
       embed.add_field(name="Moderator", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
+      await self.bot.send_message(user, embed=embed)
       return
     else:
       return
