@@ -32,6 +32,13 @@ class Trynew:
         await self.bot.send_message(member, "{} \n"
                                     "Your account was verificate✅ \n"
                                     "You can now post **invite links** in **Join 4 Join** server".format(member.mention))
+        
+        embed=discord.Embed(title="✅__Verification__", description=" ", color=0x2be20a)
+        embed.set_footer(text='verificate')
+        embed.set_author(name=" ")
+        embed.set_image(url=" ")
+        embed.add_field(name="User", value=" {} ".format(member.mention), inline=True)
+        await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
         return
       
   async def on_member_remove(self, member):
@@ -47,6 +54,13 @@ class Trynew:
                                     "{} \n"
                                     "You don´t meet the verification request \n"
                                     "try **verify** your account again".format(member.mention))
+        
+        embed=discord.Embed(title="❌__Verification__", description=" ", color=0x2be20a)
+        embed.set_footer(text='error')
+        embed.set_author(name=" ")
+        embed.set_image(url=" ")
+        embed.add_field(name="User", value=" {} ".format(member.mention), inline=True)
+        await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
         return
  
     
