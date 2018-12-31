@@ -35,7 +35,6 @@ class Commands:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
    
   @commands.command(pass_context=True)
-  @commands.cooldown(1, 60, commands.BucketType.user)
   async def clear(self, ctx, amount=51):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       channel = ctx.message.channel
