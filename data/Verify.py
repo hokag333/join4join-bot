@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-class Trynew:
+class Verify:
   def __init__(self, bot):
     self.bot = bot 
                                 
@@ -85,4 +85,4 @@ class Trynew:
  
     
 def setup(bot):
-  bot.add_cog(Trynew(bot))
+  bot.add_cog(Verify(bot))
