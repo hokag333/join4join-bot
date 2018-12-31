@@ -74,6 +74,24 @@ class Verify:
         await self.bot.send_message(ctx.message.author, "You already have a verified✅ account")
         return
       
+      server2 = self.bot.get_server("382204136990703616")
+      if ctx.message.author in(server2.members):
+        server = self.bot.get_server("528142547894272010")
+        role = discord.utils.get(server.roles, id="528162784022626314")
+        member = server.get_member(ctx.message.author.id)
+        await self.bot.add_roles(member, role)
+        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
+        await self.bot.send_message(ctx.message.author, "{} \n"
+                                    "Your account was verificate✅ \n"
+                                    "You can now post **invite links** in **Join 4 Join** server".format(ctx.message.author.mention))
+        
+        embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
+        embed.set_footer(text='verificate')
+        embed.set_author(name=" ")
+        embed.set_image(url=" ")
+        embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
+        await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
+      
       await self.bot.delete_message(ctx.message)
       await self.bot.send_message(ctx.message.author, "{}".format(ctx.message.author.mention))
       
@@ -91,25 +109,7 @@ class Verify:
       embed.set_image(url=" ")
       embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
-      
-      server1 = self.bot.get_server("528142547894272010")
-      if ctx.message.author in(server1.members):
-        server = self.bot.get_server("528142547894272010")
-        role = discord.utils.get(server.roles, id="528162784022626314")
-        member = server.get_member(ctx.message.author.id)
-        await self.bot.add_roles(member, role)
-        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
-        await self.bot.send_message(ctx.message.author, "{} \n"
-                                    "Your account was verificate✅ \n"
-                                    "You can now post **invite links** in **Join 4 Join** server".format(ctx.message.author.mention))
-        
-        embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
-        embed.set_footer(text='verificate')
-        embed.set_author(name=" ")
-        embed.set_image(url=" ")
-        embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
-        await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
-        return
+      return
  
     
 def setup(bot):
