@@ -23,7 +23,7 @@ class Moderation:
           return
         else:
           await self.bot.delete_message(message)
-          embed=discord.Embed(title="__Warn__", description=" ", color=0xdb781e)
+          embed=discord.Embed(title="❗__Warn__", description=" ", color=0xdb781e)
           embed.set_footer(text='developer: Prisa')
           embed.set_author(name=" ")
           embed.set_image(url=" ")
