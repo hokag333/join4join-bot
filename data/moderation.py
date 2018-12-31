@@ -37,7 +37,7 @@ class Moderation:
           
   @commands.command(pass_context=True)
   async def warn(self, ctx, user: discord.User, *, reason=""):
-    mod_list = ["528145435022327810"
+    mod_list = ["528145435022327810",
                 "528200802863677450"]
     if mod_list in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(message)
