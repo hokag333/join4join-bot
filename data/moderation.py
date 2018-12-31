@@ -38,6 +38,10 @@ class Moderation:
   @commands.command(pass_context=True)
   async def warn(self, ctx, user: discord.User, *, reason=""):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
+      mod = "528145435022327810"
+    if "528200802863677450" in(role.id for role in ctx.message.author.roles):
+      mod = "528200802863677450"
+    if mod in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
       embed=discord.Embed(title="❗__Warn__", description=" ", color=0xdb781e)
       embed.set_footer(text='developer: Prisa')
