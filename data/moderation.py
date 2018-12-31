@@ -47,7 +47,7 @@ class Moderation:
       embed.set_footer(text='developer: Prisa')
       embed.set_author(name=" ")
       embed.set_image(url=" ")
-      embed.add_field(name="User", value=" {} ".format(user.mention), inline=True)
+      embed.add_field(name="👤User", value=" {} ".format(user.mention), inline=True)
       embed.add_field(name="Reason", value="{}".format(reason), inline=True)
       embed.add_field(name="Moderator", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
