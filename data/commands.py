@@ -55,6 +55,7 @@ class Commands:
       embed.set_author(name=" ", icon_url=" ")
       embed.set_image(url=" ")
       embed.add_field(name="** **", value=" {} ".format(reason), inline=True)
+      embed.add_field(name="** **", value="[**Join 4 Join** server](https://discord.gg/9hjAVpP)", inline=True)
       await self.bot.send_message(ctx.message.author, embed=embed)
       return
         
