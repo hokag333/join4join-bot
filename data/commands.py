@@ -43,16 +43,13 @@ class Commands:
         messages.append(message)
         await self.bot.delete_messages(messages)
         msg = "**{}** messages was deleted".format(amount)
-        await self.bot.send_message(channel, msg)
+        await self.bot.send_message(ctx.message.channel, msg)
         return
       
   @commands.command(pass_context=True)
   async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
-      server = self.bot.get_server("458341394524798976")
-      mser = server.get_member(random.choice(server.member.id))
-      
       embed = discord.Embed(title = '**__Information__**', description = ' ', color=0x1378ca)
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url=' ')
