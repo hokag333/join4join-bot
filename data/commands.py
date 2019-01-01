@@ -49,16 +49,15 @@ class Commands:
   @commands.command(pass_context=True)
   async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
-      for members in ctx.message.server.members:
-        await self.bot.delete_message(ctx.message)
-        embed = discord.Embed(title = '**__Information__**', description = ' ', color=0x1378ca)
-        embed.set_footer(text='developer: Prisa#4835')
-        embed.set_thumbnail(url=' ')
-        embed.set_image(url=' ')
-        embed.set_author(name=' ', icon_url=' ')
-        embed.add_field(name='** **', value= '{}'.format(reason), inline=True)
-        embed.add_field(name='** **', value= '[Join 4 Join server](https://discord.gg/2zp4aqp)', inline=False)
-        await self.bot.send_message(members, embed=embed)
+      await self.bot.delete_message(ctx.message)
+      embed = discord.Embed(title = '**__Information__**', description = ' ', color=0x1378ca)
+      embed.set_footer(text='developer: Prisa#4835')
+      embed.set_thumbnail(url=' ')
+      embed.set_image(url=' ')
+      embed.set_author(name=' ', icon_url=' ')
+      embed.add_field(name='** **', value= '{}'.format(reason), inline=True)
+      embed.add_field(name='** **', value= '[Join 4 Join server](https://discord.gg/2zp4aqp)', inline=False)
+      await self.bot.send_message(ctx.message.server.members, embed=embed)
       
         
     
