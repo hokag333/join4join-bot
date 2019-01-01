@@ -67,6 +67,8 @@ class Moderation:
                           "You don´t have **Verified** account \n"
                           "Just **verify your account** in <#528209980734832642> \n"
                           "with **.verify** command", inline=True)
+          embed.add_field(name=" ", value="Just **verify your account** in <#528209980734832642> \n"
+                          "with **.verify** command", inline=False)
           await self.bot.send_message(message.author, embed=embed)
           
   @commands.command(pass_context=True)
