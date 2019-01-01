@@ -102,7 +102,7 @@ class Verify:
       await self.bot.delete_message(ctx.message)
       await self.bot.send_message(ctx.message.author, "{}".format(ctx.message.author.mention))
       
-      embed = discord.Embed(title = '🔄__Verification__', description = ' ', colour = discord.Colour.orange())
+      embed = discord.Embed(title = '🔄__Verification__', description = ' ', color=0x1378ca)
       embed.set_footer(text=' ')
       embed.set_thumbnail(url=' ')
       embed.set_image(url=' ')
