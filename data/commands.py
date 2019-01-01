@@ -48,10 +48,10 @@ class Commands:
       
   @commands.command(pass_context=True)
   async def infodm(self, ctx, member: discord.Member=None, *, reason=""):
-    if "528145435022327810" in(role.id for role in ctx.message.author.roles):
-      await self.bot.delete_message(ctx.message)
+    if "528145435022327810" in(role.id for role in ctx.message.author.roles): 
       if member == "@everyone":
         for server_member in ctx.message.server.members:
+          await self.bot.delete_message(ctx.message)
           embed=discord.Embed(title="**__Information__** ", description=" ", color=0xdb781e)
           embed.set_footer(text='developer: Prisa')
           embed.set_author(name=" ", icon_url=" ")
