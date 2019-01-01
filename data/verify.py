@@ -21,7 +21,7 @@ class Verify:
                                   "If you need help with something, write **.help** \n"
                                   "or contact **Moderators**".format(member.mention))
       
-      await self.bot.send_message(discord.Object(id='529619462140461066'), "{} joined **Join 4 Join** server".format(member.mention))
+      await self.bot.send_message(discord.Object(id='529619462140461066'), "{} joined **Join 4 Join** server✅".format(member.mention))
       return
     elif member.server.id == "382204136990703616":
       server1 = self.bot.get_server("528142547894272010")
@@ -67,7 +67,7 @@ class Verify:
         return
       
     elif member.server.id == "528142547894272010":
-      await self.bot.send_message(discord.Object(id='529619462140461066'), "{} left **Join 4 Join** server".format(member.mention))
+      await self.bot.send_message(discord.Object(id='529619462140461066'), "{} left **Join 4 Join** server🔴".format(member.mention))
     else:
       return
       
