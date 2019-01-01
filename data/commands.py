@@ -51,6 +51,7 @@ class Commands:
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       server = self.bot.get_server("528142547894272010")
       for member in server:
+        await self.bot.delete_message(ctx.message)
         embed = discord.Embed(title = '**__Information__**', description = ' ', color=0x1378ca)
         embed.set_footer(text='developer: Prisa#4835')
         embed.set_thumbnail(url=' ')
