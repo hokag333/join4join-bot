@@ -73,50 +73,50 @@ class Verify:
       
   @commands.command(pass_context=True)
   async def verify(self, ctx):
-    if "528142547894272010" in (ctx.message.server.id):
-      if "528162784022626314" in(role.id for role in ctx.message.author.roles):
-        await self.bot.delete_message(ctx.message)
-        await self.bot.send_message(ctx.message.author, "You already have a verified✅ account")
-        return
-      
-      server2 = self.bot.get_server("382204136990703616")
-      if ctx.message.author in(server2.members):
-        server = self.bot.get_server("528142547894272010")
-        role = discord.utils.get(server.roles, id="528162784022626314")
-        member = server.get_member(ctx.message.author.id)
-        await self.bot.delete_message(ctx.message)
-        await self.bot.add_roles(member, role)
-        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
-        await self.bot.send_message(ctx.message.author, "{} \n"
-                                    "Your account was verificate✅ \n"
-                                    "You can now post **invite links** in **Join 4 Join** server".format(ctx.message.author.mention))
-        
-        embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
-        embed.set_footer(text='verificate')
-        embed.set_author(name=" ")
-        embed.set_image(url=" ")
-        embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
-        await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
-        return
-      
+    server1 = self.bot.get_server("528142547894272010")
+    if "528162784022626314" in(server1.role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
-      await self.bot.send_message(ctx.message.author, "{}".format(ctx.message.author.mention))
+      await self.bot.send_message(ctx.message.author, "You already have a verified✅ account")
+      return
+    
+    server2 = self.bot.get_server("382204136990703616")
+    if ctx.message.author in(server2.members):
+      server = self.bot.get_server("528142547894272010")
+      role = discord.utils.get(server.roles, id="528162784022626314")
+      member = server.get_member(ctx.message.author.id)
+      await self.bot.delete_message(ctx.message)
+      await self.bot.add_roles(member, role)
+      await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
+      await self.bot.send_message(ctx.message.author, "{} \n"
+                                  "Your account was verificate✅ \n"
+                                  "You can now post **invite links** in **Join 4 Join** server".format(ctx.message.author.mention))
       
-      embed = discord.Embed(title = '🔄__Verification__', description = ' ', colour = discord.Colour.orange())
-      embed.set_footer(text=' ')
-      embed.set_thumbnail(url=' ')
-      embed.set_image(url=' ')
-      embed.set_author(name=' ', icon_url=' ')
-      embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
-      await self.bot.send_message(ctx.message.author, embed=embed)
-      
-      embed=discord.Embed(title="🔄__Verification__", description=" ", color=0x1378ca)
-      embed.set_footer(text='Processing ...')
+      embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
+      embed.set_footer(text='verificate')
       embed.set_author(name=" ")
       embed.set_image(url=" ")
       embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
       return
+    
+    await self.bot.delete_message(ctx.message)
+    await self.bot.send_message(ctx.message.author, "{}".format(ctx.message.author.mention))
+    
+    embed = discord.Embed(title = '🔄__Verification__', description = ' ', colour = discord.Colour.orange())
+    embed.set_footer(text=' ')
+    embed.set_thumbnail(url=' ')
+    embed.set_image(url=' ')
+    embed.set_author(name=' ', icon_url=' ')
+    embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
+    await self.bot.send_message(ctx.message.author, embed=embed)
+    
+    embed=discord.Embed(title="🔄__Verification__", description=" ", color=0x1378ca)
+    embed.set_footer(text='Processing ...')
+    embed.set_author(name=" ")
+    embed.set_image(url=" ")
+    embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
+    await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
+    return
  
     
 def setup(bot):
