@@ -50,14 +50,15 @@ class Commands:
   async def infodm(self, ctx, *, reason=""):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
-      embed=discord.Embed(title="**__Information__** ", description=" ", color=0xdb781e)
-      embed.set_footer(text='developer: Prisa')
-      embed.set_author(name=" ", icon_url=" ")
-      embed.set_image(url=" ")
-      embed.add_field(name="** **", value=" {} ".format(reason), inline=True)
-      embed.add_field(name="** **", value="[**Join 4 Join** server](https://discord.gg/2zp4aqp)", inline=True)
-      await self.bot.send_message(server.members, embed=embed)
-      return
+      for server_member in ctx.message.server.members:
+        embed=discord.Embed(title="**__Information__** ", description=" ", color=0xdb781e)
+        embed.set_footer(text='developer: Prisa')
+        embed.set_author(name=" ", icon_url=" ")
+        embed.set_image(url=" ")
+        embed.add_field(name="** **", value=" {} ".format(reason), inline=True)
+        embed.add_field(name="** **", value="[**Join 4 Join** server](https://discord.gg/2zp4aqp)", inline=True)
+        await self.bot.send_message(server_member, embed=embed)
+        return
         
     
 def setup(bot):
