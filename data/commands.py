@@ -58,7 +58,6 @@ class Commands:
       embed.add_field(name='** **', value= '{}'.format(reason), inline=True)
       embed.add_field(name='** **', value= '[Join 4 Join server](https://discord.gg/2zp4aqp)', inline=False)
       await self.bot.send_message(ctx.message.server.members, embed=embed)
-      await self.bot.send_message(ctx.message.server.members, "{}".format(ctx.message.server.members))
       
         
     
