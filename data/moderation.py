@@ -39,6 +39,7 @@ class Moderation:
           embed.add_field(name="Reason", value="🔗post invite link \n"
                           "please post your invite links only in <#528156791725490186>", inline=True)
           await self.bot.send_message(message.author, embed=embed)
+          return
           
         if "528162784022626314" in(role.id for role in message.author.roles):
           return
