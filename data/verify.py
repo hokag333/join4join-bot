@@ -75,7 +75,8 @@ class Verify:
   async def verify(self, ctx):
     server1 = self.bot.get_server("528142547894272010")
     if "528162784022626314" in(server1.role.id for role in ctx.message.author.roles):
-      await self.bot.delete_message(ctx.message)
+      if "528142547894272010" in (ctx.message.server.id):
+        await self.bot.delete_message(ctx.message)
       await self.bot.send_message(ctx.message.author, "You already have a verified✅ account")
       return
     
@@ -84,7 +85,8 @@ class Verify:
       server = self.bot.get_server("528142547894272010")
       role = discord.utils.get(server.roles, id="528162784022626314")
       member = server.get_member(ctx.message.author.id)
-      await self.bot.delete_message(ctx.message)
+      if "528142547894272010" in (ctx.message.server.id):
+        await self.bot.delete_message(ctx.message)
       await self.bot.add_roles(member, role)
       await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
       await self.bot.send_message(ctx.message.author, "{} \n"
@@ -99,7 +101,8 @@ class Verify:
       await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
       return
     
-    await self.bot.delete_message(ctx.message)
+    if "528142547894272010" in (ctx.message.server.id):
+      await self.bot.delete_message(ctx.message)
     await self.bot.send_message(ctx.message.author, "{}".format(ctx.message.author.mention))
     
     embed = discord.Embed(title = '🔄__Verification__', description = ' ', colour = discord.Colour.orange())
