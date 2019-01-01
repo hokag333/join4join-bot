@@ -65,7 +65,7 @@ class Moderation:
           embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
           embed.add_field(name="Reason", value="🔗post invite link \n"
                           "You don´t have **Verified** account \n"
-                          "Just **verify you account in <#528209980734832642> \n"
+                          "Just **verify your account** in <#528209980734832642> \n"
                           "with **.verify** command", inline=True)
           await self.bot.send_message(message.author, embed=embed)
           
