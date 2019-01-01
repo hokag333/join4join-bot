@@ -47,7 +47,7 @@ class Commands:
         return
       
   @commands.command(pass_context=True)
-  async def infodm(self, ctx, user: discord.User, *, reason=""):
+  async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
       server = await self.bot.get_server("458341394524798976")
       await self.bot.delete_message(ctx.message)
