@@ -117,6 +117,12 @@ class Verify:
       embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
       await self.bot.send_message(discord.Object(id='529194384764174337'), embed=embed)
       return
+    
+    server1 = self.bot.get_server("528142547894272010")
+    role1 = discord.utils.get(server1.roles, id="528162784022626314")
+    if role1 in(ctx.message.author.roles):
+      await self.bot.send_message(ctx.message.author, "You already have a verified✅ account")
+      return
  
     
 def setup(bot):
