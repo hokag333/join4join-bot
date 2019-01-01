@@ -45,6 +45,18 @@ class Commands:
         msg = "**{}** messages was deleted".format(amount)
         await self.bot.send_message(channel, msg)
         return
+      
+  @commands.command(pass_context=True)
+  async def infodm(self, ctx, *, reason=""):
+    if "528145435022327810" in(role.id for role in ctx.message.author.roles):
+      await self.bot.delete_message(ctx.message)
+      embed=discord.Embed(title="**__Information__** ", description=" ", color=0xdb781e)
+      embed.set_footer(text='developer: Prisa')
+      embed.set_author(name=" ", icon_url=" ")
+      embed.set_image(url=" ")
+      embed.add_field(name="** **", value=" {} ".format(reason), inline=True)
+      await self.bot.send_message(ctx.message.author, embed=embed)
+      return
         
     
 def setup(bot):
