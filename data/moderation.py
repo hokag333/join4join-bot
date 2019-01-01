@@ -57,8 +57,8 @@ class Moderation:
           embed.add_field(name="Reason", value="🔗post invite link \n"
                           "user doesn´t have **Verified** account", inline=True)
           await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
-          msg = [" {} you need have **verification account**, \n"
-                 "write **.verify** to make verification".format(message.author.mention)]
+          msg = " {} you need have **verification account**, \n"
+                 "write **.verify** to make verification".format(message.author.mention)
           await self.bot.send_message(message.channel, msg)
           await asyncio.sleep(5)
           await self.bot.delete_message(msg)
