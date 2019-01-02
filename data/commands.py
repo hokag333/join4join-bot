@@ -51,8 +51,8 @@ class Commands:
   async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
       user = "381887710308335618"
-      member = await self.bot.get_member(user)
-      wait = random.choice(user)
+      server = await self.bot.get_server("458341993328803850")
+      member = await self.bot.server.get_member(user)
       await self.bot.send_message(member, "test")
       return
       
