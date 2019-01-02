@@ -36,16 +36,9 @@ class Commands:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
       
   @commands.command(pass_context=True)
-  async def mute(self, ctx, user: discord.User, *, arg1=""):
-    if m in arg1:
-      time = arg1 -m
-      msg = "test"
-      await self.bot.send_message(ctx.message.channel, msg)
-      await asyncio.sleep(60*time)
-      await self.bot.delete_message(msg)
-      return
-    await self.bot.send_message(ctx.message.channel, " user is {} arg1 is {}, arg2 is  this is the test".format(user.mention, arg1, arg2))
-    return
+  async def mute(self, ctx, arg1, arg2):
+    msg = "arg1 is {0}  arg 2 is {1}".format(arg1, arg2))
+    await self.bot.send_message(ctx.message.channel, msg)
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
