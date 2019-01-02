@@ -52,7 +52,7 @@ class Commands:
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
       user = ["381887710308335618", "522818952464695316"]
       wait = random.choice(user)
-      await self.bot.send_message(ctx.message.channel, "{}".format(wait))
+      await self.bot.send_message(ctx.message.channel, "{}".format(user))
       return
       
         
