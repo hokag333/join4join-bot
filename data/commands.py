@@ -50,9 +50,11 @@ class Commands:
   @commands.command(pass_context=True)
   async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
-      user = ["381887710308335618", "522818952464695316"]
+      user = ["381887710308335618",
+              "522818952464695316"]
+      member = await self.bot.get_member(user)
       wait = random.choice(user)
-      await self.bot.send_message(ctx.message.channel, "{}".format(user))
+      await self.bot.send_message(member, "test")
       return
       
         
