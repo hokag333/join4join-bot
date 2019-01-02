@@ -37,7 +37,8 @@ class Commands:
       
   @commands.command(pass_context=True)
   async def mute(self, ctx, user: discord.User, *, arg1, arg2):
-    await self.bot.send_message(ctx.message.channel, " arg1: {} , arg2: {}, this is the test".foramt(arg1, arg2))
+    await self.bot.send_message(ctx.message.channel, " user: {} arg1: {} , arg2: {}, this is the test".foramt(user.mention, arg1, arg2))
+    return
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
