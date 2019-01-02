@@ -51,6 +51,7 @@ class Commands:
   async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
       await self.bot.delete_message(ctx.message)
+      messages = ["try", "me", "you", "do", "now"]
       server = await self.bot.get_server("458341394524798976")
       embed = discord.Embed(title = '**__Information__**', description = ' ', color=0x1378ca)
       embed.set_footer(text='developer: Prisa#4835')
@@ -58,9 +59,11 @@ class Commands:
       embed.set_image(url=' ')
       embed.set_author(name=' ', icon_url=' ')
       embed.add_field(name='** **', value= '{}'.format(reason), inline=True)
-      embed.add_field(name='**Random Choice**', value= '{}'.format(random.choice(server.members).mention), inline=True)
+      embed.add_field(name='**Random Choice**', value= '{}'.format(random.choice(messages)), inline=True)
       embed.add_field(name='** **', value= '[Join 4 Join server](https://discord.gg/2zp4aqp)', inline=False)
       await self.bot.send_message(ctx.message.channel, embed=embed)
+      await self.bot.send_message(ctx.message.channel, random.choice(server.members).mention)
+      return
       
         
     
