@@ -50,11 +50,15 @@ class Commands:
   @commands.command(pass_context=True)
   async def infodm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
-      user = "381887710308335618"
-      server = await self.bot.get_server("458341993328803850")
-      member = await self.bot.server.get_member(user)
-      await self.bot.send_message(member, "test")
+      user = ["381887710308335618", "522818952464695316"]
+      member = random.choice(user)
+      await self.bot.send_message(discord.Object(id='529944759364747264'), ".test <@{}>".format(member))
       return
+  
+  @commands.command(pass_context=True)
+  async def test(self, ctx, user: discord.User, *, reason=""):
+    if ctx.message.author.bot:
+      await self.bot.send_message(user, "test")
       
         
     
