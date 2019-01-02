@@ -16,7 +16,7 @@ async def my_background_task():
     while not bot.is_closed:
         await bot.change_presence(game=discord.Game(name='Join 4 Join server'))
         await asyncio.sleep(5)
-        await bot.change_presence(game=discord.Game(name='version 1.2.1'))
+        await bot.change_presence(game=discord.Game(name='version 1.3.5'))
         await asyncio.sleep(5)
         server = bot.get_server("528142547894272010")
         await bot.change_presence(game=discord.Game(name=" %s members" % len(server.members)))
