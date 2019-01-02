@@ -61,8 +61,10 @@ class Commands:
       embed.add_field(name='**Random Choice**', value= '{}'.format(random.choice(messages)), inline=True)
       embed.add_field(name='** **', value= '[Join 4 Join server](https://discord.gg/2zp4aqp)', inline=False)
       await self.bot.send_message(ctx.message.channel, embed=embed)
-      server = ctx.message.server
-      await self.bot.send_message(ctx.message.channel, "{}".format(random.choice(server.members).mention))
+      user = ["381887710308335618", "522818952464695316"]
+      wait = random.choice(user)
+      member = await self.bot.get_member(wait)
+      await self.bot.send_message(ctx.message.channel, "{}".format(member.mention))
       return
       
         
