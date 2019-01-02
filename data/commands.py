@@ -37,7 +37,7 @@ class Commands:
       
   @commands.command(pass_context=True)
   async def mute(self, ctx, arg1, arg2):
-    msg = "arg1 is {0}  arg 2 is {1}".format(arg1, arg2))
+    msg = "arg1 is {}  arg 2 is {}".format(arg1, arg2))
     await self.bot.send_message(ctx.message.channel, msg)
    
   @commands.command(pass_context=True)
