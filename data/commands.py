@@ -38,9 +38,10 @@ class Commands:
   @commands.command(pass_context=True)
   async def mute(self, ctx, user: discord.User, *, arg1=""):
     if m in arg1:
+      time = arg1 -m
       msg = "test"
       await self.bot.send_message(ctx.message.channel, msg)
-      await asyncio.sleep(60*arg1(-=m))
+      await asyncio.sleep(60*time)
       await self.bot.delete_message(msg)
       return
     await self.bot.send_message(ctx.message.channel, " user is {} arg1 is {}, arg2 is  this is the test".format(user.mention, arg1, arg2))
