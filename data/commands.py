@@ -48,12 +48,12 @@ class Commands:
         return
       
   @commands.command(pass_context=True)
-  async def infodm(self, ctx, member: discord.Member=None, *, reason=""):
+  async def infodm(self, ctx, user: discord.User=None, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
-      if not member:
+      if not user:
         await client.say(ctx.message.author.mention + "Specify a user to DM!")
         return
-      if member == "@everyone":
+      if user == "@everyone":
         for server_member in ctx.message.server.members:
           await client.send_message(server_member, "{} ".format(reason))
           return
