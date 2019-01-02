@@ -34,7 +34,8 @@ class Moderation:
           embed.set_image(url=" ")
           embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
           embed.add_field(name="Reason", value="🔗post invite link \n"
-                          "in <#{}> ".format(message.channel.id), inline=True) 
+                          "in <#{}> ".format(message.channel.id), inline=True)
+          embed.add_field(name="Info", value="message was deleted", inline=True)
           await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
           
           embed=discord.Embed(title=" ", description=" ", color=0xdb781e)
@@ -56,6 +57,7 @@ class Moderation:
           embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
           embed.add_field(name="Reason", value="🔗post invite link \n"
                           "user doesn´t have **Verified** account", inline=True)
+          embed.add_field(name="Info", value="message was deleted", inline=True)
           await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
           
           embed=discord.Embed(title=" ", description=" ", color=0xdb781e)
