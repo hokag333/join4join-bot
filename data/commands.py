@@ -58,10 +58,10 @@ class Commands:
       embed.set_image(url=' ')
       embed.set_author(name=' ', icon_url=' ')
       embed.add_field(name='** **', value= '{}'.format(reason), inline=True)
-      embed.add_field(name='**Random Choice**', value= '{}'.format(ctx.message.author.mention), inline=True)
+      embed.add_field(name='**Random Choice**', value= '{}'.format(random.choice(messages)), inline=True)
+      embed.add_field(name='**Random Choice 2**', value= '{}'.format(random.choice(messages)), inline=True)
       embed.add_field(name='** **', value= '[Join 4 Join server](https://discord.gg/2zp4aqp)', inline=False)
       await self.bot.send_message(ctx.message.channel, embed=embed)
-      await self.bot.send_message(ctx.message.channel, random.choice(messages))
       
         
     
