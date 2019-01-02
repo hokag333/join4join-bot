@@ -30,13 +30,13 @@ class Verify:
         role = discord.utils.get(server.roles, id="528162784022626314")
         new_member = server.get_member(member.id)
         await self.bot.add_roles(new_member, role)
-        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(member.mention))
+        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verified✅".format(member.mention))
         await self.bot.send_message(member, "{} \n"
-                                    "Your account was verificate✅ \n"
+                                    "Your account was verified✅ \n"
                                     "You can now post **invite links** in **Join 4 Join** server".format(member.mention))
         
         embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
-        embed.set_footer(text='verificate')
+        embed.set_footer(text='verified')
         embed.set_author(name=" ")
         embed.set_image(url=" ")
         embed.add_field(name="User", value=" {} ".format(member.mention), inline=True)
@@ -86,13 +86,13 @@ class Verify:
         member = server.get_member(ctx.message.author.id)
         await self.bot.delete_message(ctx.message)
         await self.bot.add_roles(member, role)
-        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verificate✅".format(ctx.message.author.mention))
+        await self.bot.send_message(discord.Object(id='528209980734832642'), "{} was verified✅".format(ctx.message.author.mention))
         await self.bot.send_message(ctx.message.author, "{} \n"
-                                    "Your account was verificate✅ \n"
+                                    "Your account was verified✅ \n"
                                     "You can now post **invite links** in **Join 4 Join** server".format(ctx.message.author.mention))
         
         embed=discord.Embed(title="✅__Verification__", description=" ", color=0x21ae09)
-        embed.set_footer(text='verificate')
+        embed.set_footer(text='verified')
         embed.set_author(name=" ")
         embed.set_image(url=" ")
         embed.add_field(name="User", value=" {} ".format(ctx.message.author.mention), inline=True)
