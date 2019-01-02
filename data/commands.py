@@ -36,7 +36,7 @@ class Commands:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
       
   @commands.command(pass_context=True)
-  async def mute(self, ctx, user: discord.User, *, arg1, arg2):
+  async def mute(self, ctx, user: discord.User, *, arg1, **, arg2):
     await self.bot.send_message(ctx.message.channel, " user: {} arg1: {} , arg2: {}, this is the test".foramt(user.mention, arg1, arg2))
     return
    
