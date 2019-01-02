@@ -34,6 +34,10 @@ class Commands:
       return
     else:
       await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
+      
+  @commands.command(pass_context=True)
+  async def mute(self, ctx, user: discord.User, *, arg1, arg2):
+    await self.bot.send_message(ctx.message.channel, " arg1: {} , arg2: {}, this is the test".foramt(arg1, arg2))
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
@@ -46,24 +50,6 @@ class Commands:
         msg = "**{}** messages was deleted".format(amount)
         await self.bot.send_message(ctx.message.channel, msg)
         return
-      
-  @commands.command(pass_context=True)
-  async def infodm(self, ctx, user: discord.User=None, *, reason=""):
-    if "458341993328803850" in(role.id for role in ctx.message.author.roles):
-      if not user:
-        await self.bot.say(ctx.message.author.mention + "Specify a user to DM!")
-        return
-      if user == "@everyone":
-        for server_member in ctx.message.server.members:
-          await self.bot.send_message(server_member, "{} ".format(reason))
-          return
-      else:
-        await self.bot.send_message(member, " {} ".format(reason))
-  
-  @commands.command(pass_context=True)
-  async def test(self, ctx, user: discord.User, *, reason=""):
-    await self.bot.send_message(user, "test")
-    return
       
         
     
