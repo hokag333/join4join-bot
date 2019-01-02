@@ -59,6 +59,7 @@ class Commands:
   async def test(self, ctx, user: discord.User, *, reason=""):
     if ctx.message.author.bot:
       await self.bot.send_message(user, "test")
+      return
       
         
     
