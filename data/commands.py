@@ -17,10 +17,9 @@ class Commands:
       
   @commands.command(pass_context=True)
   @commands.cooldown(1, 10, commands.BucketType.user)
-  async def dm(self, ctx, *, reason=""):
-    if "458341993328803850" in(role.id for role in ctx.message.author.roles):
-      user = random.choice(message.guild.members)
-      await self.bot.send_message(ctx.message.channel, " {} ".format(user))
+  async def dm(self, ctx):
+    user = random.choice(ctx.message.guild.members)
+    await self.bot.send_message(ctx.message.channel, " {} ".format(user.mention))
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
