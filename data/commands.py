@@ -19,6 +19,7 @@ class Commands:
   @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
+      member = discord.Member
       user = random.choice(member in(ctx.message.server.members))
       await self.bot.send_message(ctx.message.channel, " **User select** : {} {} ".format(user.mention, reason))
       return
