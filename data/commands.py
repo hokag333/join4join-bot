@@ -20,7 +20,7 @@ class Commands:
   async def dm(self, ctx, *, reason=""):
     if "458341993328803850" in(role.id for role in ctx.message.author.roles):
       user = random.choice(member in(ctx.message.server.members))
-      await self.bot.send_message(ctx.message.channel, " **User select** : {} ".format(user.mention))
+      await self.bot.send_message(ctx.message.channel, " **User select** : {} {} ".format(user.mention, reason))
       return
    
   @commands.command(pass_context=True)
