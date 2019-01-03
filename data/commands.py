@@ -18,27 +18,10 @@ class Commands:
   @commands.command(pass_context=True)
   @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx, *, reason=""):
-    if "528160233273425923" in(role.id for role in ctx.message.author.roles):
-      await self.bot.delete_message(ctx.message)
-      await self.bot.send_message(ctx.message.channel, "{}\n"
-                                  " \n"
-                                  "**Join 4 Join dm** by {} \n"
-                                  "don´t forget to contact him to make join 4 join".format(reason, ctx.message.author.mention))
+    if "458341993328803850" in(role.id for role in ctx.message.author.roles):
+      user = random.choice(member in(ctx.message.server.members))
+      await self.bot.send_message(ctx.message.channel, " **User select** : {} ".format(user.mention))
       return
-    if "528500676372856834" in(role.id for role in ctx.message.author.roles):
-      await self.bot.delete_message(ctx.message)
-      await self.bot.send_message(ctx.message.channel, "{}\n"
-                                  " \n"
-                                  "**Join 4 Join dm** by {} \n"
-                                  "don´t forget to contact him to make join 4 join".format(reason, ctx.message.author.mention))
-      return
-    else:
-      await self.bot.send_message(ctx.message.channel, "{} you don´t have permissions to dm command".format(ctx.message.author.mention))
-      
-  @commands.command(pass_context=True)
-  async def mute(self, ctx, arg1, arg2):
-    msg = "arg1 is {}  arg 2 is {}".format(arg1, arg2))
-    await self.bot.send_message(ctx.message.channel, msg)
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
