@@ -53,7 +53,7 @@ class Verify:
         await self.bot.remove_roles(left_member, role)
         await self.bot.send_message(member, "**Verification error**❌ \n"
                                     "{} \n"
-                                    "You don´t meet the verification request \n"
+                                    "You are not satisfy request for verification \n"
                                     "try **verify** your account again".format(member.mention))
         
         embed=discord.Embed(title="❌__Verification__", description=" ", color=0xc11515)
