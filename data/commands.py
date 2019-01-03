@@ -20,7 +20,7 @@ class Commands:
   async def dm(self, ctx):
     member = ctx.message.server.members
     user = random.choice(member)
-    await self.bot.send_message(ctx.message.channel, "test {} {} ".format(ctx.message.author.mention, user))
+    await self.bot.send_message(ctx.message.channel, "test {} {} ".format(ctx.message.author.mention, user.id))
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
