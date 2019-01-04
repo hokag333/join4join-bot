@@ -19,7 +19,9 @@ class Commands:
   @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx):
     members = ["text", "hi", "lol"]
+    server = ctx.message.server
     await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(members)))
+    await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members.id)))
     return
   
   @commands.command(pass_context=True)
