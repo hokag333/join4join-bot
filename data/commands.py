@@ -2,6 +2,8 @@ import discord
 import asyncio
 import random
 import itertools, datetime
+import asyncpg
+from db import create_tables
 from async_timeout import timeout
 from discord.ext import commands
 
