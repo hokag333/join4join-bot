@@ -29,10 +29,10 @@ class Commands:
       messages = []
       async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
         messages.append(message)
-        await self.bot.delete_messages(messages)
-        msg = "**{}** messages was deleted".format(amount)
-        await self.bot.send_message(ctx.message.channel, msg)
-        return
+      await self.bot.delete_messages(messages)
+      msg = "**{}** messages was deleted".format(amount)
+      await self.bot.send_message(ctx.message.channel, msg)
+      return
       
         
     
