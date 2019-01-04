@@ -1,6 +1,4 @@
 import discord
-import asyncpg
-from db import create_tables
 from discord.ext import commands
 
 class Verify:
@@ -22,9 +20,6 @@ class Verify:
                                   " \n"
                                   "If you need help with something, write **.help** \n"
                                   "or contact **Moderators**".format(member.mention))
-      
-      await self.db.execute("(member.id)",
-                              str(member.id))
       
       await self.bot.send_message(discord.Object(id='529619462140461066'), "{} joined **Join 4 Join** server✅".format(member.mention))
       return
