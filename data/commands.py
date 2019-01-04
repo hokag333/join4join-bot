@@ -18,10 +18,8 @@ class Commands:
   @commands.command(pass_context=True)
   @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx):
-    server = ctx.message.server
-    user = random.choice(get_server.members)
-    member = await self.bot.get_member(user.id)
-    await self.bot.send_message(ctx.message.channel, "test {} {} ".format(ctx.message.author.mention, member.mention))
+    server = bot.get_server("458341394524798976")
+    await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members))
    
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
