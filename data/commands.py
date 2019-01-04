@@ -19,8 +19,9 @@ class Commands:
   @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx):
     server = bot.get_server("458341394524798976")
-    await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members))
-   
+    await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members)))
+    return
+  
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=51):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
