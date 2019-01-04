@@ -82,7 +82,7 @@ class Moderation:
         embed.set_author(name="Warn", icon_url=message.author.avatar_url)
         embed.set_image(url=" ")
         embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
-        embed.add_field(name="Reason", value="mention everyone \n"
+        embed.add_field(name="Reason", value="mention **everyone** \n"
                         "user doesn´t have **<@&528153075391660044> role**", inline=True)
         embed.add_field(name="Info", value="message was deleted", inline=True)
         await self.bot.send_message(discord.Object(id='528915422871945228'), embed=embed)
@@ -92,7 +92,7 @@ class Moderation:
         embed.set_author(name="Warn", icon_url=message.author.avatar_url)
         embed.set_image(url=" ")
         embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
-        embed.add_field(name="Reason", value="mention everyone \n"
+        embed.add_field(name="Reason", value="mention **everyone** \n"
                         "You don´t have **<@&528153075391660044> role**", inline=True)
         embed.add_field(name="**Info**", value="just read <#528148347698020353> ", inline=False)
         await self.bot.send_message(message.author, embed=embed)
