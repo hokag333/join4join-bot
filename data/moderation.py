@@ -93,7 +93,7 @@ class Moderation:
         embed.set_image(url=" ")
         embed.add_field(name="User", value=" {} ".format(message.author.mention), inline=True)
         embed.add_field(name="Reason", value="mention **everyone** \n"
-                        "You don´t have **<@&528153075391660044> role**", inline=True)
+                        "You don´t have **10 invites role**", inline=True)
         embed.add_field(name="**Info**", value="just read <#528148347698020353> ", inline=False)
         await self.bot.send_message(message.author, embed=embed)
         return
