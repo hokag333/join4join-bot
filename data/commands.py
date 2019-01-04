@@ -21,7 +21,7 @@ class Commands:
     members = ["text", "hi", "lol"]
     server = ctx.message.server
     await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(members)))
-    await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members.id)))
+    await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members).mention))
     return
   
   @commands.command(pass_context=True)
