@@ -25,7 +25,7 @@ class Commands:
     return
   
   @commands.command(pass_context=True)
-  async def clear(self, ctx, amount=51):
+  async def clear(self, ctx, amount=10):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       channel = ctx.message.channel
       messages = []
