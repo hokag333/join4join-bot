@@ -11,18 +11,18 @@ class Helper:
       return
     if message.author.bot: return
       
-    if message.content.startswith('.help mod'):
+    if message.content.startswith('.mod'):
       embed = discord.Embed(title = 'Help', description = 'moderator commands', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='warn', value= 'to warn user', inline=True)
-      embed.add_field(name='clear', value= 'clear messages (max 50)', inline=False)
+      embed.add_field(name='clear', value= 'clear messages (max 100)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
       return
       
-    if message.content.startswith('.help cmds'):
+    if message.content.startswith('.cmds'):
       embed = discord.Embed(title = 'Help', description = 'moderator commands', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
@@ -40,8 +40,9 @@ class Helper:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='cmds', value= 'commands', inline=True)
-      embed.add_field(name='mod', value= 'moderator commands', inline=True)
+      embed.add_field(name='.cmds', value= 'commands', inline=True)
+      embed.add_field(name='.mod', value= 'moderator commands', inline=True)
+      embed.add_field(name='.bonus', value = 'all invite bonuses', inline=False)
       embed.add_field(name='** **', value= '[chicken server](https://discord.gg/9hjAVpP)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
  
