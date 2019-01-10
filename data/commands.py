@@ -17,10 +17,8 @@ class Commands:
   
   @commands.command(pass_context=True)
   @commands.cooldown(1, 10, commands.BucketType.user)
-  async def bonus(self, ctx):
-    await self.bot.send_message(ctx.message.channel, "**__Invite Bonuses__** \n"
-                               "**10 invites:** can mention everyone \n"
-                               "**20 invites:** 1 per 24 hours can dm 10 random members by bot")
+  async def tre(self, ctx):
+    await self.bot.send_message(ctx.message.channel, "not set")
     return
     
   @commands.command(pass_context=True)
