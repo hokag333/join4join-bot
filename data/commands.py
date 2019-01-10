@@ -25,7 +25,7 @@ class Commands:
     return
   
   @commands.command(pass_context=True)
-  async def bonus(self, ctx):
+  async def mytestcmd(self, ctx):
     await self.bot.send_message(ctx.message.channel, "reward roles \n"
                                "10 invites = mention everyone \n"
                                "20 invites = dm random members to join4join \n"
