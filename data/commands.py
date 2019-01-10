@@ -25,6 +25,10 @@ class Commands:
     return
   
   @commands.command(pass_context=True)
+  async def bonuses(self, ctx):
+    await self.bot.send_message(ctx.message.channel, "reward roles:") 
+    
+  @commands.command(pass_context=True)
   async def clear(self, ctx, amount=10):
     if "528145435022327810" in(role.id for role in ctx.message.author.roles):
       channel = ctx.message.channel
