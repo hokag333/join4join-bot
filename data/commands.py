@@ -16,7 +16,7 @@ class Commands:
       raise error
   
   @commands.command(pass_context=True)
-  async def testcmdbonus(self, ctx):
+  async def trst(self, ctx):
     await self.bot.send_message(ctx.message.channel, "test")
     return
   
