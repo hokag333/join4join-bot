@@ -14,7 +14,12 @@ class Commands:
       message = content="You have %.5s s cooldown on this command" % error.retry_after
       await self.bot.send_message(ctx.message.channel, message)
       raise error
-      
+  
+  @commands.command(pass_context=True)
+  async def testcmdbonus(self, ctx):
+    await self.bot.send_message(ctx.message.channel, "test")
+    return
+  
   @commands.command(pass_context=True)
   @commands.cooldown(1, 10, commands.BucketType.user)
   async def dm(self, ctx):
@@ -22,14 +27,6 @@ class Commands:
     server = ctx.message.server
     await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(members)))
     await self.bot.send_message(ctx.message.channel, "test {}".format(random.choice(server.members).mention))
-    return
-  
-  @commands.command(pass_context=True)
-  async def mytestcmd(self, ctx):
-    await self.bot.send_message(ctx.message.channel, "reward roles \n"
-                               "10 invites = mention everyone \n"
-                               "20 invites = dm random members to join4join \n"
-                               "**this is test** ")
     return
     
   @commands.command(pass_context=True)
