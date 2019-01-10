@@ -40,8 +40,8 @@ class Helper:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='** **', value= '**10 invites:** can mention everyone', inline=True)
-      embed.add_field(name='** **', value= '**20 invites:** 1 per 24 hours can dm 10 random members by bot', inline=True)
+      embed.add_field(name='**10 invites:**', value= 'can mention everyone', inline=True)
+      embed.add_field(name='**20 invites:**', value= '1 per 24 hours can dm 10 random members by bot', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       return
       
