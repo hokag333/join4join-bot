@@ -14,7 +14,7 @@ extensions = [ 'data.userinfo', 'data.commands', 'data.verify', 'data.moderation
 async def my_background_task():
     await bot.wait_until_ready()
     while not bot.is_closed:
-        await bot.change_presence(game=discord.Game(name='Join 4 Join server'))
+        await bot.change_presence(game=discord.Game(name='Join 4 Join server', url='twitch.tv/twitchbot_discord', type=1))
         await asyncio.sleep(5)
         await bot.change_presence(game=discord.Game(name='version 1.3.5'))
         await asyncio.sleep(5)
