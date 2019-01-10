@@ -42,7 +42,7 @@ class Helper:
       embed.set_author(name='', icon_url='')
       embed.add_field(name='.cmds', value= 'commands', inline=True)
       embed.add_field(name='.mod', value= 'moderator commands', inline=True)
-      embed.add_field(name='.bonus', value = 'all invite bonuses', inline=False)
+      embed.add_field(name='.bonus', value = 'all invite bonuses commands', inline=False)
       embed.add_field(name='** **', value= '[chicken server](https://discord.gg/9hjAVpP)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
  
