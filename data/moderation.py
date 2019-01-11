@@ -141,7 +141,7 @@ class Moderation:
       embed.add_field(name="User", value=" {} ".format(user.mention), inline=True)
       embed.add_field(name="Reason", value="{}".format(reason), inline=True)
       embed.add_field(name="Reported by", value=" {} \n"
-                      " <@{}> ".format(ctx.message.author.mention, mod), inline=True)
+                      " <@&{}> ".format(ctx.message.author.mention, mod), inline=True)
       await self.bot.send_message(discord.Object(id='533355227827666964'), embed=embed)
     
 def setup(bot):
