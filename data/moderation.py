@@ -127,7 +127,7 @@ class Moderation:
       return
     
   @commands.command(pass_context=True)
-  async def warn(self, ctx, user: discord.User, *, reason=""):
+  async def report(self, ctx, user: discord.User, *, reason=""):
     if "528162784022626314" in(role.id for role in ctx.message.author.roles):
       mod = "528162784022626314"
     if "529027718340280327" in(role.id for role in ctx.message.author.roles):
