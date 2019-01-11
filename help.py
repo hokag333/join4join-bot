@@ -23,7 +23,7 @@ class Helper:
       return
       
     if message.content.startswith('.cmds'):
-      embed = discord.Embed(title = 'Help', description = 'moderator commands', colour = discord.Colour.blue())
+      embed = discord.Embed(title = 'Help', description = 'commands', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
