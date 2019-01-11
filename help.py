@@ -17,8 +17,8 @@ class Helper:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='warn', value= 'to warn user', inline=True)
-      embed.add_field(name='clear', value= 'clear messages (max 100)', inline=False)
+      embed.add_field(name='**warn**', value= 'to warn user', inline=True)
+      embed.add_field(name='**clear**', value= 'clear messages (max 100)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
       return
       
@@ -29,8 +29,9 @@ class Helper:
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='**.verify**', value= 'verify your account', inline=True)
+      embed.add_field(name='**.report**', value= 'report user', inline=False)
       embed.add_field(name='**.userinfo**', value= 'info about user', inline=True)
-      embed.add_field(name='**.dm**', value= 'dm invite links to all users (need 20 invites)', inline=True)
+      embed.add_field(name='**.dm**', value= 'dm invite links to some users (need 20 invites)', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       return
     
@@ -53,7 +54,6 @@ class Helper:
       embed.set_author(name='', icon_url='')
       embed.add_field(name='**.cmds**', value= 'commands', inline=True)
       embed.add_field(name='**.mod**', value= 'moderator commands', inline=False)
-      embed.add_field(name='**.report**', value= 'report user', inline=False)
       embed.add_field(name='**.bonus info**', value = 'bonuses which you can get', inline=False)
       embed.add_field(name='** **', value= '[chicken server](https://discord.gg/9hjAVpP)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
