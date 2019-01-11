@@ -136,7 +136,7 @@ class Moderation:
       await self.bot.delete_message(ctx.message)
       embed=discord.Embed(title=" ", description=" ", color=0xdb781e)
       embed.set_footer(text='developer: Prisa')
-      embed.set_author(name="Warn", icon_url=user.avatar_url)
+      embed.set_author(name="Report", icon_url=user.avatar_url)
       embed.set_image(url=" ")
       embed.add_field(name="User", value=" {} ".format(user.mention), inline=True)
       embed.add_field(name="Reason", value="{}".format(reason), inline=True)
