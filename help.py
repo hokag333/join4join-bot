@@ -30,8 +30,8 @@ class Helper:
       embed.set_author(name='', icon_url='')
       embed.add_field(name='**.verify**', value= 'verify your account', inline=True)
       embed.add_field(name='**.report**', value= 'report user', inline=False)
-      embed.add_field(name='**.userinfo**', value= 'info about user', inline=True)
-      embed.add_field(name='**.dm**', value= 'dm invite links to some users (need 20 invites)', inline=True)
+      embed.add_field(name='**.userinfo**', value= 'info about user', inline=False)
+      embed.add_field(name='**.dm**', value= 'dm invite links to some users (need 20 invites)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
       return
     
