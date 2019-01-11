@@ -12,7 +12,7 @@ class Helper:
     if message.author.bot: return
       
     if message.content.startswith('.mod'):
-      embed = discord.Embed(title = 'Help', description = 'moderator commands', colour = discord.Colour.blue())
+      embed = discord.Embed(title = '**__Help__**', description = 'moderator commands', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
@@ -23,7 +23,7 @@ class Helper:
       return
       
     if message.content.startswith('.cmds'):
-      embed = discord.Embed(title = 'Help', description = 'commands', colour = discord.Colour.blue())
+      embed = discord.Embed(title = '**__Help__**', description = 'commands', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
@@ -35,7 +35,7 @@ class Helper:
       return
     
     if message.content.startswith('.bonus info'):
-      embed = discord.Embed(title = 'Bonuses', description = ' ', colour = discord.Colour.blue())
+      embed = discord.Embed(title = '**__Bonuses__**', description = ' ', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
@@ -46,7 +46,7 @@ class Helper:
       return
       
     if message.content.startswith('.help'):
-      embed = discord.Embed(title = 'Help', description = '', colour = discord.Colour.blue())
+      embed = discord.Embed(title = '**__Help__**', description = '', colour = discord.Colour.blue())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
       embed.set_image(url='')
