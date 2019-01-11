@@ -28,9 +28,9 @@ class Helper:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='verify', value= 'verify your account', inline=True)
-      embed.add_field(name='userinfo', value= 'info about user', inline=True)
-      embed.add_field(name='dm', value= 'dm invite links to all users (need 20 invites)', inline=True)
+      embed.add_field(name='**.verify**', value= 'verify your account', inline=True)
+      embed.add_field(name='**.userinfo**', value= 'info about user', inline=True)
+      embed.add_field(name='**.dm**', value= 'dm invite links to all users (need 20 invites)', inline=True)
       await self.bot.send_message(message.channel, embed=embed)
       return
     
@@ -41,7 +41,7 @@ class Helper:
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
       embed.add_field(name='**10 invites:**', value= 'can mention everyone', inline=True)
-      embed.add_field(name='**20 invites:**', value= '1 per 24 hours can dm 10 random members by bot', inline=True)
+      embed.add_field(name='**20 invites:**', value= '1 per 24 hours can dm 10 random members by bot', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
       return
       
@@ -51,10 +51,10 @@ class Helper:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name='.cmds', value= 'commands', inline=True)
-      embed.add_field(name='.mod', value= 'moderator commands', inline=False)
-      embed.add_field(name='.report', value= 'report user', inline=False)
-      embed.add_field(name='.bonus info', value = 'bonuses which you can get', inline=False)
+      embed.add_field(name='**.cmds**', value= 'commands', inline=True)
+      embed.add_field(name='**.mod**', value= 'moderator commands', inline=False)
+      embed.add_field(name='**.report**', value= 'report user', inline=False)
+      embed.add_field(name='**.bonus info**', value = 'bonuses which you can get', inline=False)
       embed.add_field(name='** **', value= '[chicken server](https://discord.gg/9hjAVpP)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
  
