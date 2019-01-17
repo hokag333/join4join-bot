@@ -8,7 +8,10 @@ from discord.ext import commands
 class Commands:
   def __init__(self, bot):
     self.bot = bot
-    
+   
+  async def on_reaction_add(self, reaction, user):
+    await self.bot.send_message(discord.Object(id='506512907786518528'), " {} test of add reaction {} ".format(reaction.emoji, user.mention))
+        
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
       message = content="You have %.5s s cooldown on this command" % error.retry_after
@@ -31,8 +34,7 @@ class Commands:
       await self.bot.delete_messages(messages)
       msg = "**{}** messages was deleted".format(amount)
       await self.bot.send_message(ctx.message.channel, msg)
-      return
-      
+      return  
         
     
 def setup(bot):
