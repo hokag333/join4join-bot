@@ -8,9 +8,6 @@ from discord.ext import commands
 class Commands:
   def __init__(self, bot):
     self.bot = bot
-   
-  async def on_reaction_add(self, reaction, user):
-    await self.bot.send_message(discord.Object(id='506512907786518528'), " {} test of add reaction {} ".format(reaction.emoji, user.mention))
         
   async def on_command_error(self, error, ctx):
     if isinstance(error, commands.CommandOnCooldown):
