@@ -47,7 +47,7 @@ class Commands:
         await self.bot.send_message(ctx.message.channel, "**__Help__** \n"
                                     "**            **If you need help with something write **.help** and <@522411754731339786> bot will help you \n"
                                     "**            **or contact <@&528200802863677450> or <@&529619823404253184> \n"
-                                    "**            **messages in this channel will be every week cleaned")
+                                    "**            **all messages in this channel will be cleaned every week")
         return
     
 def setup(bot):
