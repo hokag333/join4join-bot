@@ -31,8 +31,23 @@ class Commands:
       await self.bot.delete_messages(messages)
       msg = "**{}** messages was deleted".format(amount)
       await self.bot.send_message(ctx.message.channel, msg)
-      return  
-        
+      return
+    
+  @commands.command(pass_context=True)
+  async def definition(self, ctx):
+    if "528145435022327810" in(role.id for role in ctx.message.author.roles):
+      mod = "528145435022327810"
+      
+    if "528200802863677450" in(role.id for role in ctx.message.author.roles):
+      mod = "528200802863677450"
+    
+    if mod in(role.id for role in ctx.message.author.roles):
+      if "529265526002941953" in(ctx.message.channel.id):
+        await self.bot.send_message(ctx.message.channel, "**__Help__** \n"
+                                    "**            **If you need help with something write **.help** and our bot will help you \n"
+                                    "**            **or contact <@&528200802863677450> or <@&529619823404253184> \n"
+                                    "**            **messages in this channel will be every week cleaned")
+        return
     
 def setup(bot):
   bot.add_cog(Commands(bot))
