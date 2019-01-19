@@ -45,7 +45,7 @@ class Commands:
       if "529265526002941953" in(ctx.message.channel.id):
         await self.bot.delete_message(ctx.message)
         await self.bot.send_message(ctx.message.channel, "**__Help__** \n"
-                                    "**            **If you need help with something write **.help** and our bot will help you \n"
+                                    "**            **If you need help with something write **.help** and <@522411754731339786> bot will help you \n"
                                     "**            **or contact <@&528200802863677450> or <@&529619823404253184> \n"
                                     "**            **messages in this channel will be every week cleaned")
         return
