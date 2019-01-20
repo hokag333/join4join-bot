@@ -12,15 +12,28 @@ class Helper:
     if message.author.bot: return
       
     if message.content.startswith('.mod'):
-      embed = discord.Embed(title = '**__Help__**', description = 'moderator commands', colour = discord.Colour.blue())
-      embed.set_footer(text='developer: Prisa#4835')
-      embed.set_thumbnail(url='')
-      embed.set_image(url='')
-      embed.set_author(name='', icon_url='')
-      embed.add_field(name='**warn**', value= 'to warn user', inline=True)
-      embed.add_field(name='**clear**', value= 'clear messages (max 100)', inline=False)
-      await self.bot.send_message(message.channel, embed=embed)
-      return
+      if "528145435022327810" in(role.id for role in ctx.message.author.roles):
+        mod = "528145435022327810"
+      if "528200802863677450" in(role.id for role in ctx.message.author.roles):
+        mod = "528200802863677450"
+      if mod in(role.id for role in ctx.message.author.roles):
+        embed = discord.Embed(title = '**__Help__**', description = 'moderator commands', colour = discord.Colour.blue())
+        embed.set_footer(text='developer: Prisa#4835')
+        embed.set_thumbnail(url='')
+        embed.set_image(url='')
+        embed.set_author(name='', icon_url='')
+        embed.add_field(name='**warn**', value= 'to warn user', inline=True)
+        embed.add_field(name='**clear**', value= 'clear messages (max 100)', inline=False)
+        await self.bot.send_message(message.channel, embed=embed)
+        return
+      else:
+        embed = discord.Embed(title = '**__Help__**', description = 'moderator commands', colour = discord.Colour.blue())
+        embed.set_footer(text='developer: Prisa#4835')
+        embed.set_thumbnail(url='')
+        embed.set_image(url='')
+        embed.set_author(name='', icon_url='')
+        embed.add_field(name='** **', value= '** You are not moderator', inline=True)
+        await self.bot.send_message(message.channel, embed=embed)
       
     if message.content.startswith('.cmds'):
       embed = discord.Embed(title = '**__Help__**', description = 'commands', colour = discord.Colour.blue())
