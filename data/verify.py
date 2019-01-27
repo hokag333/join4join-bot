@@ -107,7 +107,7 @@ class Verify:
       embed.set_thumbnail(url=' ')
       embed.set_image(url=' ')
       embed.set_author(name=' ', icon_url=' ')
-      embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/9hjAVpP)', inline=True)
+      embed.add_field(name='just confirm verification', value= '[click here](https://discord.gg/ZSNcHxu)', inline=True)
       await self.bot.send_message(ctx.message.author, embed=embed)
       
       embed=discord.Embed(title="🔄__Verification__", description=" ", color=0x1378ca)
