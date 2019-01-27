@@ -12,10 +12,10 @@ class Helper:
     if message.author.bot: return
       
     if message.content.startswith('.mod'):
-      if "528145435022327810" in(role.id for role in ctx.message.author.roles):
-        mod = "528145435022327810"
-      if "528200802863677450" in(role.id for role in ctx.message.author.roles):
-        mod = "528200802863677450"
+      if "537913297052106762" in(role.id for role in ctx.message.author.roles):
+        mod = "537913297052106762"
+      if "537913808975429642" in(role.id for role in ctx.message.author.roles):
+        mod = "537913808975429642"
       if mod in(role.id for role in ctx.message.author.roles):
         embed = discord.Embed(title = '**__Help__**', description = 'moderator commands', colour = discord.Colour.blue())
         embed.set_footer(text='developer: Prisa#4835')
