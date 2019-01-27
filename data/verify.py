@@ -73,7 +73,7 @@ class Verify:
       
   @commands.command(pass_context=True)
   async def verify(self, ctx):
-    if "537921215168512000" in(ctx.message.server.id):
+    if "537014667550261318" in(ctx.message.server.id):
       if "537914257639997441" in(role.id for role in ctx.message.author.roles):
         await self.bot.delete_message(ctx.message)
         await self.bot.send_message(ctx.message.author, "You already have a verified✅ account")
