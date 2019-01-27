@@ -19,11 +19,11 @@ class Userinfo:
     await self.bot.send_message(ctx.message.channel, embed=embed)
     
   @commands.command(pass_context=True)
-  async def testcmd(self, ctx, user: discord.User=None):
+  async def check(self, ctx, user: discord.User=None):
     if not user:
       user = ctx.message.author
       
-    server = self.bot.get_server("382204136990703616")
+    server = self.bot.get_server("537014489598394399")
     if user in(server.members):
       await self.bot.send_message(ctx.message.channel, "{} user is in {} server".format(user.mention, server.name))
       return
