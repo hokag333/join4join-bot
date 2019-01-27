@@ -23,7 +23,7 @@ class Commands:
     
   @commands.command(pass_context=True)
   async def clear(self, ctx, amount=10):
-    if "528145435022327810" in(role.id for role in ctx.message.author.roles):
+    if "537913297052106762" in(role.id for role in ctx.message.author.roles):
       channel = ctx.message.channel
       messages = []
       async for message in self.bot.logs_from(channel, limit=int(amount) + 1):
@@ -35,18 +35,18 @@ class Commands:
     
   @commands.command(pass_context=True)
   async def definition(self, ctx):
-    if "528145435022327810" in(role.id for role in ctx.message.author.roles):
-      mod = "528145435022327810"
+    if "537913297052106762" in(role.id for role in ctx.message.author.roles):
+      mod = "537913297052106762"
       
-    if "528200802863677450" in(role.id for role in ctx.message.author.roles):
-      mod = "528200802863677450"
+    if "537913808975429642" in(role.id for role in ctx.message.author.roles):
+      mod = "537913808975429642"
     
     if mod in(role.id for role in ctx.message.author.roles):
-      if "529265526002941953" in(ctx.message.channel.id):
+      if "537923962659667969" in(ctx.message.channel.id):
         await self.bot.delete_message(ctx.message)
         await self.bot.send_message(ctx.message.channel, "**__Help__** \n"
-                                    "**            **If you need help with something write **.help** and <@522411754731339786> bot will help you \n"
-                                    "**            **or contact <@&528200802863677450> or <@&529619823404253184> \n"
+                                    "**            **If you need help with something write **.help** and <@538781726319837184> bot will help you \n"
+                                    "**            **or contact <@&537913808975429642> or <@&537915611205074947> \n"
                                     "**            **all messages in this channel will be cleaned every week")
         return
     
