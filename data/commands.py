@@ -61,10 +61,15 @@ class Commands:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
+      embed.add_field(name='**How does it work**', value= "If you invite **Join4Join** bot to your server \n"
+                      "your server will be automatically connected to **Partnership program** \n"
+                      "after this, bot will automatically inviting members to your server \n"
+                      "** **", inline=True)
       embed.add_field(name="function", value= "if **member join** your server, \n"
                       "bot will invite him to **join4join** server \n"
                       "and invite one random member of **Join4Join** server to your server \n"
-                      "** **", inline=True)
+                      "(if member is already on **Join4Join** server, function will be skipped"
+                      "** **", inline=False)
       embed.add_field(name='**fake invites**', value= "if you will making fake invites \n"
                       "**Partnership** program will be disabled on your server \n"
                       "**  **", inline=True)
