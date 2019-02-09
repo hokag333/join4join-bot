@@ -51,7 +51,10 @@ class Commands:
         return
       
   @commands.command(pass_context=True)
-  async def partnership(self, ctx):
+  async def partnership(self, ctx, reason=""):
+    if reason == "join":
+      await self.bot.send_message(ctx.message.channel, "partnership program is in setting")
+      return
     embed = discord.Embed(title = '**__Partnership program__**', description = 'commands', colour = discord.Colour.purple())
     embed.set_footer(text='developer: Prisa#4835')
     embed.set_thumbnail(url='')
