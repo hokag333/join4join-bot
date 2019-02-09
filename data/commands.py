@@ -61,7 +61,7 @@ class Commands:
       embed.set_thumbnail(url='')
       embed.set_image(url='')
       embed.set_author(name='', icon_url='')
-      embed.add_field(name="Partnership program function", value= "if **member join** your server, \n"
+      embed.add_field(name="function", value= "if **member join** your server, \n"
                       "bot will invite him to **join4join** server \n"
                       "and invite one random member of **Join4Join** server to your server ", inline=True)
       embed.add_field(name='**fake invites**', value= "if you will making fake invites \n"
