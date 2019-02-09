@@ -49,6 +49,21 @@ class Commands:
                                     "**            **or contact <@&537913808975429642> or <@&537915611205074947> \n"
                                     "**            **all messages in this channel will be cleaned every week")
         return
+      
+  @commands.command(pass_context=True)
+  async def partnership(self, ctx):
+    embed = discord.Embed(title = '**__Partnership program__**', description = 'commands', colour = discord.Colour.purple())
+    embed.set_footer(text='developer: Prisa#4835')
+    embed.set_thumbnail(url='')
+    embed.set_image(url='')
+    embed.set_author(name='', icon_url='')
+    embed.add_field(name="Partnership program function", value= "if member join your server, bot will automatically invite him to **join4join** server \n"
+                    "and invite one random member of **Join4Join** server to your server ", inline=True)
+    embed.add_field(name='**fake invites', value= "if you will making fake invites to post many invite links of your server with bot\n"
+                    "**Partnership** program will be disabled on your server", inline=True)
+    embed.add_field(name='**.partnership join**', value= 'invite **join4join** bot to your server', inline=False)
+    await self.bot.send_message(message.channel, embed=embed)
+    return
     
 def setup(bot):
   bot.add_cog(Commands(bot))
