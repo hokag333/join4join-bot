@@ -51,7 +51,7 @@ class Commands:
         return
       
   @commands.command(pass_context=True)
-  async def partnership(self, ctx, reason=""):
+  async def partnership(self, ctx, reason=None):
     if reason == "join":
       await self.bot.send_message(ctx.message.channel, "partnership program is in setting")
       return
