@@ -55,7 +55,7 @@ class Commands:
     if reason == "join":
       await self.bot.send_message(ctx.message.channel, "partnership program is in setting")
       return
-    if not reason:
+    if reason == "test":
       embed = discord.Embed(title = '**__Partnership program__**', description = 'commands', colour = discord.Colour.purple())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
