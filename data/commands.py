@@ -65,7 +65,8 @@ class Commands:
                       "bot will invite him to **join4join** server \n"
                       "and invite one random member of **Join4Join** server to your server ", inline=True)
       embed.add_field(name='**fake invites**', value= "if you will making fake invites \n"
-                      "**Partnership** program will be disabled on your server", inline=True)
+                      "**Partnership** program will be disabled on your server \n"
+                      "  ", inline=True)
       embed.add_field(name='**.partnership join**', value= 'invite **join4join** bot to your server', inline=False)
       await self.bot.send_message(ctx.message.channel, embed=embed)
       return
