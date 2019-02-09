@@ -55,7 +55,7 @@ class Commands:
     if reason == "join":
       await self.bot.send_message(ctx.message.channel, "partnership program is in setting")
       return
-    if reason == "test":
+    if not reason:
       embed = discord.Embed(title = '**__Partnership program__**', description = 'commands', colour = discord.Colour.purple())
       embed.set_footer(text='developer: Prisa#4835')
       embed.set_thumbnail(url='')
@@ -66,7 +66,7 @@ class Commands:
       embed.add_field(name='**fake invites', value= "if you will making fake invites to post many invite links of your server with bot\n"
                       "**Partnership** program will be disabled on your server", inline=True)
       embed.add_field(name='**.partnership join**', value= 'invite **join4join** bot to your server', inline=False)
-      await self.bot.send_message(message.channel, embed=embed)
+      await self.bot.send_message(ctx.message.channel, embed=embed)
       return
     
 def setup(bot):
