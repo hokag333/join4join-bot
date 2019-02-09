@@ -64,15 +64,15 @@ class Commands:
       embed.add_field(name='**How does it work**', value= "If you invite **Join4Join** bot to your server \n"
                       "your server will be automatically connected to **Partnership program** \n"
                       "after this, bot will automatically inviting members to your server \n"
-                      "** **", inline=True)
+                      "**  ____  **", inline=True)
       embed.add_field(name="function", value= "if **member join** your server, \n"
                       "bot will invite him to **join4join** server \n"
                       "and invite one random member of **Join4Join** server to your server \n"
-                      "(if member is already on **Join4Join** server, function will be skipped"
-                      "** **", inline=False)
+                      "(if member is already on **Join4Join** server, function will be skipped)"
+                      "**     **", inline=False)
       embed.add_field(name='**fake invites**', value= "if you will making fake invites \n"
                       "**Partnership** program will be disabled on your server \n"
-                      "**  **", inline=True)
+                      "**  ____   **", inline=True)
       embed.add_field(name='**.partnership join**', value= 'invite **join4join** bot to your server', inline=False)
       await self.bot.send_message(ctx.message.channel, embed=embed)
       return
