@@ -67,6 +67,7 @@ class Helper:
       embed.set_author(name='', icon_url='')
       embed.add_field(name='**.cmds**', value= 'commands', inline=True)
       embed.add_field(name='**.mod**', value= 'moderator commands', inline=False)
+      embed.add_field(name='**.partnership**', value= 'info about **join4join** server partnership', inline=False)
       embed.add_field(name='**.bonus info**', value = 'bonuses which you can get', inline=False)
       embed.add_field(name='** **', value= '[chicken server](https://discord.gg/9hjAVpP)', inline=False)
       await self.bot.send_message(message.channel, embed=embed)
