@@ -49,33 +49,6 @@ class Commands:
                                     "**            **or contact <@&537913808975429642> or <@&537915611205074947> \n"
                                     "**            **all messages in this channel will be cleaned every week")
         return
-      
-  @commands.command(pass_context=True)
-  async def partnership(self, ctx, reason=None):
-    if reason == "join":
-      await self.bot.send_message(ctx.message.channel, "partnership program is in setting")
-      return
-    if not reason:
-      embed = discord.Embed(title = '**__Partnership program__**', description = ' ', colour = discord.Colour.purple())
-      embed.set_footer(text='developer: Prisa#4835')
-      embed.set_thumbnail(url='')
-      embed.set_image(url='')
-      embed.set_author(name='', icon_url='')
-      embed.add_field(name='**How does it work**', value= "If you invite **Join4Join** bot to your server \n"
-                      "your server will be automatically connected to **Partnership program** \n"
-                      "after this, bot will automatically inviting members to your server \n"
-                      "**  ____  **", inline=True)
-      embed.add_field(name="function", value= "if **member join** your server, \n"
-                      "bot will invite him to **join4join** server \n"
-                      "and invite one random member of **Join4Join** server to your server \n"
-                      "(if member is already on **Join4Join** server, function will be skipped)"
-                      "**     **", inline=False)
-      embed.add_field(name='**fake invites**', value= "if you will making fake invites \n"
-                      "**Partnership** program will be disabled on your server \n"
-                      "**  ____   **", inline=True)
-      embed.add_field(name='**.partnership join**', value= 'invite **join4join** bot to your server', inline=False)
-      await self.bot.send_message(ctx.message.channel, embed=embed)
-      return
     
 def setup(bot):
   bot.add_cog(Commands(bot))
