@@ -22,7 +22,7 @@ class Verify:
                                   "or contact **Moderators**".format(member.mention))
       
       await self.bot.send_message(discord.Object(id='537918427059453952'), "{} joined **Join 4 Join** server✅ \n"
-                                  "account created at** {} ** ".format(member.mention, member.created_at.strftime(" %j days %y years ")))
+                                  "account created at** {} ** ".format(member.mention, member.created_at.strftime(" %d %B %Y ")))
       return
     elif member.server.id == "537014489598394399":
       server1 = self.bot.get_server("537014667550261318")
