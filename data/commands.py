@@ -43,12 +43,7 @@ class Commands:
     
     if mod in(role.id for role in ctx.message.author.roles):
       if "537923962659667969" in(ctx.message.channel.id):
-        channel = ctx.message.channel
-        messages = []
-        async for message in self.bot.logs_from(channel, limit=int(40) + 1):
-          messages.append(message)
-        await self.bot.delete_messages(messages)
-        await asyncio.sleep(10)
+        await self.bot.delete_messages(ctx.message)
         await self.bot.send_message(ctx.message.channel, "**__Help__** \n"
                                     "**            **If you need help with something write **.help** and <@538781726319837184> bot will help you \n"
                                     "**            **or contact <@&537913808975429642> or <@&537915611205074947> \n"
